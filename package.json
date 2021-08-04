@@ -1,7 +1,7 @@
 {
-  "name": "catexams",
+  "name": "experts4you",
   "version": "1.0.0",
-  "description": "Official website for catexams.lk",
+  "description": "Official website for Experts 4 You Business consultants",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madushan-sooriyarathne/cat-exams.git"
+    "url": "git+https://github.com/madushan-sooriyarathne/experts4you.git"
   },
   "author": "Madushan Sooriyarathne <hello@madushan.dev>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/madushan-sooriyarathne/cat-exams/issues"
+    "url": "https://github.com/madushan-sooriyarathne/experts4you/issues"
   },
-  "homepage": "https://github.com/madushan-sooriyarathne/cat-exams#readme",
+  "homepage": "https://github.com/madushan-sooriyarathne/experts4you#readme",
   "dependencies": {
     "framer-motion": "^4.1.17",
     "next": "^11.0.1",
