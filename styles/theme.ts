@@ -51,8 +51,8 @@ const theme: DefaultTheme = {
     // success: string,
   },
   fonts: {
-    primary: "Arial, Helvetica, sans-serif",
-    secondary: "'Times New Roman', Times, serif",
+    primary: "'Inter', Tahoma, Geneva, Verdana, sans-serif",
+    secondary: "'Gotham', Tahoma, Geneva, Verdana, sans-serif",
   },
   gradients: {
     headingLight: "linear-gradient(to right, #abbaab, #ffffff)",
