@@ -14,16 +14,13 @@ const Heading = styled.h1<HeadingProps>`
   color: ${(props) =>
     props.light ? props.theme.colors.white : props.theme.colors.secondary};
 
-  /* FOR GRADIENT HEADINGS
-
-    background: ${(props) =>
+  background: ${(props) =>
     props.light
       ? props.theme.gradients.secondaryLight
       : props.theme.gradients.secondaryDark};
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; 
-*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export { Heading };
