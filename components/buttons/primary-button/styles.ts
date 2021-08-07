@@ -1,3 +1,4 @@
+import { redirect } from "next/dist/next-server/server/api-utils";
 import styled from "styled-components";
 
 interface ButtonProps {
@@ -11,17 +12,27 @@ const Button = styled.a<ButtonProps>`
   padding: 2rem 3rem;
   outline: none;
   text-decoration: none;
+  text-align: center;
   color: ${(props) =>
     props.light ? props.theme.colors.black : props.theme.colors.white};
-  background-color: transparent;
   border: ${(props) =>
     `1px solid ${
       props.light ? props.theme.colors.black : props.theme.colors.white
     }`};
 
+  background-color: transparent;
   position: relative;
+  cursor: pointer;
+  display: block;
 
-  &::before {
+  &:hover {
+    &::after {
+      transform: translate(0, 0);
+    }
+  }
+
+  &::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -30,9 +41,11 @@ const Button = styled.a<ButtonProps>`
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: ${(props) =>
-      props.light ? props.theme.colors.white : props.theme.colors.black};
-    transform: translate(2rem, 2rem);
+    transform: translate(1rem, 1rem);
+    /* background-color: ${(props) =>
+      props.light ? props.theme.colors.black : props.theme.colors.white}; */
+    background-color: yellow;
+    transition: transform 0.3s ease-in-out;
   }
 `;
 
