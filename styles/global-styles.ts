@@ -13,7 +13,7 @@ const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
 
     html {
         font-size: 62.5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: ${(props) => props.theme.fonts.primary};
         font-weight: 400;
         letter-spacing: 0.5px;
         color: black;
