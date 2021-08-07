@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 
 import GlobalStyles from "@styles/global-styles";
 import theme from "@styles/theme";
+import "@styles/fonts.css";
 
 const App: React.FC<AppProps> = ({
   Component,
@@ -12,7 +13,9 @@ const App: React.FC<AppProps> = ({
   return (
     <>
       <Head>
-        <title> Next Boilerplate with Framer motion & styled component</title>
+        <title>
+          Experts 4 You | Your one stop business consultation solutions.
+        </title>
       </Head>
       {/* View port meta tags here */}
       <ThemeProvider theme={theme}>
