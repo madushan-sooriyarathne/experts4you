@@ -7,31 +7,43 @@ interface ButtonProps {
 
 const Button = styled.a<ButtonProps>`
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1px;
   padding: 2rem 3rem;
   outline: none;
   text-decoration: none;
   text-align: center;
   color: ${(props) =>
-    props.light ? props.theme.colors.black : props.theme.colors.white};
+    props.light
+      ? props.theme.colors.secondaryLight
+      : props.theme.colors.secondary};
   border: ${(props) =>
     `1px solid ${
-      props.light ? props.theme.colors.black : props.theme.colors.white
+      props.light
+        ? props.theme.colors.secondaryLight
+        : props.theme.colors.secondary
     }`};
 
   background-color: transparent;
   position: relative;
   cursor: pointer;
   display: block;
+  transition: color 0.3s ease-in-out 0.2s;
 
+  z-index: 0;
   &:hover {
-    &::after {
-      transform: translate(0, 0);
+    color: ${(props) =>
+      props.light
+        ? props.theme.colors.secondary
+        : props.theme.colors.secondaryLight};
+
+    &::before {
+      transform: scaleY(1);
+      transform-origin: center bottom;
     }
   }
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -40,12 +52,14 @@ const Button = styled.a<ButtonProps>`
     right: 0;
     width: 100%;
     height: 100%;
+    transform-origin: center top;
+    transform: scaleY(0);
     z-index: -1;
-    transform: translate(1rem, 1rem);
-    /* background-color: ${(props) =>
-      props.light ? props.theme.colors.black : props.theme.colors.white}; */
-    background-color: yellow;
-    transition: transform 0.3s ease-in-out;
+    background-color: ${(props) =>
+      props.light
+        ? props.theme.colors.secondaryLight
+        : props.theme.colors.secondary};
+    transition: transform 0.3s ease-in-out 0.2s;
   }
 `;
 
