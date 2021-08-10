@@ -5,17 +5,20 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       primary: string;
-      // primaryMedium: string;
-      // primaryLight: string;
+      primaryMedium: string;
+      primaryLight: string;
+      primaryDark: string;
       secondary: string;
-      // secondaryMedium: string;
-      // secondaryLight: string;
+      secondaryMedium: string;
+      secondaryLight: string;
+      secondaryDark: string;
       white: string;
       black: string;
-      // blackLight: string;
-      // danger: string;
-      // warning: string;
-      // success: string;
+      blackMedium: string;
+      blackLight: string;
+      danger: string;
+      warning: string;
+      success: string;
     };
     fonts: {
       primary: string;
@@ -26,6 +29,7 @@ declare module "styled-components" {
       headingDark: string;
       secondaryDark: string;
       secondaryLight: string;
+      mainBg: string;
     };
     shadows: {
       close: string;
@@ -37,18 +41,21 @@ declare module "styled-components" {
 
 const theme: DefaultTheme = {
   colors: {
-    primary: "red",
-    // primaryMedium: string,
-    // primaryLight: string,
-    secondary: "yellow",
-    // secondaryMedium: string,
-    // secondaryLight: string,
-    white: "white",
-    black: "black",
-    // blackLight: string,
-    // danger: string,
-    // warning: string,
-    // success: string,
+    primary: "#09b9f4",
+    primaryMedium: "#53cef7",
+    primaryLight: "#e6f8fe",
+    primaryDark: "#055d7a",
+    secondary: "#e05b14",
+    secondaryMedium: "#e98c5b",
+    secondaryLight: "#fcefe8",
+    secondaryDark: "#86370c",
+    white: "#ffffff",
+    black: "#32373E",
+    blackMedium: "#474b51",
+    blackLight: "#adafb2",
+    danger: "##de4435",
+    warning: "##e8bc0d",
+    success: "##29c46a",
   },
   fonts: {
     primary: "'Inter', Tahoma, Geneva, Verdana, sans-serif",
@@ -56,9 +63,10 @@ const theme: DefaultTheme = {
   },
   gradients: {
     headingLight: "linear-gradient(to right, #abbaab, #ffffff)",
-    headingDark: "linear-gradient(to right, #c31432, #240b36)",
+    headingDark: "linear-gradient(135deg, #86370c 10%, #e05b14 100%);",
     secondaryDark: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
     secondaryLight: "linear-gradient(to right, #ffefba, #ffffff)",
+    mainBg: "linear-gradient(135deg, #fffeff 10%, #d7fffe 100%)",
   },
   shadows: {
     close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
