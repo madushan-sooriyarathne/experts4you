@@ -7,6 +7,7 @@ const Container = styled.div`
   height: 100vh;
   padding: 15rem 10rem 0 10rem;
   margin-top: -15rem;
+  margin-bottom: -20rem;
 
   position: relative;
   display: grid;
@@ -15,7 +16,7 @@ const Container = styled.div`
   grid-template-areas: "co im";
   column-gap: 5rem;
 
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
 `;
 
 const ContainerBG = styled.div`
@@ -44,6 +45,7 @@ const ContainerOverlay = styled.div`
   bottom: 0;
   right: 0;
   z-index: -1;
+  background-image: ${(props) => props.theme.gradients.blurBg};
   backdrop-filter: blur(100px);
 `;
 
@@ -70,6 +72,8 @@ const StatGroup = styled.div`
   align-items: start;
   justify-items: start;
   column-gap: 5rem;
+
+  margin-top: 5rem;
 `;
 
 const StatItem = styled.div`

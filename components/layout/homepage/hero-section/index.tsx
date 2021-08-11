@@ -31,7 +31,7 @@ const HeroSection: React.FC<Props> = ({ heroData }: Props): JSX.Element => {
         </PrimaryButton>
         <StatGroup>
           {heroData.stats.map((stat, index) => (
-            <StatItem id={`stat-${index}`}>
+            <StatItem key={`stat-${index}`}>
               <StatNumber>{stat.number}</StatNumber>
               <StatLabel>{stat.label}</StatLabel>
             </StatItem>
