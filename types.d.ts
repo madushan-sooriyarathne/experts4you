@@ -12,6 +12,7 @@ declare global {
     id: string;
     description: string;
     image: Image;
+    icon: string;
   }
 
   interface Stats {
