@@ -30,6 +30,7 @@ declare module "styled-components" {
       secondaryDark: string;
       secondaryLight: string;
       mainBg: string;
+      blurBg: string;
     };
     shadows: {
       close: string;
@@ -67,6 +68,8 @@ const theme: DefaultTheme = {
     secondaryDark: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
     secondaryLight: "linear-gradient(to right, #ffefba, #ffffff)",
     mainBg: "linear-gradient(135deg, #fffeff 10%, #d7fffe 100%)",
+    blurBg:
+      "linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.8) 100%)",
   },
   shadows: {
     close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
