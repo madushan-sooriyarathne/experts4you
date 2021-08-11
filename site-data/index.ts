@@ -8,6 +8,7 @@ const services: Service[] = [
       alt: "Tax",
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
+    icon: "/assets/svg/bookkeeping.svg",
   },
   {
     name: "Company Incorporation",
@@ -18,6 +19,7 @@ const services: Service[] = [
       alt: "Tax",
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
+    icon: "/assets/svg/incorporation.svg",
   },
   {
     name: "Tax Advisory",
@@ -28,6 +30,7 @@ const services: Service[] = [
       alt: "Tax",
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
+    icon: "/assets/svg/tax.svg",
   },
 ];
 
