@@ -15,17 +15,18 @@ const Para = styled.p<ParaProps>`
   text-align: ${(props) => props.alignment};
   color: ${(props) =>
     props.light ? props.theme.colors.white : props.theme.colors.black};
-  margin-bottom: 1rem;
-  & > b {
+  /* margin-bottom: 1rem; */
+  & b {
     font-weight: 700;
   }
-  & > a {
+
+  & a {
     font-weight: 700;
     text-decoration: none;
     color: ${(props) => props.theme.colors.black};
     transition: color 0.2s ease-in-out;
     &:hover {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.secondary};
     }
   }
 `;
