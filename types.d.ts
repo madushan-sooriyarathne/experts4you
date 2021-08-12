@@ -27,6 +27,17 @@ declare global {
     stats: Stats[];
     image: Image;
   }
+
+  interface SiteLinks {
+    name: string;
+    route: string;
+  }
+
+  interface SocialLinks {
+    name: string;
+    link: string;
+    icon: string;
+  }
 }
 
 export {};
