@@ -52,4 +52,49 @@ const heroData: HeroData = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
 
-export { services, heroData };
+const navLinks: SiteLinks[] = [
+  {
+    route: "/about",
+    name: "About",
+  },
+  {
+    route: "/services",
+    name: "Services",
+  },
+  {
+    route: "/tax-calculator",
+    name: "Tax Calculator",
+  },
+  {
+    route: "/contact",
+    name: "Contact",
+  },
+];
+
+const homeLinks: SiteLinks[] = [
+  {
+    route: "/#why-us",
+    name: "Why Us",
+  },
+  {
+    route: "/#services",
+    name: "Our Services",
+  },
+  {
+    route: "/#testimonials",
+    name: "Client Testimonials",
+  },
+  {
+    route: "/#clients",
+    name: "Our Clients",
+  },
+];
+
+const socialMedia: SocialLinks[] = [
+  { link: "#", name: "Facebook", icon: "facebook" },
+  { link: "#", name: "Instagram", icon: "instagram" },
+  { link: "#", name: "Twitter", icon: "twitter" },
+  { link: "#", name: "LinkedIn", icon: "linkedin" },
+];
+
+export { services, heroData, navLinks, homeLinks, socialMedia };
