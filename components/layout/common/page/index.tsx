@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import Head from "next/head";
 
+import Footer from "@components/layout/common/footer";
+
 import { Content, Container } from "./styles";
 
 interface Props {
@@ -24,7 +26,7 @@ const Page: React.FC<Props> = ({
       </Head>
       {/* <NavBar /> */}
       <Content>{children}</Content>
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   );
 };
