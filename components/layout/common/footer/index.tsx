@@ -13,52 +13,9 @@ import {
   SocialMediaButton,
 } from "./styles";
 
+import { homeLinks, navLinks, socialMedia } from "@site-data";
+
 const Footer: React.FC = (): JSX.Element => {
-  const nav = [
-    {
-      route: "/about",
-      name: "About",
-    },
-    {
-      route: "/services",
-      name: "Services",
-    },
-    {
-      route: "/tax-calculator",
-      name: "Tax Calculator",
-    },
-    {
-      route: "/contact",
-      name: "Contact",
-    },
-  ];
-
-  const homeLinks = [
-    {
-      route: "/#why-us",
-      name: "Why Us",
-    },
-    {
-      route: "/#services",
-      name: "Our Services",
-    },
-    {
-      route: "/#testimonials",
-      name: "Client Testimonials",
-    },
-    {
-      route: "/#clients",
-      name: "Our Clients",
-    },
-  ];
-
-  const socialMedia = [
-    { link: "#", name: "Facebook", icon: "facebook" },
-    { link: "#", name: "Instagram", icon: "instagram" },
-    { link: "#", name: "Twitter", icon: "twitter" },
-    { link: "#", name: "LinkedIn", icon: "linkedin" },
-  ];
-
   return (
     <FooterContainer>
       <FooterBG />
@@ -89,7 +46,7 @@ const Footer: React.FC = (): JSX.Element => {
       <LinkSection>
         <TertiaryHeading>Navigation</TertiaryHeading>
         <LinkGroup>
-          {nav.map((link) => (
+          {navLinks.map((link) => (
             <Link href={link.route}>
               <Route>{link.name}</Route>
             </Link>

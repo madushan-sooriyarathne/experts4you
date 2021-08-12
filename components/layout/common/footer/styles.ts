@@ -84,10 +84,9 @@ const Route = styled.a`
   color: ${(props) => props.theme.colors.blackMedium};
   outline: none;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out 0.1s;
+  transition: color 0.2s ease-in-out 0.1s;
 
   &:hover {
-    transform: scale(1.02);
     color: ${(props) => props.theme.colors.black};
   }
 `;
@@ -99,10 +98,22 @@ const SocialMediaButton = styled.a`
   column-gap: 1rem;
   text-decoration: none;
   color: ${(props) => props.theme.colors.blackMedium};
+  cursor: pointer;
+
+  &:hover {
+    & > svg {
+      filter: grayscale(90%);
+    }
+
+    & > span {
+      color: ${(props) => props.theme.colors.black};
+    }
+  }
 
   & > svg {
     width: 2.5rem;
     height: 2.5rem;
+    transition: filter 0.2s ease-in-out;
   }
 
   & > span {
@@ -113,6 +124,7 @@ const SocialMediaButton = styled.a`
     text-decoration: none;
     color: ${(props) => props.theme.colors.blackMedium};
     outline: none;
+    transition: color 0.2s ease-in-out;
   }
 `;
 
