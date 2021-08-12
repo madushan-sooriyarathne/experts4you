@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Head from "next/head";
 
 import Footer from "@components/layout/common/footer";
-
+import NavBar from "@components/layout/common/navbar";
 import { Content, Container } from "./styles";
 
 interface Props {
@@ -24,7 +24,7 @@ const Page: React.FC<Props> = ({
       <Head>
         <title>{`${title} | madushan.dev`}</title>
       </Head>
-      {/* <NavBar /> */}
+      <NavBar />
       <Content>{children}</Content>
       <Footer />
     </Container>
