@@ -5,7 +5,7 @@ interface HeadingProps {
   light: boolean;
 }
 
-const Heading = styled.h1<HeadingProps>`
+const Heading = styled.h3<HeadingProps>`
   font-size: 1.8rem;
   font-weight: 700;
   font-family: ${(props) => props.theme.fonts.primary};
