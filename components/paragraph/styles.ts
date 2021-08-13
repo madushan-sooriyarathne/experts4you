@@ -7,7 +7,7 @@ interface ParaProps {
 }
 
 const Para = styled.p<ParaProps>`
-  font-size: ${(props) => (props.small ? "1.3rem" : "1.6rem")};
+  font-size: ${(props) => (props.small ? "1.3rem" : "1.5rem")};
   font-family: ${(props) => props.theme.fonts.primary};
   font-weight: 400;
   letter-spacing: 0.1px;
