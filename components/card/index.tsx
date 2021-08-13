@@ -1,4 +1,5 @@
 import PrimaryButton from "@components/buttons/primary-button";
+import SecondaryButton from "@components/buttons/secondary-button";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import Paragraph from "@components/paragraph";
 import Link from "next/link";
@@ -24,9 +25,9 @@ const Card: React.FC<Props> = ({
       <Icon src={icon} alt={title} />
       <SecondaryHeading alignment="left">{title}</SecondaryHeading>
       <Paragraph alignment="left">{description}</Paragraph>
-      <PrimaryButton route={route} type="route">
+      <SecondaryButton route={route} type="route">
         Learn More
-      </PrimaryButton>
+      </SecondaryButton>
     </CardContainer>
   ) : (
     <Link href={route}>
