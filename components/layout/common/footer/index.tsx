@@ -37,7 +37,7 @@ const Footer: React.FC = (): JSX.Element => {
         <TertiaryHeading>Home</TertiaryHeading>
         <LinkGroup>
           {homeLinks.map((link) => (
-            <Link href={link.route}>
+            <Link href={link.route} key={`footer-home-${link.name}`}>
               <Route>{link.name}</Route>
             </Link>
           ))}
@@ -47,7 +47,7 @@ const Footer: React.FC = (): JSX.Element => {
         <TertiaryHeading>Navigation</TertiaryHeading>
         <LinkGroup>
           {navLinks.map((link) => (
-            <Link href={link.route}>
+            <Link href={link.route} key={`footer-nav-${link.name}`}>
               <Route>{link.name}</Route>
             </Link>
           ))}
@@ -57,7 +57,10 @@ const Footer: React.FC = (): JSX.Element => {
         <TertiaryHeading>Follow us on</TertiaryHeading>
         <LinkGroup>
           {socialMedia.map((media) => (
-            <SocialMediaButton href={media.link}>
+            <SocialMediaButton
+              href={media.link}
+              key={`footer-social-${media.name}`}
+            >
               <svg>
                 <use xlinkHref={`/assets/svg/sprites.svg#${media.icon}`} />
               </svg>
