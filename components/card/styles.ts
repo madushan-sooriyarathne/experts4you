@@ -1,14 +1,21 @@
 import styled from "styled-components";
 
-const CardContainer = styled.div`
+interface CardContainerProps {
+  withButton: boolean;
+}
+
+const CardContainer = styled.div<CardContainerProps>`
   width: 100%;
   height: 100%;
-  padding: 3rem 3rem 8rem 3rem;
+  padding: ${(props) => (props.withButton ? "3rem" : "3rem 3rem 8rem 3rem")};
   position: relative;
 
   display: grid;
   grid-template-columns: minmax(min-content, 1fr);
-  grid-template-rows: repeat(2, min-content) 1fr;
+  grid-template-rows: ${(props) =>
+    props.withButton
+      ? "repeat(2, min-content) 1fr min-content"
+      : "repeat(2, min-content) 1fr"};
   row-gap: 3rem;
   align-items: start;
   justify-items: start;
@@ -26,7 +33,10 @@ const CardContainer = styled.div`
     box-shadow: ${(props) => props.theme.shadows.spread};
 
     &::after {
-      background-color: ${(props) => props.theme.colors.secondary};
+      background-color: ${(props) =>
+        props.withButton
+          ? props.theme.colors.secondaryLight
+          : props.theme.colors.secondary};
     }
   }
 

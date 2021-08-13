@@ -1,3 +1,4 @@
+import PrimaryButton from "@components/buttons/primary-button";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import Paragraph from "@components/paragraph";
 import Link from "next/link";
@@ -8,6 +9,7 @@ interface Props {
   description: string;
   route: string;
   icon: string;
+  withButton?: boolean;
 }
 
 const Card: React.FC<Props> = ({
@@ -15,10 +17,20 @@ const Card: React.FC<Props> = ({
   description,
   route,
   icon,
+  withButton = false,
 }: Props): JSX.Element => {
-  return (
+  return withButton ? (
+    <CardContainer withButton={withButton}>
+      <Icon src={icon} alt={title} />
+      <SecondaryHeading alignment="left">{title}</SecondaryHeading>
+      <Paragraph alignment="left">{description}</Paragraph>
+      <PrimaryButton route={route} type="route">
+        Learn More
+      </PrimaryButton>
+    </CardContainer>
+  ) : (
     <Link href={route}>
-      <CardContainer>
+      <CardContainer withButton={withButton}>
         <Icon src={icon} alt={title} />
         <SecondaryHeading alignment="left">{title}</SecondaryHeading>
         <Paragraph alignment="left">{description}</Paragraph>
