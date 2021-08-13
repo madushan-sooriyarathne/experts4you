@@ -5,7 +5,7 @@ const FooterContainer = styled.footer`
   height: auto;
   position: relative;
 
-  padding: 10rem 40rem 3rem 40rem;
+  padding: 10rem 30rem 3rem 30rem;
   display: grid;
   grid-template-columns: 2fr repeat(3, minmax(min-content, 1fr));
   grid-template-rows: repeat(2, min-content);
