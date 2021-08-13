@@ -5,8 +5,8 @@ const Container = styled.div`
 
   width: 100%;
   height: 100vh;
-  padding: 15rem 10rem 0 10rem;
-  margin-top: -15rem;
+  padding: 10rem 10rem 0 10rem;
+
   margin-bottom: -20rem;
 
   position: relative;
