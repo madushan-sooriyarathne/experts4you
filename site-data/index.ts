@@ -97,4 +97,18 @@ const socialMedia: SocialLinks[] = [
   { link: "#", name: "LinkedIn", icon: "linkedin" },
 ];
 
-export { services, heroData, navLinks, homeLinks, socialMedia };
+const testimonials: Testimonial[] = [
+  {
+    image: {
+      src: "/assets/img/client.jpeg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    },
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Jane Doe",
+    company: "Advertaro",
+    designation: "CTO",
+  },
+];
+
+export { services, heroData, navLinks, homeLinks, socialMedia, testimonials };
