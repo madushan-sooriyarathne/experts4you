@@ -1,5 +1,6 @@
 import PrimaryButton from "@components/buttons/primary-button";
 import PrimaryHeading from "@components/headings/primary-heading";
+import SubHeading from "@components/headings/sub-heading";
 import TertiaryHeading from "@components/headings/tertiary-heading";
 import { ReactNodeArray } from "react";
 import GridLayout from "../grid-layout";
@@ -22,7 +23,7 @@ const TitledGrid: React.FC<Props> = ({
     <GridContainer>
       <TitleWrapper>
         <PrimaryHeading>{heading}</PrimaryHeading>
-        {subHeading && <TertiaryHeading>{subHeading}</TertiaryHeading>}
+        {subHeading && <SubHeading>{subHeading}</SubHeading>}
       </TitleWrapper>
       <GridLayout>{children}</GridLayout>
       {route && (
