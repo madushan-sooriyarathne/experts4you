@@ -48,8 +48,9 @@ const NavBarContainer = styled.nav<NavBarContainerProps>`
 
 const Logo = styled(motion.img)`
   grid-area: lo;
-  height: 4rem;
+  height: 3.5rem;
   object-fit: contain;
+  cursor: pointer;
 `;
 
 const NavLinkWrapper = styled.div`
@@ -69,7 +70,7 @@ const NavLinkGroup = styled.div`
 `;
 
 const NavLink = styled.a`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;

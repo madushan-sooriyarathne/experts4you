@@ -31,30 +31,31 @@ const NavBar: React.FC = (): JSX.Element => {
 
   return (
     <NavBarContainer scrolled={scrolled}>
-      <AnimatePresence>
-        {scrolled ? (
-          <Logo
-            src="/assets/logo/logo-small.svg"
-            alt="Experts 4 You"
-            key="logo-regular"
-            variants={logoMotionVariants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-          />
-        ) : (
-          <Logo
-            src="/assets/logo/logo.svg"
-            alt="Experts 4 You"
-            key="logo-small"
-            variants={logoMotionVariants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-          />
-        )}
-      </AnimatePresence>
-
+      <Link href="/">
+        <AnimatePresence>
+          {scrolled ? (
+            <Logo
+              src="/assets/logo/logo-small.svg"
+              alt="Experts 4 You"
+              key="logo-regular"
+              variants={logoMotionVariants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+            />
+          ) : (
+            <Logo
+              src="/assets/logo/logo.svg"
+              alt="Experts 4 You"
+              key="logo-small"
+              variants={logoMotionVariants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+            />
+          )}
+        </AnimatePresence>
+      </Link>
       <NavLinkWrapper>
         <NavLinkGroup>
           {navLinks.map((link) => (
