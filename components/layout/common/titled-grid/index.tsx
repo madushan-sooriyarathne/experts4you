@@ -1,7 +1,6 @@
 import PrimaryButton from "@components/buttons/primary-button";
 import PrimaryHeading from "@components/headings/primary-heading";
 import SubHeading from "@components/headings/sub-heading";
-import TertiaryHeading from "@components/headings/tertiary-heading";
 import { ReactNodeArray } from "react";
 import GridLayout from "../grid-layout";
 import { GridContainer, TitleWrapper } from "./styles";
