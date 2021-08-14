@@ -11,6 +11,7 @@ import {
   LinkGroup,
   Route,
   SocialMediaButton,
+  CompanyDetailsGroup,
 } from "./styles";
 
 import { homeLinks, navLinks, socialMedia } from "@site-data";
@@ -25,8 +26,13 @@ const Footer: React.FC = (): JSX.Element => {
           src="/assets/logo/logo.svg"
           alt="Experts 4 You | Business consultants in Sri Lanka"
         ></Logo>
-        <TertiaryHeading>Experts 4 You Private Limited.</TertiaryHeading>
-        <Paragraph>No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka</Paragraph>
+        <CompanyDetailsGroup>
+          <TertiaryHeading>Experts 4 You Private Limited.</TertiaryHeading>
+          <Paragraph>
+            No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka
+          </Paragraph>
+        </CompanyDetailsGroup>
+
         <Paragraph>
           Phone: 077 734 2212
           <br />

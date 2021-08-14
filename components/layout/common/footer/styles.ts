@@ -59,12 +59,20 @@ const Logo = styled.img`
   margin-bottom: 2rem;
 `;
 
+const CompanyDetailsGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 1rem;
+`;
+
 const LinkSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  row-gap: 2rem;
+  row-gap: 3rem;
 `;
 
 const LinkGroup = styled.div`
@@ -72,7 +80,7 @@ const LinkGroup = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  row-gap: 1rem;
+  row-gap: 2rem;
 `;
 
 const Route = styled.a`
@@ -145,6 +153,7 @@ export {
   FooterBG,
   FooterOverlay,
   Logo,
+  CompanyDetailsGroup,
   CopyrightNote,
   LinkSection,
   LinkGroup,
