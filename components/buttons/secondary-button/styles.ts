@@ -29,7 +29,7 @@ const Button = styled.a<ButtonProps>`
     text-decoration: none;
     text-align: center;
     color: ${(props) =>
-      props.light ? props.theme.colors.secondary : props.theme.colors.black};
+      props.light ? props.theme.colors.primary : props.theme.colors.black};
     transition: color 0.3s ease-in-out 0.2s;
   }
 

@@ -35,8 +35,8 @@ const CardContainer = styled.div<CardContainerProps>`
     &::after {
       background-color: ${(props) =>
         props.withButton
-          ? props.theme.colors.secondaryLight
-          : props.theme.colors.secondary};
+          ? props.theme.colors.primaryLight
+          : props.theme.colors.primary};
     }
   }
 
@@ -48,7 +48,7 @@ const CardContainer = styled.div<CardContainerProps>`
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: ${(props) => props.theme.colors.secondaryLight};
+    background-color: ${(props) => props.theme.colors.primaryLight};
     transition: background-color 0.2s ease-in-out;
   }
 `;

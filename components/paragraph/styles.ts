@@ -26,7 +26,7 @@ const Para = styled.p<ParaProps>`
     color: ${(props) => props.theme.colors.black};
     transition: color 0.2s ease-in-out;
     &:hover {
-      color: ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 `;

@@ -8,7 +8,7 @@ interface HeadingProps {
 const Heading = styled.h1<HeadingProps>`
   font-size: 5rem;
   font-weight: 900;
-  font-family: ${(props) => props.theme.fonts.secondary};
+  font-family: ${(props) => props.theme.fonts.primary};
   letter-spacing: 1px;
   text-align: ${(props) => props.alignment};
   color: ${(props) =>

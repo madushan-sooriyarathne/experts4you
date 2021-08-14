@@ -38,6 +38,14 @@ declare global {
     link: string;
     icon: string;
   }
+
+  interface Testimonial {
+    image: Image;
+    description: string;
+    name: string;
+    company?: string;
+    designation?: string;
+  }
 }
 
 export {};

@@ -42,14 +42,14 @@ declare module "styled-components" {
 
 const theme: DefaultTheme = {
   colors: {
-    primary: "#09b9f4",
-    primaryMedium: "#53cef7",
-    primaryLight: "#e6f8fe",
-    primaryDark: "#055d7a",
-    secondary: "#e05b14",
-    secondaryMedium: "#e98c5b",
-    secondaryLight: "#fcefe8",
-    secondaryDark: "#86370c",
+    secondary: "#09b9f4",
+    secondaryMedium: "#53cef7",
+    secondaryLight: "#e6f8fe",
+    secondaryDark: "#055d7a",
+    primary: "#e05b14",
+    primaryMedium: "#e98c5b",
+    primaryLight: "#fcefe8",
+    primaryDark: "#86370c",
     white: "#ffffff",
     black: "#32373E",
     blackMedium: "#474b51",

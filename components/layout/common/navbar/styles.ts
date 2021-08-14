@@ -81,7 +81,7 @@ const NavLink = styled.a`
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: ${(props) => props.theme.colors.secondaryMedium};
+    color: ${(props) => props.theme.colors.primaryMedium};
   }
 `;
 

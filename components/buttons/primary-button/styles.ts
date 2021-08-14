@@ -14,14 +14,10 @@ const Button = styled.a<ButtonProps>`
   text-decoration: none;
   text-align: center;
   color: ${(props) =>
-    props.light
-      ? props.theme.colors.secondaryLight
-      : props.theme.colors.secondary};
+    props.light ? props.theme.colors.primaryLight : props.theme.colors.primary};
   border: ${(props) =>
     `1px solid ${
-      props.light
-        ? props.theme.colors.secondaryLight
-        : props.theme.colors.secondary
+      props.light ? props.theme.colors.primaryLight : props.theme.colors.primary
     }`};
 
   background-color: transparent;
@@ -34,8 +30,8 @@ const Button = styled.a<ButtonProps>`
   &:hover {
     color: ${(props) =>
       props.light
-        ? props.theme.colors.secondary
-        : props.theme.colors.secondaryLight};
+        ? props.theme.colors.primary
+        : props.theme.colors.primaryLight};
 
     &::before {
       transform: scaleY(1);
@@ -57,8 +53,8 @@ const Button = styled.a<ButtonProps>`
     z-index: -1;
     background-color: ${(props) =>
       props.light
-        ? props.theme.colors.secondaryLight
-        : props.theme.colors.secondary};
+        ? props.theme.colors.primaryLight
+        : props.theme.colors.primary};
     transition: transform 0.3s ease-in-out 0.2s;
   }
 `;

@@ -12,7 +12,7 @@ const Heading = styled.h2<HeadingProps>`
   letter-spacing: 0.5px;
   text-align: ${(props) => props.alignment};
   color: ${(props) =>
-    props.light ? props.theme.colors.white : props.theme.colors.secondary};
+    props.light ? props.theme.colors.white : props.theme.colors.primary};
 
   background: ${(props) =>
     props.light
