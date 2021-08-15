@@ -46,6 +46,12 @@ declare global {
     company?: string;
     designation?: string;
   }
+
+  interface ErrorType {
+    heading: string;
+    message: string;
+    errorCode: number;
+  }
 }
 
 export {};
