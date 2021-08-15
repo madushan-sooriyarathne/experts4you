@@ -111,4 +111,30 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export { services, heroData, navLinks, homeLinks, socialMedia, testimonials };
+const errors: ErrorType[] = [
+  {
+    errorCode: 500,
+    heading: "Shoot! We got some unexpected error",
+    message: "Don't worry! You can safely go the home page",
+  },
+  {
+    errorCode: 404,
+    heading: "Sorry! We cannot find the page your are looking for",
+    message: "Don't worry! You can safely go the home page",
+  },
+  {
+    errorCode: 503,
+    heading: "Sorry! We encountered an error while processing your request",
+    message: "Don't worry! You can safely go the home page",
+  },
+];
+
+export {
+  services,
+  heroData,
+  navLinks,
+  homeLinks,
+  socialMedia,
+  testimonials,
+  errors,
+};
