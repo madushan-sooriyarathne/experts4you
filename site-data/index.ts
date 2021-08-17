@@ -122,6 +122,45 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const ourValues: CardContentType[] = [
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    heading: "We’re Innovators",
+    iconId: "innovators",
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    heading: "We’re Entrepreneurial",
+    iconId: "entrepreneurial",
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    heading: "A 360 Partnership",
+    iconId: "360-partnership",
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    heading: "We’re Innovators",
+    iconId: "innovators",
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    heading: "We’re Entrepreneurial",
+    iconId: "entrepreneurial",
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    heading: "A 360 Partnership",
+    iconId: "360-partnership",
+  },
+];
+
 const errors: ErrorType[] = [
   {
     errorCode: 500,
@@ -147,5 +186,6 @@ export {
   homeLinks,
   socialMedia,
   testimonials,
+  ourValues,
   errors,
 };
