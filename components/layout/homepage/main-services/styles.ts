@@ -8,6 +8,33 @@ const ServicesContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-template-rows: 1fr;
+
+  & > *:nth-child(1) {
+    background-image: linear-gradient(
+      0deg,
+      rgba(252, 239, 232, 1) 0%,
+      rgba(252, 239, 232, 0.8) 50%,
+      rgba(252, 239, 232, 0.5) 100%
+    );
+  }
+
+  & > *:nth-child(2) {
+    background-image: linear-gradient(
+      0deg,
+      rgba(236, 250, 255, 1) 0%,
+      rgba(236, 250, 255, 0.8) 50%,
+      rgba(245, 252, 255, 0.5) 100%
+    );
+  }
+
+  & > *:nth-child(3) {
+    background-image: linear-gradient(
+      0deg,
+      rgba(252, 239, 232, 1) 0%,
+      rgba(252, 239, 232, 0.8) 50%,
+      rgba(252, 239, 232, 0.5) 100%
+    );
+  }
 `;
 
 const ServicesSection = styled.div`
@@ -20,12 +47,6 @@ const ServicesSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(0, 0, 0, 1) 100%
-  );
 
   & > *:not(:last-child) {
     margin-bottom: 3rem;

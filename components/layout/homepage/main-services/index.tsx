@@ -22,11 +22,9 @@ const MainServicesSection: React.FC<Props> = ({
           <SectionBackground>
             <ImageComponent image={service.image} />
           </SectionBackground>
-          <PrimaryHeading light>{service.name}</PrimaryHeading>
-          <Paragraph light alignment="center">
-            {service.description}
-          </Paragraph>
-          <PrimaryButton route={`/${service.id}`} type="route" light>
+          <PrimaryHeading>{service.name}</PrimaryHeading>
+          <Paragraph alignment="center">{service.description}</Paragraph>
+          <PrimaryButton route={`/${service.id}`} type="route">
             Learn More
           </PrimaryButton>
         </ServicesSection>
