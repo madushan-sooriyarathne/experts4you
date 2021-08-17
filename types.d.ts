@@ -47,6 +47,12 @@ declare global {
     designation?: string;
   }
 
+  interface Partner {
+    image: Image;
+    id: string;
+    name: string;
+  }
+
   interface ErrorType {
     heading: string;
     message: string;
