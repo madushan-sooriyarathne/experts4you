@@ -12,7 +12,7 @@ interface Props {
 
 const Page: React.FC<Props> = ({
   children,
-  title = "madushan.dev",
+  title = "Experts 4 You",
 }: Props): JSX.Element => {
   return (
     <Container
@@ -22,7 +22,7 @@ const Page: React.FC<Props> = ({
       key={title.replace(" ", "_").toLowerCase()}
     >
       <Head>
-        <title>{`${title} | madushan.dev`}</title>
+        <title>{`${title} | Experts 4 You`}</title>
       </Head>
       <NavBar />
       <Content>{children}</Content>
