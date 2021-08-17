@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   padding: 10rem 10rem 0 10rem;
+  z-index: 1;
 
   margin-bottom: -20rem;
 
