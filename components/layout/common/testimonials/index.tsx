@@ -73,12 +73,7 @@ const TestimonialsSection: React.FC<Props> = ({
             </TestimonialSlide>
           </AnimatePresence>
         </TestimonialSliderWrapper>
-        <svg
-          onClick={() => {
-            paginate(1);
-            console.log(this);
-          }}
-        >
+        <svg onClick={() => paginate(1)}>
           <use xlinkHref="/assets/svg/sprites.svg#arrow-right-slide" />
         </svg>
       </TestimonialSliderFrame>
