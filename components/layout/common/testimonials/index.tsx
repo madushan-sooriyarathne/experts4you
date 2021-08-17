@@ -28,7 +28,9 @@ const TestimonialsSection: React.FC<Props> = ({
   const [[curPage, direction], setData] = useState<[number, number]>([0, 1]);
 
   const paginate = (dir: number) => {
-    setData([curPage + dir, dir]);
+    Promise.resolve().then(() => {
+      setData([curPage + dir, dir]);
+    });
   };
 
   const curSlide: number = clamp(curPage, 0, testimonials.length);
@@ -53,7 +55,7 @@ const TestimonialsSection: React.FC<Props> = ({
               custom={direction}
               key={curSlide}
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
+                x: { type: "spring", stiffness: 400, damping: 30 },
               }}
             >
               <ImageComponent image={testimonials[curSlide].image} />
@@ -71,7 +73,12 @@ const TestimonialsSection: React.FC<Props> = ({
             </TestimonialSlide>
           </AnimatePresence>
         </TestimonialSliderWrapper>
-        <svg onClick={() => paginate(1)}>
+        <svg
+          onClick={() => {
+            paginate(1);
+            console.log(this);
+          }}
+        >
           <use xlinkHref="/assets/svg/sprites.svg#arrow-right-slide" />
         </svg>
       </TestimonialSliderFrame>

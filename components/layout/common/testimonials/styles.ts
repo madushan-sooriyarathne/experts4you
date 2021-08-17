@@ -45,7 +45,8 @@ const TestimonialSliderFrame = styled.div`
 
 const TestimonialSliderWrapper = styled.div`
   width: 100%;
-  height: 60rem;
+  min-height: 40rem;
+  height: auto;
 
   overflow: hidden;
   position: relative;
