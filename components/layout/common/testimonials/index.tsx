@@ -4,12 +4,17 @@ import SubHeading from "@components/headings/sub-heading";
 import TertiaryHeading from "@components/headings/tertiary-heading";
 import ImageComponent from "@components/image-component";
 import Paragraph from "@components/paragraph";
+import { clamp } from "@utils";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import {
   MetadataGroup,
   TestimonialContainer,
   TestimonialDetails,
   TestimonialSlide,
   TestimonialSliderFrame,
+  TestimonialSliderVariants,
+  TestimonialSliderWrapper,
   TitleGroup,
 } from "./styles";
 
@@ -20,6 +25,14 @@ interface Props {
 const TestimonialsSection: React.FC<Props> = ({
   testimonials,
 }: Props): JSX.Element => {
+  const [[curPage, direction], setData] = useState<[number, number]>([0, 1]);
+
+  const paginate = (dir: number) => {
+    setData([curPage + dir, dir]);
+  };
+
+  const curSlide: number = clamp(curPage, 0, testimonials.length);
+
   return (
     <TestimonialContainer>
       <TitleGroup>
@@ -27,22 +40,38 @@ const TestimonialsSection: React.FC<Props> = ({
         <PrimaryHeading>See what's our partners are telling</PrimaryHeading>
       </TitleGroup>
       <TestimonialSliderFrame>
-        <svg>
+        <svg onClick={() => paginate(-1)}>
           <use xlinkHref="/assets/svg/sprites.svg#arrow-left-slide" />
         </svg>
-        <TestimonialSlide>
-          <ImageComponent image={testimonials[0].image} />
-          <TestimonialDetails>
-            <Paragraph>{testimonials[0].description}</Paragraph>
-            <MetadataGroup>
-              <TertiaryHeading>{testimonials[0].name}</TertiaryHeading>
-              {testimonials[0].company && (
-                <Paragraph>{`${testimonials[0].designation}, ${testimonials[0].company}`}</Paragraph>
-              )}
-            </MetadataGroup>
-          </TestimonialDetails>
-        </TestimonialSlide>
-        <svg>
+        <TestimonialSliderWrapper>
+          <AnimatePresence custom={direction} initial={false}>
+            <TestimonialSlide
+              variants={TestimonialSliderVariants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+              custom={direction}
+              key={curSlide}
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+              }}
+            >
+              <ImageComponent image={testimonials[curSlide].image} />
+              <TestimonialDetails>
+                <Paragraph>{testimonials[curSlide].description}</Paragraph>
+                <MetadataGroup>
+                  <TertiaryHeading>
+                    {testimonials[curSlide].name}
+                  </TertiaryHeading>
+                  {testimonials[curSlide].company && (
+                    <Paragraph>{`${testimonials[curSlide].designation}, ${testimonials[0].company}`}</Paragraph>
+                  )}
+                </MetadataGroup>
+              </TestimonialDetails>
+            </TestimonialSlide>
+          </AnimatePresence>
+        </TestimonialSliderWrapper>
+        <svg onClick={() => paginate(1)}>
           <use xlinkHref="/assets/svg/sprites.svg#arrow-right-slide" />
         </svg>
       </TestimonialSliderFrame>

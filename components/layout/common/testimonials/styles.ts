@@ -1,3 +1,4 @@
+import { motion, Variants } from "framer-motion";
 import styled from "styled-components";
 
 const TestimonialContainer = styled.section`
@@ -34,7 +35,7 @@ const TestimonialSliderFrame = styled.div`
     height: 5rem;
     fill: ${(props) => props.theme.colors.primaryMedium};
     transition: fill 0.2s ease-in-out;
-    cursor: crosshair;
+    cursor: pointer;
 
     &:hover {
       fill: ${(props) => props.theme.colors.primary};
@@ -42,9 +43,22 @@ const TestimonialSliderFrame = styled.div`
   }
 `;
 
-const TestimonialSlide = styled.div`
+const TestimonialSliderWrapper = styled.div`
   width: 100%;
-  height: 50rem;
+  height: 60rem;
+
+  overflow: hidden;
+  position: relative;
+`;
+
+const TestimonialSlide = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background-color: ${(props) => props.theme.colors.primaryLight};
 
   display: grid;
@@ -86,11 +100,29 @@ const MetadataGroup = styled.div`
   justify-content: center;
 `;
 
+// motion variants
+const TestimonialSliderVariants: Variants = {
+  initial: (direction: number) => ({
+    x: direction < 0 ? "100%" : "-100%",
+    opacity: 0,
+  }),
+  enter: {
+    x: "0",
+    opacity: 1,
+  },
+  exit: (direction: number) => ({
+    x: direction < 0 ? "-100%" : "100%",
+    opacity: 0,
+  }),
+};
+
 export {
   TestimonialContainer,
   TestimonialSliderFrame,
   TitleGroup,
+  TestimonialSliderWrapper,
   TestimonialSlide,
   TestimonialDetails,
   MetadataGroup,
+  TestimonialSliderVariants,
 };
