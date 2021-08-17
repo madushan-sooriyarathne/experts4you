@@ -73,20 +73,25 @@ const navLinks: SiteLinks[] = [
 
 const homeLinks: SiteLinks[] = [
   {
+    route: "/#who-we-are",
+    name: "Who We Are",
+  },
+  {
+    route: "/#what-we-do",
+    name: "What We Do",
+  },
+  {
     route: "/#why-us",
     name: "Why Us",
   },
-  {
-    route: "/#services",
-    name: "Our Services",
-  },
+
   {
     route: "/#testimonials",
     name: "Client Testimonials",
   },
   {
-    route: "/#clients",
-    name: "Our Clients",
+    route: "/#partners",
+    name: "Our partners",
   },
 ];
 
@@ -179,6 +184,63 @@ const errors: ErrorType[] = [
   },
 ];
 
+const partners: Partner[] = [
+  {
+    name: "Advertaro",
+    image: {
+      src: "/assets/svg/advertaro.svg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      alt: "Advertaro Logo",
+    },
+    id: "advertaro",
+  },
+  {
+    name: "Eleven",
+    image: {
+      src: "/assets/svg/eleven.svg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      alt: "Eleven Logo",
+    },
+    id: "eleven",
+  },
+  {
+    name: "Asian Football",
+    image: {
+      src: "/assets/svg/asian-football.svg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      alt: "Asian Football Logo",
+    },
+    id: "asian-football",
+  },
+  {
+    name: "Product Hunt",
+    image: {
+      src: "/assets/svg/product-hunt.svg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      alt: "Product Hunt Logo",
+    },
+    id: "product-hunt",
+  },
+  {
+    name: "Reddit",
+    image: {
+      src: "/assets/svg/reddit.svg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      alt: "Reddit Logo",
+    },
+    id: "reddit",
+  },
+  {
+    name: "CD Projekt Red",
+    image: {
+      src: "/assets/svg/cd-projekt-red.svg",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      alt: "CD Projekt Red Logo",
+    },
+    id: "cd-projekt-red",
+  },
+];
+
 export {
   services,
   heroData,
@@ -186,6 +248,7 @@ export {
   homeLinks,
   socialMedia,
   testimonials,
+  partners,
   ourValues,
   errors,
 };
