@@ -10,6 +10,7 @@ interface Props {
   subHeading?: string;
   children: ReactNodeArray;
   route?: string;
+  id?: string;
 }
 
 const TitledGrid: React.FC<Props> = ({
@@ -17,9 +18,10 @@ const TitledGrid: React.FC<Props> = ({
   children,
   subHeading,
   route,
+  id = "",
 }: Props): JSX.Element => {
   return (
-    <GridContainer>
+    <GridContainer id={id}>
       <TitleWrapper>
         <PrimaryHeading>{heading}</PrimaryHeading>
         {subHeading && <SubHeading>{subHeading}</SubHeading>}
