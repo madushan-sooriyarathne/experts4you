@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-const HeroContainer = styled.div`
+const ServicesContainer = styled.section`
   grid-column: full-start / full-end;
   width: 100%;
-  height: 100vh;
+  height: auto;
 
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-template-rows: 1fr;
 `;
 
-const HeroSection = styled.div`
+const ServicesSection = styled.div`
   width: 100%;
-  height: 100%;
+  height: calc(100vw / 3);
 
   padding: 5rem;
   position: relative;
@@ -43,4 +43,4 @@ const SectionBackground = styled.div`
   z-index: -1;
 `;
 
-export { HeroContainer, HeroSection, SectionBackground };
+export { ServicesContainer, ServicesSection, SectionBackground };

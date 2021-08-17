@@ -2,17 +2,23 @@ import PrimaryButton from "@components/buttons/primary-button";
 import PrimaryHeading from "@components/headings/primary-heading";
 import ImageComponent from "@components/image-component";
 import Paragraph from "@components/paragraph";
-import { HeroContainer, HeroSection, SectionBackground } from "./styles";
+import {
+  ServicesContainer,
+  ServicesSection,
+  SectionBackground,
+} from "./styles";
 
 interface Props {
   services: Service[];
 }
 
-const Hero: React.FC<Props> = ({ services }: Props): JSX.Element => {
+const MainServicesSection: React.FC<Props> = ({
+  services,
+}: Props): JSX.Element => {
   return (
-    <HeroContainer>
+    <ServicesContainer>
       {services.map((service) => (
-        <HeroSection key={service.id}>
+        <ServicesSection key={service.id}>
           <SectionBackground>
             <ImageComponent image={service.image} />
           </SectionBackground>
@@ -23,10 +29,10 @@ const Hero: React.FC<Props> = ({ services }: Props): JSX.Element => {
           <PrimaryButton route={`/${service.id}`} type="route" light>
             Learn More
           </PrimaryButton>
-        </HeroSection>
+        </ServicesSection>
       ))}
-    </HeroContainer>
+    </ServicesContainer>
   );
 };
 
-export default Hero;
+export default MainServicesSection;
