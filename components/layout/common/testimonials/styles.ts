@@ -101,6 +101,34 @@ const MetadataGroup = styled.div`
   justify-content: center;
 `;
 
+const PartnersContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5rem;
+  margin-top: 3rem;
+`;
+
+const PartnersGroup = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+`;
+
+const PartnerLogo = styled.div`
+  width: 30rem;
+  height: 20rem;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-in;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+`;
+
 // motion variants
 const TestimonialSliderVariants: Variants = {
   initial: (direction: number) => ({
@@ -125,5 +153,8 @@ export {
   TestimonialSlide,
   TestimonialDetails,
   MetadataGroup,
+  PartnersContainer,
+  PartnersGroup,
+  PartnerLogo,
   TestimonialSliderVariants,
 };

@@ -9,6 +9,9 @@ import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import {
   MetadataGroup,
+  PartnersContainer,
+  PartnersGroup,
+  PartnerLogo,
   TestimonialContainer,
   TestimonialDetails,
   TestimonialSlide,
@@ -20,10 +23,12 @@ import {
 
 interface Props {
   testimonials: Testimonial[];
+  partners: Partner[];
 }
 
 const TestimonialsSection: React.FC<Props> = ({
   testimonials,
+  partners,
 }: Props): JSX.Element => {
   const [[curPage, direction], setData] = useState<[number, number]>([0, 1]);
 
@@ -36,7 +41,7 @@ const TestimonialsSection: React.FC<Props> = ({
   const curSlide: number = clamp(curPage, 0, testimonials.length);
 
   return (
-    <TestimonialContainer>
+    <TestimonialContainer id="testimonials">
       <TitleGroup>
         <SecondaryHeading>Don't take our word for it</SecondaryHeading>
         <PrimaryHeading>See what's our partners are telling</PrimaryHeading>
@@ -77,6 +82,16 @@ const TestimonialsSection: React.FC<Props> = ({
           <use xlinkHref="/assets/svg/sprites.svg#arrow-right-slide" />
         </svg>
       </TestimonialSliderFrame>
+      <PartnersContainer id="partners">
+        <SecondaryHeading>We are trusted by</SecondaryHeading>
+        <PartnersGroup>
+          {partners.map((partner) => (
+            <PartnerLogo key={partner.id}>
+              <ImageComponent image={partner.image} objectFit="contain" />
+            </PartnerLogo>
+          ))}
+        </PartnersGroup>
+      </PartnersContainer>
     </TestimonialContainer>
   );
 };
