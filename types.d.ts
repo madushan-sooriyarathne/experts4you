@@ -52,6 +52,12 @@ declare global {
     message: string;
     errorCode: number;
   }
+
+  interface CardContentType {
+    iconId: string;
+    heading: string;
+    description: string;
+  }
 }
 
 export {};
