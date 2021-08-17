@@ -8,7 +8,7 @@ import { BoxItem, Description, WhoWeAreContainer } from "./styles";
 
 const WhoWeAre: React.FC = (): JSX.Element => {
   return (
-    <WhoWeAreContainer>
+    <WhoWeAreContainer id="who-we-are">
       <PrimaryHeading>Who We Are</PrimaryHeading>
       <Description>
         <SubHeading>
