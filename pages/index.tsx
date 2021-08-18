@@ -21,6 +21,7 @@ import {
 } from "@site-data";
 import React from "react";
 import StaticCard from "@components/static-card";
+import CallRequest from "@components/layout/common/call-requst";
 
 interface Props {
   services: Service[];
@@ -70,6 +71,7 @@ const HomePage: React.FC<Props> = ({
         ))}
       </TitledGrid>
       <TestimonialsSection testimonials={testimonials} partners={partners} />
+      <CallRequest />
     </Page>
   );
 };
