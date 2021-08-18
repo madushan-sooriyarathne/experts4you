@@ -1,3 +1,5 @@
+import { FormEvent } from "react";
+
 declare global {
   type AlignmentType = "center" | "left" | "right" | "justify";
 
@@ -64,6 +66,10 @@ declare global {
     heading: string;
     description: string;
   }
+
+  type InputEventType =
+    | FormEvent<HTMLInputElement>
+    | FormEvent<HTMLTextAreaElement>;
 }
 
 export {};
