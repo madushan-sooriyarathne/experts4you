@@ -54,9 +54,9 @@ const theme: DefaultTheme = {
     black: "#32373E",
     blackMedium: "#474b51",
     blackLight: "#adafb2",
-    danger: "##de4435",
-    warning: "##e8bc0d",
-    success: "##29c46a",
+    danger: "#de4435",
+    warning: "#e8bc0d",
+    success: "#29c46a",
   },
   fonts: {
     primary: "'Inter', Tahoma, Geneva, Verdana, sans-serif",
