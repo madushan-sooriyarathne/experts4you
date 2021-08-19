@@ -34,16 +34,17 @@ const InputFieldStyles = css`
   &::placeholder {
     font-size: 1.5rem;
     font-weight: 500;
+    font-family: ${(props) => props.theme.fonts.primary};
     letter-spacing: 0.5px;
     color: ${(props) => props.theme.colors.blackLight};
   }
 
-  &:invalid {
+  &:not(:placeholder-shown):invalid {
     border: ${(props) => `1px solid ${props.theme.colors.danger}`};
     border-top: none;
   }
 
-  &:valid {
+  &:not(:placeholder-shown):valid {
     border: ${(props) => `1px solid ${props.theme.colors.success}`};
     border-top: none;
   }
@@ -55,6 +56,8 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   ${InputFieldStyles}
+  min-height: 15rem;
+  resize: none;
 `;
 
 export { InputGroup, Label, Input, TextArea };
