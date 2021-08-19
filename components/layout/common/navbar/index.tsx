@@ -11,8 +11,11 @@ import {
   NavLinkGroup,
 } from "./styles";
 import Link from "next/link";
+import { useRouter } from "next/dist/client/router";
 
 const NavBar: React.FC = (): JSX.Element => {
+  const router = useRouter();
+
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
@@ -29,33 +32,38 @@ const NavBar: React.FC = (): JSX.Element => {
     return () => window.removeEventListener("scroll", scrollHandler);
   });
 
+  const handleLogoClick = () => {
+    router.push("/");
+  };
+
   return (
     <NavBarContainer scrolled={scrolled}>
-      <Link href="/">
-        <AnimatePresence>
-          {scrolled ? (
-            <Logo
-              src="/assets/logo/logo-small.svg"
-              alt="Experts 4 You"
-              key="logo-regular"
-              variants={logoMotionVariants}
-              initial="initial"
-              animate="enter"
-              exit="exit"
-            />
-          ) : (
-            <Logo
-              src="/assets/logo/logo.svg"
-              alt="Experts 4 You"
-              key="logo-small"
-              variants={logoMotionVariants}
-              initial="initial"
-              animate="enter"
-              exit="exit"
-            />
-          )}
-        </AnimatePresence>
-      </Link>
+      <AnimatePresence>
+        {scrolled ? (
+          <Logo
+            src="/assets/logo/logo-small.svg"
+            alt="Experts 4 You"
+            key="logo-regular"
+            variants={logoMotionVariants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            onClick={handleLogoClick}
+          />
+        ) : (
+          <Logo
+            src="/assets/logo/logo.svg"
+            alt="Experts 4 You"
+            key="logo-small"
+            variants={logoMotionVariants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            onClick={handleLogoClick}
+          />
+        )}
+      </AnimatePresence>
+
       <NavLinkWrapper>
         <NavLinkGroup>
           {navLinks.map((link) => (
