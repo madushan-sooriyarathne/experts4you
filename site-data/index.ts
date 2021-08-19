@@ -1,19 +1,8 @@
 const services: Service[] = [
   {
-    name: "Bookkeeping",
-    id: "bookkeeping",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
-    image: {
-      src: "/assets/img/bookkeeping-bg.jpg",
-      alt: "Tax",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
-    },
-    icon: "/assets/svg/bookkeeping.svg",
-  },
-  {
     name: "Company Incorporation",
     id: "company-incorporation",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    description: `Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us. `,
     image: {
       src: "/assets/img/business-bg.jpg",
       alt: "Tax",
@@ -22,9 +11,21 @@ const services: Service[] = [
     icon: "/assets/svg/incorporation.svg",
   },
   {
+    name: "Bookkeeping",
+    id: "bookkeeping",
+    description: `Sophisticated Solutions for financial recoding process where Traditional and Modern implications merged to offer the foremost, Explore to click and get on board in no time by registering online with us.`,
+    image: {
+      src: "/assets/img/bookkeeping-bg.jpg",
+      alt: "Tax",
+      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    },
+    icon: "/assets/svg/bookkeeping.svg",
+  },
+
+  {
     name: "Tax Advisory",
     id: "tax-advisory",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
     image: {
       src: "/assets/img/tax-bg.jpg",
       alt: "Tax",
@@ -44,12 +45,12 @@ const heroData: HeroData = {
   route: "/contact",
   stats: [
     { number: "4+", label: "Years of Excellence" },
-    { number: "450+", label: "Happy Clients" },
+    { number: "450+", label: "Faultless Projects" },
 
     { number: "100%", label: "Client Satisfaction" },
   ],
   subText:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Explore the facilities we cater related to Financial and Secretarial Services for any corporation in operation.   ",
 };
 
 const navLinks: SiteLinks[] = [
