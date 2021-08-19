@@ -41,19 +41,17 @@ const CallRequest: React.FC = (): JSX.Element => {
             type="text"
           />
           <InputField
-            value={email}
-            onChange={updateEmail}
+            value={phone}
+            onChange={updatePhone}
             name="Phone"
             placeholder="(+94) 77 123 4567"
-            pattern="^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
             type="tel"
           />
           <InputField
-            value={phone}
-            onChange={updatePhone}
+            value={email}
+            onChange={updateEmail}
             name="Email"
             placeholder="example@example.com"
-            pattern={`/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/`}
             type="email"
           />
           <SubmitButton loading={loading} light>
