@@ -57,8 +57,8 @@ const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
         width: 3rem;
         height: 3rem;
         border-radius: 100%;
-        background-color: ${(props) => props.theme.colors.blackLight};
-        border: ${(props) => `3px solid ${props.theme.colors.primaryLight}`};
+        background-color: ${(props) => props.theme.colors.blackMedium};
+        border: ${(props) => `3px solid ${props.theme.colors.blackLight}`};
         animation: ${pulse} 1s ease-in-out infinite alternate;
        
     }
