@@ -36,7 +36,7 @@ const services: Service[] = [
 ];
 
 const heroData: HeroData = {
-  title: "Let's follow your dream, Together.",
+  title: "Perfection in Services to be offered at your requirements. ",
   image: {
     src: "/assets/img/fg-img.png",
     alt: "Experts 4 You",
@@ -50,7 +50,7 @@ const heroData: HeroData = {
     { number: "100%", label: "Client Satisfaction" },
   ],
   subText:
-    "Explore the facilities we cater related to Financial and Secretarial Services for any corporation in operation.   ",
+    "Explore the facilities we cater related to Financial and Secretarial Services for any corporation in operation.",
 };
 
 const navLinks: SiteLinks[] = [
@@ -65,6 +65,10 @@ const navLinks: SiteLinks[] = [
   {
     route: "/tax-calculator",
     name: "Tax Calculator",
+  },
+  {
+    route: "/knowledge",
+    name: "Knowledge",
   },
   {
     route: "/contact",
