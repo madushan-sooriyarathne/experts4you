@@ -67,6 +67,13 @@ declare global {
     description: string;
   }
 
+  interface Cover {
+    id: string;
+    heading: string;
+    description: string;
+    image: Image;
+  }
+
   type InputEventType =
     | FormEvent<HTMLInputElement>
     | FormEvent<HTMLTextAreaElement>;
