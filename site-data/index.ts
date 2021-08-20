@@ -246,6 +246,18 @@ const partners: Partner[] = [
   },
 ];
 
+const servicesCover: Cover = {
+  id: "services",
+  heading: "Services that lead the way to better business",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  image: {
+    src: "/assets/img/cover-services.jpg",
+    blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    alt: "Services that lead the way to better business - cover",
+  },
+};
+
 export {
   services,
   heroData,
@@ -256,4 +268,5 @@ export {
   partners,
   ourValues,
   errors,
+  servicesCover,
 };
