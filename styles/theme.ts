@@ -71,7 +71,7 @@ const theme: DefaultTheme = {
     mainBg: "linear-gradient(135deg, #fffeff 10%, #d7fffe 100%)",
     blurBg:
       "linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.8) 100%)",
-    coverBg: "linear-gradient(135deg, #FCCF31 10%, #F55555 100%);",
+    coverBg: "linear-gradient(135deg, #ffecd2 10%, #fcb69f 100%);",
   },
   shadows: {
     close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
