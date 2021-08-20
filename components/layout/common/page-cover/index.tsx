@@ -7,6 +7,7 @@ import {
   CoverBg,
   CoverBgOverlay,
   SubHeadingBox,
+  HeadingWrapper,
 } from "./styles";
 
 interface Props {
@@ -19,7 +20,9 @@ const PageCover: React.FC<Props> = ({ cover }: Props): JSX.Element => {
       <Cover>
         <CoverBg />
         <CoverBgOverlay />
-        <PrimaryHeading alignment="left">{cover.heading}</PrimaryHeading>
+        <HeadingWrapper>
+          <PrimaryHeading alignment="left">{cover.heading}</PrimaryHeading>
+        </HeadingWrapper>
         <ImageComponent image={cover.image} />
         <SubHeadingBox>
           <SubHeading light>{cover.description}</SubHeading>

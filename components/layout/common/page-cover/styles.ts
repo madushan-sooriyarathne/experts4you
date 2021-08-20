@@ -11,7 +11,6 @@ const CoverContainer = styled.header`
 const Cover = styled.div`
   width: 100%;
   height: 100%;
-  padding: 5rem 10rem;
   background-color: transparent;
   position: relative;
 
@@ -20,6 +19,10 @@ const Cover = styled.div`
   gap: 10rem;
   align-items: center;
   justify-content: start;
+`;
+
+const HeadingWrapper = styled.div`
+  padding: 10rem;
 `;
 
 const CoverBg = styled.div`
@@ -68,4 +71,11 @@ const SubHeadingBox = styled.div`
   }
 `;
 
-export { CoverContainer, Cover, CoverBg, CoverBgOverlay, SubHeadingBox };
+export {
+  CoverContainer,
+  Cover,
+  HeadingWrapper,
+  CoverBg,
+  CoverBgOverlay,
+  SubHeadingBox,
+};
