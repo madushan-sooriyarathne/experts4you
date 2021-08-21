@@ -13,7 +13,7 @@ const NavBarContainer = styled.nav<NavBarContainerProps>`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 50;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
