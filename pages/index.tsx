@@ -21,7 +21,7 @@ import {
 } from "@site-data";
 import React from "react";
 import StaticCard from "@components/static-card";
-import CallRequest from "@components/layout/common/call-requst";
+import CallRequest from "@components/layout/common/call-request";
 
 interface Props {
   services: Service[];

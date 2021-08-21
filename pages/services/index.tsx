@@ -6,7 +6,7 @@ import PageCover from "@components/layout/common/page-cover";
 import { servicesCover, services } from "@site-data";
 import GridLayout from "@components/layout/common/grid-layout";
 import Card from "@components/card";
-import CallRequest from "@components/layout/common/call-requst";
+import CallRequest from "@components/layout/common/call-request";
 import CTASection from "@components/layout/common/cta-section";
 
 interface Props {
@@ -29,6 +29,7 @@ const ServicesPage: NextPage<Props> = ({
             icon={service.icon}
             route={`/services/${service.id}`}
             withButton
+            key={service.id}
           />
         ))}
       </GridLayout>
