@@ -74,6 +74,12 @@ declare global {
     image: Image;
   }
 
+  interface FAQ {
+    question: string;
+    answer: string;
+    id: string;
+  }
+
   type InputEventType =
     | FormEvent<HTMLInputElement>
     | FormEvent<HTMLTextAreaElement>;
