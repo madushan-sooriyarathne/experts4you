@@ -37,9 +37,25 @@ declare module "styled-components" {
       close: string;
       spread: string;
     };
-    responsive: {};
+    responsive: {
+      width1500: string;
+      width1400: string;
+      smallDesktop: string;
+      width1200: string;
+      width1100: string;
+    };
   }
 }
+
+/*
+largest - 1500px
+larger - 1400px
+large - 1300px
+mediumLarge- 1200px
+medium - 1100px
+mediumSmall - 1100px
+
+ */
 
 const theme: DefaultTheme = {
   colors: {
@@ -77,7 +93,13 @@ const theme: DefaultTheme = {
     close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
     spread: " 0 0 20px 0 rgba(0, 0, 0, 0.15)",
   },
-  responsive: {},
+  responsive: {
+    width1500: "@media only screen and (max-width: 93.75em)",
+    width1400: "@media only screen and (max-width: 87.5em)",
+    smallDesktop: "@media only screen and (max-width: 85.375em)",
+    width1200: "@media only screen and (max-width: 75em)",
+    width1100: "@media only screen and (max-width: 68.75em)",
+  },
 };
 
 export default theme;
