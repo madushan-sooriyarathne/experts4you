@@ -4,8 +4,22 @@ const FooterContainer = styled.footer`
   width: 100%;
   height: auto;
   position: relative;
+  padding: 10rem 5rem 3rem 5rem;
 
-  padding: 10rem 30rem 3rem 30rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 130rem) 1fr;
+  grid-template-rows: min-content;
+  grid-template-areas: "le co ri";
+  align-items: center;
+  justify-items: center;
+  background-color: transparent;
+`;
+
+const FooterWrapper = styled.div`
+  grid-area: co;
+  width: 100%;
+  height: auto;
+
   display: grid;
   grid-template-columns: 2fr repeat(3, minmax(min-content, 1fr));
   grid-template-rows: repeat(2, min-content);
@@ -16,7 +30,6 @@ const FooterContainer = styled.footer`
   justify-items: start;
   row-gap: 10rem;
   column-gap: 5rem;
-  background-color: transparent;
 `;
 
 const FooterBG = styled.div`
@@ -152,6 +165,7 @@ export {
   FooterContainer,
   FooterBG,
   FooterOverlay,
+  FooterWrapper,
   Logo,
   CompanyDetailsGroup,
   CopyrightNote,
