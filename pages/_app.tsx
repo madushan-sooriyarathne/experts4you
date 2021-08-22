@@ -23,7 +23,7 @@ const App: React.FC<AppProps> = ({
     };
 
     // if loading get delayed, remove loader after 10 seconds
-    setTimeout(() => setLoading(false), 5000);
+    setTimeout(() => handleContentLoad(), 5000);
 
     window.addEventListener("load", handleContentLoad);
 
