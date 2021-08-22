@@ -8,11 +8,11 @@ const rotate = keyframes`
 }
 
 50% {
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
 }
 
 100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
 }
 
 `;
