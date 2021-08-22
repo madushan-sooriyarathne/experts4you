@@ -13,8 +13,11 @@ declare global {
     name: string;
     id: string;
     description: string;
+    about: string[];
     image: Image;
     icon: string;
+    steps: Step[];
+    faqs: Faq[];
   }
 
   interface Stats {
@@ -78,6 +81,12 @@ declare global {
     question: string;
     answer: string;
     id: string;
+  }
+
+  interface Step {
+    name: string;
+    icon: string;
+    description: string;
   }
 
   type InputEventType =
