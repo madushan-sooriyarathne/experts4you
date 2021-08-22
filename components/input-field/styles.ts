@@ -26,9 +26,9 @@ const InputFieldStyles = css`
   letter-spacing: 0.5px;
   color: ${(props) => props.theme.colors.blackMedium};
   padding: 1.5rem 2rem;
+  border: none;
 
-  border: ${(props) => `1px solid ${props.theme.colors.blackMedium}`};
-  border-top: none;
+  border-bottom: ${(props) => `2px solid ${props.theme.colors.blackMedium}`};
   outline: none;
 
   &::placeholder {
@@ -40,13 +40,11 @@ const InputFieldStyles = css`
   }
 
   &:not(:placeholder-shown):invalid {
-    border: ${(props) => `1px solid ${props.theme.colors.danger}`};
-    border-top: none;
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.danger}`};
   }
 
   &:not(:placeholder-shown):valid {
-    border: ${(props) => `1px solid ${props.theme.colors.success}`};
-    border-top: none;
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.success}`};
   }
 `;
 
