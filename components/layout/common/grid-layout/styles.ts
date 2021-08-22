@@ -23,6 +23,14 @@ const Grid = styled.section<GridProps>`
   gap: ${(props) => props.gap};
   align-items: start;
   justify-items: center;
+
+  ${(props) => props.theme.responsive.width1200} {
+    grid-template-columns: ${(props) =>
+      `repeat(2, minmax(min-content, ${props.columnSize}))`};
+    grid-template-rows: ${(props) =>
+      `repeat(${props.rows}, minmax(min-content, ${props.rowSize}))`};
+    grid-auto-rows: ${(props) => `minmax(min-content, ${props.rowSize})`};
+  }
 `;
 
 export { Grid };

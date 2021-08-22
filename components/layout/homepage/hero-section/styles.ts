@@ -5,6 +5,7 @@ const Container = styled.div`
 
   width: 100%;
   height: 100vh;
+  min-height: 100rem;
   padding: 10rem 10rem 0 10rem;
   z-index: 1;
 
@@ -18,6 +19,20 @@ const Container = styled.div`
   column-gap: 5rem;
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+  ${(props) => props.theme.responsive.width1400} {
+    padding: 10rem 5rem 0 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width1100} {
+    padding: 10rem 5rem 0 5rem;
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-rows: repeat(2, minmax(60rem, min-content));
+    grid-template-areas:
+      "co"
+      "im";
+  }
+  height: auto;
 `;
 
 const ContainerBG = styled.div`
@@ -59,6 +74,14 @@ const TextContainer = styled.div`
   align-items: start;
   justify-content: center;
   row-gap: 4rem;
+
+  ${(props) => props.theme.responsive.width1500} {
+    padding: 3rem;
+  }
+
+  ${(props) => props.theme.responsive.width1100} {
+    padding: 10rem;
+  }
 `;
 
 const ImageContainer = styled.div`

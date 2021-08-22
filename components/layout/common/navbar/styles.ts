@@ -16,7 +16,7 @@ const NavBarContainer = styled.nav<NavBarContainerProps>`
   z-index: 50;
 
   display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-columns: min-content minmax(min-content, 1fr);
   grid-template-rows: min-content;
   grid-template-areas: "lo na";
   column-gap: 5rem;

@@ -17,10 +17,10 @@ const MainServicesSection: React.FC<Props> = ({
 }: Props): JSX.Element => {
   return (
     <ServicesContainer>
-      {services.map((service) => (
+      {services.slice(0, 3).map((service) => (
         <ServicesSection key={service.id}>
           <SectionBackground>
-            <ImageComponent image={service.image} />
+            <ImageComponent image={service.image} objectFit="cover" />
           </SectionBackground>
           <PrimaryHeading>{service.name}</PrimaryHeading>
           <Paragraph alignment="center">{service.description}</Paragraph>

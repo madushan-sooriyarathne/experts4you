@@ -55,7 +55,8 @@ const TestimonialSliderWrapper = styled.div`
 const TestimonialSlide = styled(motion.div)`
   position: absolute;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   left: 0;
   top: 0;
   right: 0;
@@ -70,6 +71,8 @@ const TestimonialSlide = styled(motion.div)`
 `;
 
 const TestimonialDetails = styled.div`
+  height: auto;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -83,7 +86,7 @@ const TestimonialDetails = styled.div`
     content: "";
     position: absolute;
     top: 6rem;
-    left: 8rem;
+    left: 6rem;
     width: 8rem;
     height: 8rem;
     opacity: 0.2;
@@ -91,6 +94,23 @@ const TestimonialDetails = styled.div`
     background-image: url("/assets/svg/quote.svg");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  ${(props) => props.theme.responsive.width1500} {
+    padding: 5rem;
+
+    &::before {
+      top: 3rem;
+      left: 3rem;
+    }
+  }
+
+  ${(props) => props.theme.responsive.width1200} {
+    padding: 3rem 5rem;
+
+    &::before {
+      top: 1rem;
+    }
   }
 `;
 
