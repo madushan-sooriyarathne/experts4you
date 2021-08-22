@@ -19,7 +19,7 @@ import {
   partners,
   ourValues,
 } from "@site-data";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StaticCard from "@components/static-card";
 import CallRequest from "@components/layout/common/call-request";
 
@@ -38,6 +38,12 @@ const HomePage: React.FC<Props> = ({
   ourValues,
   partners,
 }: Props): JSX.Element => {
+  const [upperBound, setUpperBound] = useState<number>(6);
+
+  useEffect(() => {
+    setUpperBound(window.innerWidth > 1200 ? 6 : 4);
+  }, []);
+
   return (
     <Page title="Experts 4 You - Your trusted partner in business">
       <HeroSection heroData={heroData} />
@@ -50,7 +56,7 @@ const HomePage: React.FC<Props> = ({
         route="/services"
         id="what-we-do"
       >
-        {services.map((service) => (
+        {services.slice(0, upperBound).map((service) => (
           <Card
             withButton
             key={`service-${service.id}`}
