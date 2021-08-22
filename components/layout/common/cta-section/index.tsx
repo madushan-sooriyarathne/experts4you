@@ -2,14 +2,22 @@ import PrimaryButton from "@components/buttons/primary-button";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import { CTAContainer } from "./styles";
 
-const CTASection: React.FC = (): JSX.Element => {
+interface Props {
+  heading?: string;
+  route?: string;
+  buttonText?: string;
+}
+
+const CTASection: React.FC<Props> = ({
+  heading = "Got a problem that needs a solution from us?",
+  route = "/quote",
+  buttonText = "Get a Quote",
+}: Props): JSX.Element => {
   return (
     <CTAContainer>
-      <SecondaryHeading>
-        Got a problem that needs a solution from us?
-      </SecondaryHeading>
-      <PrimaryButton type="route" route="/quote">
-        Get a Quote
+      <SecondaryHeading>{heading}</SecondaryHeading>
+      <PrimaryButton type="route" route={route}>
+        {buttonText}
       </PrimaryButton>
     </CTAContainer>
   );
