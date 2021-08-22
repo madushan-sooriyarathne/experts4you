@@ -3,11 +3,12 @@ import { GetStaticProps, GetStaticPropsResult, NextPage } from "next";
 import Page from "@components/layout/common/page";
 import PageCover from "@components/layout/common/page-cover";
 
-import { servicesCover, services } from "@site-data";
+import { servicesCover, services, commonFaq } from "@site-data";
 import GridLayout from "@components/layout/common/grid-layout";
 import Card from "@components/card";
 import CallRequest from "@components/layout/common/call-request";
 import CTASection from "@components/layout/common/cta-section";
+import FAQSection from "@components/layout/common/faq-section";
 
 interface Props {
   services: Service[];
@@ -33,6 +34,7 @@ const ServicesPage: NextPage<Props> = ({
           />
         ))}
       </GridLayout>
+      <FAQSection faqs={commonFaq} />
       <CTASection />
       <CallRequest />
     </Page>
