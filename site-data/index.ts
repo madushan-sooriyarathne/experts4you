@@ -258,6 +258,39 @@ const servicesCover: Cover = {
   },
 };
 
+const commonFaq: FAQ[] = [
+  {
+    id: "product-key-1",
+    question: "How do I find my Windows product key?",
+    answer:
+      "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+  },
+  {
+    id: "product-key-2",
+    question: "How do I find my Windows product key?",
+    answer:
+      "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+  },
+  {
+    id: "product-key-3",
+    question: "How do I find my Windows product key?",
+    answer:
+      "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+  },
+  {
+    id: "product-key-4",
+    question: "How do I find my Windows product key?",
+    answer:
+      "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+  },
+  {
+    id: "product-key-5",
+    question: "How do I find my Windows product key?",
+    answer:
+      "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+  },
+];
+
 export {
   services,
   heroData,
@@ -269,4 +302,5 @@ export {
   ourValues,
   errors,
   servicesCover,
+  commonFaq,
 };
