@@ -9,6 +9,65 @@ const services: Service[] = [
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     icon: "/assets/svg/incorporation.svg",
+    about: [
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+    ],
+    steps: [
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+    ],
+    faqs: [
+      {
+        id: "product-key-1",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-2",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-3",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-4",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-5",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+    ],
   },
   {
     name: "Bookkeeping",
@@ -20,6 +79,65 @@ const services: Service[] = [
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     icon: "/assets/svg/bookkeeping.svg",
+    about: [
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+    ],
+    steps: [
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+    ],
+    faqs: [
+      {
+        id: "product-key-1",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-2",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-3",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-4",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-5",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+    ],
   },
 
   {
@@ -32,6 +150,65 @@ const services: Service[] = [
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     icon: "/assets/svg/tax.svg",
+    about: [
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+    ],
+    steps: [
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+      {
+        icon: "/assets/svg/incorporation.svg",
+        name: "Lorum Ipsum",
+        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+      },
+    ],
+    faqs: [
+      {
+        id: "product-key-1",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-2",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-3",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-4",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+      {
+        id: "product-key-5",
+        question: "How do I find my Windows product key?",
+        answer:
+          "The product key is located inside the product packaging, on the receipt or confirmation page for a digital purchase or in a confirmation e-mail that shows you purchased Windows. If you purchased a digital copy from Microsoft Store, you can locate your product key in your Account under Digital Content.",
+      },
+    ],
   },
 ];
 
