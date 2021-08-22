@@ -38,6 +38,10 @@ const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
 
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+        ${(props) => props.theme.responsive.smallDesktop} {
+            font-size: 56.25%;
+        }
+
     }
 
 
