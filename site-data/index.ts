@@ -139,7 +139,6 @@ const services: Service[] = [
       },
     ],
   },
-
   {
     name: "Tax Advisory",
     id: "tax-advisory",
@@ -435,6 +434,18 @@ const servicesCover: Cover = {
   },
 };
 
+const aboutCover: Cover = {
+  id: "about",
+  heading: "About Experts 4 You",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  image: {
+    src: "/assets/img/cover-services.jpg",
+    blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    alt: "Services that lead the way to better business - cover",
+  },
+};
+
 const commonFaq: FAQ[] = [
   {
     id: "product-key-1",
@@ -479,5 +490,6 @@ export {
   ourValues,
   errors,
   servicesCover,
+  aboutCover,
   commonFaq,
 };
