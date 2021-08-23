@@ -12,6 +12,11 @@ const CallSection = styled.section`
   align-items: start;
   justify-items: center;
   gap: 10rem;
+
+  ${(props) => props.theme.responsive.width900} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-auto-rows: minmax(50rem, min-content);
+  }
 `;
 
 const InputSide = styled.div`

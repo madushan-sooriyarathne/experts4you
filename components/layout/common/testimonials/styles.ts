@@ -147,6 +147,11 @@ const PartnerLogo = styled.div`
   &:hover {
     filter: grayscale(0%);
   }
+
+  ${(props) => props.theme.responsive.width1100} {
+    width: 20rem;
+    height: 15rem;
+  }
 `;
 
 // motion variants

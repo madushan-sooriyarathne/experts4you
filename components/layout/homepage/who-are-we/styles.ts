@@ -15,6 +15,10 @@ const WhoWeAreContainer = styled.section`
 
 const Description = styled.div`
   width: 60%;
+
+  ${(props) => props.theme.responsive.width1000} {
+    width: 80%;
+  }
 `;
 
 const BoxItem = styled.div`

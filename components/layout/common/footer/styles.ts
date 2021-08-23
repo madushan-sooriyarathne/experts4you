@@ -30,6 +30,28 @@ const FooterWrapper = styled.div`
   justify-items: start;
   row-gap: 10rem;
   column-gap: 5rem;
+
+  & > *:nth-child(1) {
+    grid-area: de;
+  }
+  & > *:nth-child(2) {
+    grid-area: ho;
+  }
+  & > *:nth-child(3) {
+    grid-area: co;
+  }
+  & > *:nth-child(4) {
+    grid-area: so;
+  }
+
+  ${(props) => props.theme.responsive.width1000} {
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-auto-rows: min-content;
+    grid-template-areas:
+      "de de de"
+      "ho co so"
+      "cr cr cr";
+  }
 `;
 
 const FooterBG = styled.div`

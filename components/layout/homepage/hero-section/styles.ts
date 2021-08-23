@@ -33,6 +33,7 @@ const Container = styled.div`
       "im";
   }
   height: auto;
+  margin-bottom: -22rem;
 `;
 
 const ContainerBG = styled.div`

@@ -30,7 +30,9 @@ const Footer: React.FC = (): JSX.Element => {
             alt="Experts 4 You | Business consultants in Sri Lanka"
           ></Logo>
           <CompanyDetailsGroup>
-            <TertiaryHeading>Experts 4 You Private Limited.</TertiaryHeading>
+            <TertiaryHeading alignment="left">
+              Experts 4 You Private Limited.
+            </TertiaryHeading>
             <Paragraph>
               No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka
             </Paragraph>

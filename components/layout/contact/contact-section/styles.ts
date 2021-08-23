@@ -14,6 +14,10 @@ const FormDataSection = styled.section`
   gap: 10rem;
   align-items: center;
   justify-items: start;
+
+  ${(props) => props.theme.responsive.width1000} {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
 `;
 
 const FormSection = styled.div`
