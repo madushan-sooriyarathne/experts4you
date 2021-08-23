@@ -43,6 +43,8 @@ declare module "styled-components" {
       smallDesktop: string;
       width1200: string;
       width1100: string;
+      width1000: string;
+      width900: string;
     };
   }
 }
@@ -99,6 +101,8 @@ const theme: DefaultTheme = {
     smallDesktop: "@media only screen and (max-width: 85.375em)",
     width1200: "@media only screen and (max-width: 75em)",
     width1100: "@media only screen and (max-width: 68.75em)",
+    width1000: "@media only screen and (max-width: 62.5em)",
+    width900: "@media only screen and (max-width: 56.25em)",
   },
 };
 
