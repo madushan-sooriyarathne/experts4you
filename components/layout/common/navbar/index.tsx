@@ -8,7 +8,11 @@ import {
   NavLinkWrapper,
   logoMotionVariants,
   NavLink,
-  NavLinkGroup,
+  HamburgerMenuIcon,
+  MobileNavPanel,
+  MobileNavPanelMotionVariants,
+  MobileNavLinks,
+  MobileNavLinksMotionVariant,
 } from "./styles";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
@@ -17,6 +21,8 @@ const NavBar: React.FC = (): JSX.Element => {
   const router = useRouter();
 
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [showHamburger, setShowHamburger] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -27,13 +33,34 @@ const NavBar: React.FC = (): JSX.Element => {
       }
     };
 
-    window.addEventListener("scroll", scrollHandler);
+    const resizeHandler = () => {
+      if (window.innerWidth < 1000) {
+        setShowHamburger(true);
+      } else {
+        setShowHamburger(false);
+      }
+    };
 
-    return () => window.removeEventListener("scroll", scrollHandler);
-  });
+    // run once on component mount
+    scrollHandler();
+    resizeHandler();
+
+    window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("resize", resizeHandler);
+
+    // when component un-mounts
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, []);
 
   const handleLogoClick = () => {
     router.push("/");
+  };
+
+  const handleMenuClick = () => {
+    setMenuOpen((preState) => !preState);
   };
 
   return (
@@ -63,16 +90,42 @@ const NavBar: React.FC = (): JSX.Element => {
           />
         )}
       </AnimatePresence>
-
-      <NavLinkWrapper>
-        <NavLinkGroup>
+      {showHamburger ? (
+        <HamburgerMenuIcon clicked={menuOpen} onClick={handleMenuClick}>
+          <span />
+          <span />
+          <span />
+        </HamburgerMenuIcon>
+      ) : (
+        <NavLinkWrapper>
           {navLinks.map((link) => (
             <Link href={link.route} key={`nav-${link.name}`}>
               <NavLink>{link.name}</NavLink>
             </Link>
           ))}
-        </NavLinkGroup>
-      </NavLinkWrapper>
+        </NavLinkWrapper>
+      )}
+      <AnimatePresence>
+        {menuOpen && (
+          <MobileNavPanel
+            variants={MobileNavPanelMotionVariants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            key="mobile-nav-panel"
+          >
+            <AnimatePresence>
+              {navLinks.map((link) => (
+                <Link href={link.route} key={`nav-${link.name}`}>
+                  <MobileNavLinks variants={MobileNavLinksMotionVariant}>
+                    {link.name}
+                  </MobileNavLinks>
+                </Link>
+              ))}
+            </AnimatePresence>
+          </MobileNavPanel>
+        )}
+      </AnimatePresence>
     </NavBarContainer>
   );
 };
