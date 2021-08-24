@@ -21,6 +21,10 @@ const Heading = styled.h1<HeadingProps>`
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  ${(props) => props.theme.responsive.width600} {
+    font-size: 4rem;
+  }
 `;
 
 export { Heading };

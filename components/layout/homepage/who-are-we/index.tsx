@@ -4,7 +4,7 @@ import SecondaryHeading from "@components/headings/secondary-heading";
 import SubHeading from "@components/headings/sub-heading";
 import GridLayout from "@components/layout/common/grid-layout";
 import Paragraph from "@components/paragraph";
-import { BoxItem, Description, WhoWeAreContainer } from "./styles";
+import { BoxGroup, BoxItem, Description, WhoWeAreContainer } from "./styles";
 
 const WhoWeAre: React.FC = (): JSX.Element => {
   return (
@@ -18,7 +18,7 @@ const WhoWeAre: React.FC = (): JSX.Element => {
           incididunt ut labore et dolore magna aliqua.
         </SubHeading>
       </Description>
-      <GridLayout>
+      <BoxGroup>
         <BoxItem>
           <svg>
             <use xlinkHref="/assets/svg/sprites.svg#vision" />
@@ -55,7 +55,7 @@ const WhoWeAre: React.FC = (): JSX.Element => {
             tempor incididunt ut labore et dolore magna aliqua.
           </Paragraph>
         </BoxItem>
-      </GridLayout>
+      </BoxGroup>
       <PrimaryButton type="route" route="/about">
         About us
       </PrimaryButton>

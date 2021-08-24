@@ -15,6 +15,15 @@ const Content = styled.main`
   grid-auto-rows: min-content;
   row-gap: 15rem;
   z-index: 0;
+
+  ${(props) => props.theme.responsive.width600} {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [content-start] repeat(
+        8,
+        [col-start] minmax(min-content, 18rem) [col-end]
+      )
+      [content-end] minmax(2rem, 1fr) [full-end];
+  }
 `;
 
 const Container = styled(motion.div)`

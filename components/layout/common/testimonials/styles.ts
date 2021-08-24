@@ -41,15 +41,40 @@ const TestimonialSliderFrame = styled.div`
       fill: ${(props) => props.theme.colors.primary};
     }
   }
+
+  & > svg:nth-child(1) {
+    grid-area: bl;
+  }
+
+  & > svg:nth-child(2) {
+    grid-area: br;
+  }
+
+  ${(props) => props.theme.responsive.width600} {
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-auto-rows: min-content;
+    grid-template-areas:
+      "fr fr"
+      "bl br";
+
+    & > svg:nth-child(1) {
+      justify-self: end;
+    }
+  }
 `;
 
 const TestimonialSliderWrapper = styled.div`
+  grid-area: fr;
   width: 100%;
   min-height: 40rem;
   height: auto;
 
   overflow: hidden;
   position: relative;
+
+  ${(props) => props.theme.responsive.width900} {
+    min-height: 70rem;
+  }
 `;
 
 const TestimonialSlide = styled(motion.div)`
@@ -66,11 +91,40 @@ const TestimonialSlide = styled(motion.div)`
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 1fr;
+  grid-template-areas: "im de";
   align-items: center;
   justify-items: start;
+
+  ${(props) => props.theme.responsive.width900} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+      "im"
+      "de";
+    gap: 5rem;
+    justify-items: center;
+    padding: 5rem;
+  }
+`;
+
+const TestimonialImage = styled.div`
+  grid-area: im;
+  width: 100%;
+  height: 100%;
+
+  ${(props) => props.theme.responsive.width900} {
+    width: 100%;
+    height: 30vw;
+  }
+
+  ${(props) => props.theme.responsive.width700} {
+    width: 100%;
+    height: 40vw;
+  }
 `;
 
 const TestimonialDetails = styled.div`
+  grid-area: de;
   height: auto;
 
   display: flex;
@@ -111,6 +165,14 @@ const TestimonialDetails = styled.div`
     &::before {
       top: 1rem;
     }
+  }
+
+  ${(props) => props.theme.responsive.width800} {
+    padding: 3rem 0;
+  }
+
+  ${(props) => props.theme.responsive.width700} {
+    padding: 0;
   }
 `;
 
@@ -176,6 +238,7 @@ export {
   TitleGroup,
   TestimonialSliderWrapper,
   TestimonialSlide,
+  TestimonialImage,
   TestimonialDetails,
   MetadataGroup,
   PartnersContainer,

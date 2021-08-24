@@ -45,19 +45,15 @@ declare module "styled-components" {
       width1100: string;
       width1000: string;
       width900: string;
+      width800: string;
+      width700: string;
+      width600: string;
+      width500: string;
+      mobile: string;
+      mobileSmall: string;
     };
   }
 }
-
-/*
-largest - 1500px
-larger - 1400px
-large - 1300px
-mediumLarge- 1200px
-medium - 1100px
-mediumSmall - 1100px
-
- */
 
 const theme: DefaultTheme = {
   colors: {
@@ -98,11 +94,17 @@ const theme: DefaultTheme = {
   responsive: {
     width1500: "@media only screen and (max-width: 93.75em)",
     width1400: "@media only screen and (max-width: 87.5em)",
-    smallDesktop: "@media only screen and (max-width: 85.375em)",
+    smallDesktop: "@media only screen and (max-width: 85.375em)", // 1366px
     width1200: "@media only screen and (max-width: 75em)",
     width1100: "@media only screen and (max-width: 68.75em)",
     width1000: "@media only screen and (max-width: 62.5em)",
     width900: "@media only screen and (max-width: 56.25em)",
+    width800: "@media only screen and (max-width: 50em)",
+    width700: "@media only screen and (max-width: 43.75em)",
+    width600: "@media only screen and (max-width: 37.5em)",
+    width500: "@media only screen and (max-width: 31.25em)",
+    mobile: "@media only screen and (max-width: 25em)", // 400px
+    mobileSmall: "@media only screen and (max-width: 18.75em)", // 300px
   },
 };
 

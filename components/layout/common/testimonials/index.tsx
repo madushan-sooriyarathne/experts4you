@@ -19,6 +19,7 @@ import {
   TestimonialSliderVariants,
   TestimonialSliderWrapper,
   TitleGroup,
+  TestimonialImage,
 } from "./styles";
 
 interface Props {
@@ -63,7 +64,12 @@ const TestimonialsSection: React.FC<Props> = ({
                 x: { type: "spring", stiffness: 400, damping: 30 },
               }}
             >
-              <ImageComponent image={testimonials[curSlide].image} />
+              <TestimonialImage>
+                <ImageComponent
+                  image={testimonials[curSlide].image}
+                  objectFit="contain"
+                />
+              </TestimonialImage>
               <TestimonialDetails>
                 <Paragraph>{testimonials[curSlide].description}</Paragraph>
                 <MetadataGroup>

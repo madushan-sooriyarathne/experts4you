@@ -31,9 +31,14 @@ const Container = styled.div`
     grid-template-areas:
       "co"
       "im";
+    height: auto;
+    margin-bottom: -22rem;
   }
-  height: auto;
-  margin-bottom: -22rem;
+
+  ${(props) => props.theme.responsive.width500} {
+    padding: 10rem 3rem 0 3rem;
+    grid-template-rows: repeat(2, minmax(calc(100vw * 1.2), min-content));
+  }
 `;
 
 const ContainerBG = styled.div`
@@ -83,6 +88,14 @@ const TextContainer = styled.div`
   ${(props) => props.theme.responsive.width1100} {
     padding: 10rem;
   }
+
+  ${(props) => props.theme.responsive.width900} {
+    padding: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width700} {
+    padding: 0;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -92,16 +105,17 @@ const ImageContainer = styled.div`
 `;
 
 const StatGroup = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, min-content);
-  align-items: start;
-  justify-items: start;
-  column-gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5rem;
 
   margin-top: 5rem;
 `;
 
 const StatItem = styled.div`
+  max-width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -115,6 +129,10 @@ const StatNumber = styled.h2`
   font-family: ${(props) => props.theme.fonts.primary};
   letter-spacing: 1px;
   color: ${(props) => props.theme.colors.blackMedium};
+
+  ${(props) => props.theme.responsive.width600} {
+    font-size: 3.5rem;
+  }
 `;
 
 const StatLabel = styled.p`
@@ -125,6 +143,10 @@ const StatLabel = styled.p`
   text-transform: uppercase;
   text-align: left;
   color: ${(props) => props.theme.colors.blackMedium};
+
+  ${(props) => props.theme.responsive.width600} {
+    font-size: 1.2rem;
+  }
 `;
 
 export {

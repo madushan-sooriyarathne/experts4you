@@ -21,6 +21,10 @@ const Card = styled.div`
       transform: rotate(-5deg) scale(1.05);
     }
   }
+
+  ${(props) => props.theme.responsive.width600} {
+    padding: 3rem;
+  }
 `;
 
 const Icon = styled.svg`

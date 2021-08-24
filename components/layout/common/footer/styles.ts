@@ -33,6 +33,12 @@ const FooterWrapper = styled.div`
 
   & > *:nth-child(1) {
     grid-area: de;
+
+    ${(props) => props.theme.responsive.mobile} {
+      & h3 {
+        font-size: 1.5rem;
+      }
+    }
   }
   & > *:nth-child(2) {
     grid-area: ho;
@@ -51,6 +57,28 @@ const FooterWrapper = styled.div`
       "de de de"
       "ho co so"
       "cr cr cr";
+  }
+
+  ${(props) => props.theme.responsive.width600} {
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-auto-rows: min-content;
+    grid-template-areas:
+      "de de"
+      "ho co"
+      "so so"
+      "cr cr";
+    row-gap: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.mobile} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-auto-rows: min-content;
+    grid-template-areas:
+      "de"
+      "ho"
+      "co"
+      "so"
+      "cr";
   }
 `;
 
@@ -108,6 +136,9 @@ const LinkSection = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   row-gap: 3rem;
+  ${(props) => props.theme.responsive.mobile} {
+    row-gap: 2rem;
+  }
 `;
 
 const LinkGroup = styled.div`
@@ -116,6 +147,10 @@ const LinkGroup = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   row-gap: 2rem;
+
+  ${(props) => props.theme.responsive.mobile} {
+    row-gap: 1rem;
+  }
 `;
 
 const Route = styled.a`

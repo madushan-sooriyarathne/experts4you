@@ -286,7 +286,7 @@ const socialMedia: SocialLinks[] = [
 const testimonials: Testimonial[] = [
   {
     image: {
-      src: "/assets/img/client.jpeg",
+      src: "/assets/svg/eleven.svg",
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     description:
@@ -297,7 +297,7 @@ const testimonials: Testimonial[] = [
   },
   {
     image: {
-      src: "/assets/img/client-male.jpg",
+      src: "/assets/svg/advertaro.svg",
       blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     description:

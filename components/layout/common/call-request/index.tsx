@@ -58,7 +58,7 @@ const CallRequest: React.FC = (): JSX.Element => {
             Submit
           </SubmitButton>
         </InputGroup>
-        <Paragraph small>
+        <Paragraph small alignment="left">
           By submitting this form, I agree to having my personal and contact
           information processed and used for the purpose of marketing
           communications.

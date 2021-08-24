@@ -31,6 +31,10 @@ const Grid = styled.section<GridProps>`
       `repeat(${props.rows}, minmax(min-content, ${props.rowSize}))`};
     grid-auto-rows: ${(props) => `minmax(min-content, ${props.rowSize})`};
   }
+
+  ${(props) => props.theme.responsive.width800} {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
 `;
 
 export { Grid };

@@ -44,6 +44,14 @@ const NavBarContainer = styled.nav<NavBarContainerProps>`
     transform: ${(props) => (props.scrolled ? "scaleY(1)" : "scaleY(0)")};
     transition: transform 0.2s ease-in-out;
   }
+
+  ${(props) => props.theme.responsive.width700} {
+    padding: 3rem 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width600} {
+    padding: 3rem;
+  }
 `;
 
 const MobileNavPanel = styled(motion.div)`

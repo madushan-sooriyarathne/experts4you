@@ -40,6 +40,11 @@ const ServicesContainer = styled.section`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 60rem);
   }
+
+  ${(props) => props.theme.responsive.mobile} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 50rem);
+  }
 `;
 
 const ServicesSection = styled.div`
@@ -60,6 +65,14 @@ const ServicesSection = styled.div`
   ${(props) => props.theme.responsive.width1200} {
     height: 100%;
     padding: 5rem 20rem;
+  }
+
+  ${(props) => props.theme.responsive.width900} {
+    padding: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.mobile} {
+    padding: 2rem;
   }
 `;
 

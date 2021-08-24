@@ -33,12 +33,12 @@ const Footer: React.FC = (): JSX.Element => {
             <TertiaryHeading alignment="left">
               Experts 4 You Private Limited.
             </TertiaryHeading>
-            <Paragraph>
+            <Paragraph alignment="left">
               No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka
             </Paragraph>
           </CompanyDetailsGroup>
 
-          <Paragraph>
+          <Paragraph alignment="left">
             Phone: 077 734 2212
             <br />
             Email: connect@xperts4you.com
@@ -81,11 +81,11 @@ const Footer: React.FC = (): JSX.Element => {
           </LinkGroup>
         </LinkSection>
         <CopyrightNote>
-          <Paragraph small>
+          <Paragraph small alignment="center">
             © {new Date().getFullYear()} <b>Experts 4 You Private Limited.</b>{" "}
             All Rights Reserved.
           </Paragraph>
-          <Paragraph small>
+          <Paragraph small alignment="center">
             Website designed & developed by{" "}
             <b>
               <a href="https://advertaro.lk" target="_blank">
