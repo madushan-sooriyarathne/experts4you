@@ -38,6 +38,7 @@ declare module "styled-components" {
       spread: string;
     };
     responsive: {
+      width1600: string;
       width1500: string;
       width1400: string;
       smallDesktop: string;
@@ -92,6 +93,7 @@ const theme: DefaultTheme = {
     spread: " 0 0 20px 0 rgba(0, 0, 0, 0.15)",
   },
   responsive: {
+    width1600: "@media only screen and (max-width: 100em)",
     width1500: "@media only screen and (max-width: 93.75em)",
     width1400: "@media only screen and (max-width: 87.5em)",
     smallDesktop: "@media only screen and (max-width: 85.375em)", // 1366px

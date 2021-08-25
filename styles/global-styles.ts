@@ -57,6 +57,11 @@ const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
         text-align: center;
     }
 
+    a {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
     .marker-element {
         width: 3rem;
         height: 3rem;
