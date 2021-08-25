@@ -56,11 +56,28 @@ const NavBar: React.FC = (): JSX.Element => {
   }, []);
 
   const handleLogoClick = () => {
-    router.push("/");
+    if (menuOpen) {
+      setMenuOpen(false);
+      setTimeout(() => router.push("/"), 500);
+    } else {
+      router.push("/");
+    }
   };
 
   const handleMenuClick = () => {
+    if (menuOpen) {
+      document.body.style.overflowY = "auto";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
     setMenuOpen((preState) => !preState);
+  };
+
+  const handleNavigation = (route: string): void => {
+    setMenuOpen(false);
+    setTimeout(() => {
+      router.push(route);
+    }, 500);
   };
 
   return (
@@ -116,11 +133,13 @@ const NavBar: React.FC = (): JSX.Element => {
           >
             <AnimatePresence>
               {navLinks.map((link) => (
-                <Link href={link.route} key={`nav-${link.name}`}>
-                  <MobileNavLinks variants={MobileNavLinksMotionVariant}>
-                    {link.name}
-                  </MobileNavLinks>
-                </Link>
+                <MobileNavLinks
+                  variants={MobileNavLinksMotionVariant}
+                  key={`nav-${link.name}`}
+                  onClick={() => handleNavigation(link.route)}
+                >
+                  {link.name}
+                </MobileNavLinks>
               ))}
             </AnimatePresence>
           </MobileNavPanel>
