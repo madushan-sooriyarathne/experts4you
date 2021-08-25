@@ -29,7 +29,9 @@ const Button = styled.a<ButtonProps>`
     text-decoration: none;
     text-align: center;
     color: ${(props) =>
-      props.light ? props.theme.colors.primary : props.theme.colors.black};
+      props.light
+        ? props.theme.colors.primaryLight
+        : props.theme.colors.primary};
     transition: color 0.3s ease-in-out 0.2s;
   }
 
@@ -39,6 +41,10 @@ const Button = styled.a<ButtonProps>`
     transform: translateX(calc(-1rem + (-100%)));
     opacity: 0;
     visibility: hidden;
+    stroke: ${(props) =>
+      props.light
+        ? props.theme.colors.primaryLight
+        : props.theme.colors.primary};
     transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
     /* overflow: hidden; */
   }

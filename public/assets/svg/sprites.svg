@@ -23,7 +23,7 @@
   </symbol>
   <symbol fill="none"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 18" id="arrow-right">
-    <path d="M60.492.586L59.078 2l6 6H.5v2h64.578l-6 6 1.414 1.414L68.906 9 60.492.586z" fill="#000"></path>
+    <path d="M60.492.586L59.078 2l6 6H.5v2h64.578l-6 6 1.414 1.414L68.906 9 60.492.586z"></path>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="vision">
     <ellipse cx="32" cy="28" fill="#aae1f9" rx="29" ry="15"></ellipse>
