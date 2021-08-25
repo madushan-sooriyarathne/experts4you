@@ -1,3 +1,4 @@
+import { Route } from "next/dist/next-server/server/router";
 import { FormEvent } from "react";
 
 declare global {
@@ -75,6 +76,10 @@ declare global {
     heading: string;
     description: string;
     image: Image;
+    route?: {
+      name: string;
+      url: string;
+    };
   }
 
   interface FAQ {
