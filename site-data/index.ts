@@ -432,6 +432,10 @@ const servicesCover: Cover = {
     blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     alt: "Services that lead the way to better business - cover",
   },
+  route: {
+    url: "/get-quote",
+    name: "Get a Quote",
+  },
 };
 
 const aboutCover: Cover = {
