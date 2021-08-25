@@ -71,6 +71,10 @@ const MobileNavPanel = styled(motion.div)`
   justify-content: center;
 
   row-gap: 5rem;
+
+  ${(props) => props.theme.responsive.width800} {
+    row-gap: 3rem;
+  }
 `;
 
 const MobileNavLinks = styled(motion.a)`
@@ -80,10 +84,19 @@ const MobileNavLinks = styled(motion.a)`
   text-decoration: none;
   outline: none;
   color: ${(props) => props.theme.colors.blackMedium};
-  transition: color 0.2s eas 0.1s;
+  transition: color 0.2s ease-in-out 0.1s;
+  cursor: pointer;
 
   &:hover {
-    color: ${(props) => props.theme.colors.blackLight};
+    color: ${(props) => props.theme.colors.black};
+  }
+
+  ${(props) => props.theme.responsive.width800} {
+    font-size: 4rem;
+  }
+
+  ${(props) => props.theme.responsive.mobile} {
+    font-size: 3.5rem;
   }
 `;
 

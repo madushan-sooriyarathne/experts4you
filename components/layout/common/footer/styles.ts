@@ -120,6 +120,10 @@ const Logo = styled.img`
   width: auto;
   object-fit: contain;
   margin-bottom: 2rem;
+
+  ${(props) => props.theme.responsive.mobile} {
+    height: 3rem;
+  }
 `;
 
 const CompanyDetailsGroup = styled.div`

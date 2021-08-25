@@ -13,6 +13,10 @@ const FAQContainer = styled.section`
   align-items: stretch;
   justify-content: flex-start;
   gap: 5rem;
+
+  ${(props) => props.theme.responsive.width1000} {
+    padding: 0;
+  }
 `;
 
 const FAQGroup = styled(motion.div)`

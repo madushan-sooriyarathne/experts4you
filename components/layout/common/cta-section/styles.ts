@@ -14,6 +14,18 @@ const CTAContainer = styled.section`
   row-gap: 5rem;
 
   background-image: ${(props) => props.theme.gradients.secondaryLight};
+
+  ${(props) => props.theme.responsive.width1000} {
+    padding: 10rem;
+  }
+
+  ${(props) => props.theme.responsive.width800} {
+    padding: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width600} {
+    padding: 5rem 3rem;
+  }
 `;
 
 export { CTAContainer };

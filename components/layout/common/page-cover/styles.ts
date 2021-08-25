@@ -3,10 +3,16 @@ import styled from "styled-components";
 const CoverContainer = styled.header`
   grid-column: full-start / full-end;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
+  height: auto;
   padding: 10rem;
   z-index: 0;
   position: relative;
+
+  ${(props) => props.theme.responsive.width700} {
+    padding: 10rem 5rem 5rem 5rem;
+    min-height: 50vh;
+  }
 `;
 
 const CoverContainerBg = styled.div`
@@ -45,6 +51,15 @@ const Cover = styled.div`
   gap: 10rem;
   align-items: center;
   justify-content: start;
+
+  ${(props) => props.theme.responsive.width1200} {
+    gap: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width1100} {
+    grid-template-columns: 100% 0%;
+    gap: 0;
+  }
 `;
 
 const CoverCTA = styled.div`
@@ -54,6 +69,14 @@ const CoverCTA = styled.div`
   align-items: flex-start;
   justify-content: center;
   row-gap: 5rem;
+
+  ${(props) => props.theme.responsive.width1600} {
+    padding: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width1400} {
+    padding: 0;
+  }
 `;
 
 const HeadingWrapper = styled.div`

@@ -40,7 +40,7 @@ const FAQSection: React.FC<Props> = ({ faqs }: Props): JSX.Element => {
                 layoutId={`question-bar-${index}`}
                 selected={index === active}
               >
-                <SubHeading>{faq.question}</SubHeading>
+                <SubHeading alignment="left">{faq.question}</SubHeading>
                 <svg>
                   <use xlinkHref="/assets/svg/sprites.svg#arrow-right-short" />
                 </svg>
@@ -55,7 +55,7 @@ const FAQSection: React.FC<Props> = ({ faqs }: Props): JSX.Element => {
                     transition={{ duration: 0.2 }}
                     key="answer-bar"
                   >
-                    <Paragraph>{faq.answer}</Paragraph>
+                    <Paragraph alignment="left">{faq.answer}</Paragraph>
                   </AnswerBar>
                 )}
               </AnimatePresence>
