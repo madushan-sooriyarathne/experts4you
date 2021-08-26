@@ -55,10 +55,18 @@ const NavBar: React.FC = (): JSX.Element => {
     };
   }, []);
 
+  const navigate = (route: string): void => {
+    // close the menu
+    setMenuOpen(false);
+    // enable scroll again
+    document.body.style.overflowY = "auto";
+    // change route after a interval
+    setTimeout(() => router.push(route), 500);
+  };
+
   const handleLogoClick = () => {
     if (menuOpen) {
-      setMenuOpen(false);
-      setTimeout(() => router.push("/"), 500);
+      navigate("/");
     } else {
       router.push("/");
     }
@@ -71,13 +79,6 @@ const NavBar: React.FC = (): JSX.Element => {
       document.body.style.overflowY = "hidden";
     }
     setMenuOpen((preState) => !preState);
-  };
-
-  const handleNavigation = (route: string): void => {
-    setMenuOpen(false);
-    setTimeout(() => {
-      router.push(route);
-    }, 500);
   };
 
   return (
@@ -136,7 +137,7 @@ const NavBar: React.FC = (): JSX.Element => {
                 <MobileNavLinks
                   variants={MobileNavLinksMotionVariant}
                   key={`nav-${link.name}`}
-                  onClick={() => handleNavigation(link.route)}
+                  onClick={() => navigate(link.route)}
                 >
                   {link.name}
                 </MobileNavLinks>
