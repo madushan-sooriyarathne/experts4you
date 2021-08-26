@@ -24,7 +24,7 @@ const MainServicesSection: React.FC<Props> = ({
           </SectionBackground>
           <PrimaryHeading>{service.name}</PrimaryHeading>
           <Paragraph alignment="center">{service.description}</Paragraph>
-          <PrimaryButton route={`/${service.id}`} type="route">
+          <PrimaryButton route={`/services/${service.id}`} type="route">
             Learn More
           </PrimaryButton>
         </ServicesSection>
