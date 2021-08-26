@@ -483,6 +483,17 @@ const commonFaq: FAQ[] = [
   },
 ];
 
+const aboutCompany = {
+  name: "Experts 4 You",
+  about: [
+    `Experts4you is a Partnership firm established with the vision of creating more value to our business partners and clients.`,
+    `We have identified the need to provide personalized level of services aiming to maximize our client’s wealth through the real-life business experience gained by us over the years and open eye on the current market/industry, regulatory and other requirements and compliances those are continuously changing time to time and industry to industry.`,
+    `We broadly provide statutory auditing services, bookkeeping, accountancy and related services, tax consultancy and compliance services, business advisory services and financial management, payroll and related services and company secretarial services to an increasing number of clients attracted by identifying their specific requirements, our excellent client service, competitive pricing and flexibility.`,
+    `We always take pleasure in working with you, no matter how small or remote our client is.`,
+  ],
+  tagLine: "Adding Pace to your Business",
+};
+
 export {
   services,
   heroData,
@@ -496,4 +507,5 @@ export {
   servicesCover,
   aboutCover,
   commonFaq,
+  aboutCompany,
 };
