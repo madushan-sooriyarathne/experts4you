@@ -492,6 +492,42 @@ const aboutCompany = {
     `We always take pleasure in working with you, no matter how small or remote our client is.`,
   ],
   tagLine: "Adding Pace to your Business",
+  industries: [
+    {
+      name: "Manufacturing (Local & Export)",
+      id: "manufacturing",
+      icon: "/assets/svg/manufacturing.svg",
+    },
+    {
+      name: "Tourist Hotels",
+      id: "hotel",
+      icon: "/assets/svg/hotel.svg",
+    },
+
+    {
+      name: "Travel Agents (Inbound)",
+      id: "travel-agent",
+      icon: "/assets/svg/travel-agent.svg",
+    },
+
+    {
+      name: "Services (Professional / Foreign)",
+      id: "services",
+      icon: "/assets/svg/services.svg",
+    },
+
+    {
+      name: "Healthcare",
+      id: "healthcare",
+      icon: "/assets/svg/healthcare.svg",
+    },
+
+    {
+      name: "Trading (Local & Export)",
+      id: "trading",
+      icon: "/assets/svg/trading.svg",
+    },
+  ],
 };
 
 export {
