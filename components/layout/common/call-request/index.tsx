@@ -4,6 +4,7 @@ import ImageComponent from "@components/image-component";
 import InputField from "@components/input-field";
 import Paragraph from "@components/paragraph";
 import { useInput } from "@hooks";
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { CallSection, InputGroup, InputSide } from "./styles";
 
@@ -62,7 +63,10 @@ const CallRequest: React.FC = (): JSX.Element => {
           By submitting this form, I agree to having my personal and contact
           information processed and used for the purpose of marketing
           communications.
-          <br /> For more details, Please refer to our <a>Privacy Policy.</a>
+          <br /> For more details, Please refer to our{" "}
+          <Link href="/privacy-policy">
+            <a>Privacy Policy.</a>
+          </Link>
         </Paragraph>
       </InputSide>
       <ImageComponent
