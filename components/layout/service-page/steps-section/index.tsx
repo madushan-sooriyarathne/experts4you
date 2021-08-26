@@ -7,6 +7,7 @@ import {
   StepBox,
   StepNumber,
   Icon,
+  TextWrapper,
 } from "./styles";
 
 interface Props {
@@ -22,8 +23,10 @@ const StepSection: React.FC<Props> = ({ steps }: Props): JSX.Element => {
           <StepBox key={`step-${step.name}-${index}`}>
             <StepNumber>{index + 1}.</StepNumber>
             <Icon src={step.icon} alt={step.name}></Icon>
-            <TertiaryHeading alignment="center">{step.name}</TertiaryHeading>
-            <Paragraph alignment="center">{step.description}</Paragraph>
+            <TextWrapper>
+              <TertiaryHeading alignment="left">{step.name}</TertiaryHeading>
+              <Paragraph alignment="left">{step.description}</Paragraph>
+            </TextWrapper>
           </StepBox>
         ))}
       </StepsGroup>

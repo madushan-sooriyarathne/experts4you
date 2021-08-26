@@ -12,6 +12,18 @@ const AboutContainer = styled.section`
   gap: 10rem;
   align-items: start;
   justify-items: start;
+
+  ${(props) => props.theme.responsive.width1100} {
+    gap: 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width900} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-auto-rows: min-content;
+    grid-template-areas:
+      "he"
+      "de";
+  }
 `;
 
 const HeadingGroup = styled.div`
@@ -22,6 +34,15 @@ const HeadingGroup = styled.div`
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
+
+  ${(props) => props.theme.responsive.width900} {
+    align-items: flex-start;
+    justify-self: start;
+    & h1,
+    h2 {
+      text-align: left;
+    }
+  }
 `;
 
 const ParagraphGroup = styled.div`

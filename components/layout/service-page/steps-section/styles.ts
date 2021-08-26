@@ -23,6 +23,22 @@ const StepsGroup = styled.div`
   gap: 5rem;
   align-items: start;
   justify-content: start;
+
+  ${(props) => props.theme.responsive.width1500} {
+    gap: 3rem;
+  }
+
+  ${(props) => props.theme.responsive.width1100} {
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  }
+
+  ${(props) => props.theme.responsive.width900} {
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  }
+
+  ${(props) => props.theme.responsive.width500} {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
 `;
 
 const StepBox = styled.div`
@@ -33,10 +49,10 @@ const StepBox = styled.div`
   grid-template-columns: minmax(min-content, 1fr);
   grid-template-rows: repeat(2, min-content) 1fr;
   align-items: start;
-  justify-items: center;
-  gap: 2rem;
+  justify-items: start;
+  gap: 3rem;
   border-radius: 5px;
-  padding: 5rem 3rem;
+  padding: 3rem;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   &:hover {
@@ -59,4 +75,12 @@ const Icon = styled.img`
   object-fit: contain;
 `;
 
-export { StepsContainer, StepsGroup, StepBox, StepNumber, Icon };
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+`;
+
+export { StepsContainer, StepsGroup, StepBox, StepNumber, Icon, TextWrapper };

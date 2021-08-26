@@ -25,7 +25,7 @@ const Container = styled.div`
   }
 
   ${(props) => props.theme.responsive.width1100} {
-    padding: 10rem 5rem 0 5rem;
+    padding: 15rem 5rem 0 5rem;
     grid-template-columns: minmax(min-content, 1fr);
     grid-template-rows: repeat(2, minmax(60rem, min-content));
     grid-template-areas:
@@ -36,7 +36,7 @@ const Container = styled.div`
   }
 
   ${(props) => props.theme.responsive.width500} {
-    padding: 10rem 3rem 0 3rem;
+    padding: 15rem 3rem 0 3rem;
     grid-template-rows: repeat(2, minmax(calc(100vw * 1.2), min-content));
   }
 `;
