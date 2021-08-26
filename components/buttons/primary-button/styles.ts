@@ -23,6 +23,7 @@ const Button = styled.a<ButtonProps>`
   position: relative;
   cursor: pointer;
   display: block;
+  overflow: hidden;
   transition: color 0.3s ease-in-out 0.2s;
 
   z-index: 0;
@@ -45,7 +46,7 @@ const Button = styled.a<ButtonProps>`
     left: 0;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: calc(100% + 2px);
     height: 100%;
     transform-origin: center top;
     transform: scaleY(0);
