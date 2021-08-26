@@ -10,7 +10,7 @@ import HeroSection from "@components/layout/homepage/hero-section";
 import Card from "@components/card";
 import TitledGrid from "@components/layout/common/titled-grid";
 import WhoWeAre from "@components/layout/homepage/who-are-we";
-import TestimonialsSection from "@components/layout/common/testimonials";
+import TestimonialsSection from "@components/layout/homepage/testimonials";
 
 import {
   services,
