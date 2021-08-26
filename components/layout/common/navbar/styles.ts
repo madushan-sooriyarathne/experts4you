@@ -106,6 +106,10 @@ const Logo = styled(motion.img)`
   height: 3.5rem;
   object-fit: contain;
   cursor: pointer;
+
+  ${(props) => props.theme.responsive.mobile} {
+    height: 3rem;
+  }
 `;
 
 const NavLinkWrapper = styled.div`
