@@ -18,22 +18,22 @@ const services: Service[] = [
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance `,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistanc`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance`,
       },
     ],
     faqs: [
@@ -88,22 +88,22 @@ const services: Service[] = [
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance `,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistanc`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance`,
       },
     ],
     faqs: [
@@ -158,22 +158,22 @@ const services: Service[] = [
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance `,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistanc`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
         name: "Lorum Ipsum",
-        description: `Professional and precious assistance from the well-experienced experts  to be provided to have a flawless advisory in Tax. Give us the basic information and we will swiftly reach you to assist the demand assuring the best.`,
+        description: `Professional and precious assistance`,
       },
     ],
     faqs: [
