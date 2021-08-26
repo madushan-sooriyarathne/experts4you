@@ -14,7 +14,7 @@ import { ParsedUrlQuery } from "querystring";
 import PageCover from "@components/layout/common/page-cover";
 import CTASection from "@components/layout/common/cta-section";
 import FAQSection from "@components/layout/common/faq-section";
-import AboutSection from "@components/layout/service-page/about-section";
+import AboutSection from "@components/layout/common/about-section";
 import StepSection from "@components/layout/service-page/steps-section";
 import CallRequest from "@components/layout/common/call-request";
 
