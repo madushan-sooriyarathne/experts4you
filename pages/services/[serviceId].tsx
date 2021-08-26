@@ -33,7 +33,11 @@ const ServicePage: NextPage<Props> = ({ service }: Props): JSX.Element => {
           image: service.image,
         }}
       />
-      <AboutSection service={service} />
+      <AboutSection
+        primaryHeading={service.name}
+        subHeading="About"
+        description={service.about}
+      />
       <StepSection steps={service.steps} />
       <CTASection heading="Ready to get on-board with us?" />
       <FAQSection faqs={service.faqs} />
