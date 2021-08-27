@@ -17,7 +17,7 @@ const Card = styled.div`
   );
 
   &:hover {
-    & svg {
+    & img {
       transform: rotate(-5deg) scale(1.05);
     }
   }
@@ -27,9 +27,10 @@ const Card = styled.div`
   }
 `;
 
-const Icon = styled.svg`
+const Icon = styled.img`
   width: 8rem;
   height: 8rem;
+  object-fit: contain;
   transition: transform 0.2s ease-in-out;
 `;
 

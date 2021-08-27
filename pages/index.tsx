@@ -69,7 +69,7 @@ const HomePage: React.FC<Props> = ({
       </TitledGrid>
       <TitledGrid
         heading="Why us"
-        subHeading="Our job is not just to complete a project, we are here for you to help you shape and realise your vision."
+        subHeading={`We are to assist on how to full fill your financial responsibilities today, confirming tomorrow to be, "all perfect".`}
         id="why-us"
       >
         {ourValues.map((value, index) => (

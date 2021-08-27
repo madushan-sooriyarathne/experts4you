@@ -9,9 +9,7 @@ interface Props {
 const StaticCard: React.FC<Props> = ({ content }: Props): JSX.Element => {
   return (
     <Card>
-      <Icon>
-        <use xlinkHref={`/assets/svg/sprites.svg#${content.iconId}`} />
-      </Icon>
+      <Icon src={content.icon} alt={content.heading}></Icon>
       <SecondaryHeading>{content.heading}</SecondaryHeading>
       <Paragraph alignment="center">{content.description}</Paragraph>
     </Card>

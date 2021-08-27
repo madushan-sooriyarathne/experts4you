@@ -12,10 +12,11 @@ const WhoWeAre: React.FC = (): JSX.Element => {
       <PrimaryHeading>Who We Are</PrimaryHeading>
       <Description>
         <SubHeading>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          A professional Finance Firm that gives you all the finest services
+          related to, Bookkeeping, Secretary services, Company Incorporations,
+          Tax Advisory, and other Finance related Services. A bunch of skillful
+          professionals is leading “Experts for you” to meet and fulfill the
+          clients’ requirements at the best.
         </SubHeading>
       </Description>
       <BoxGroup>
@@ -25,10 +26,9 @@ const WhoWeAre: React.FC = (): JSX.Element => {
           </svg>
           <SecondaryHeading>Vision</SecondaryHeading>
           <Paragraph alignment="left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            From the start-up, the vision of HNS Partners has been helping our
+            business partners and clients achieve business and financial goals
+            throughout the years.
           </Paragraph>
         </BoxItem>
         <BoxItem>
@@ -37,10 +37,9 @@ const WhoWeAre: React.FC = (): JSX.Element => {
           </svg>
           <SecondaryHeading>Mission</SecondaryHeading>
           <Paragraph alignment="left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            To provide resourceful and cost-effective accounting and financial
+            solutions while building trust, honesty, and confidence with
+            stakeholders, clients, staff, and authorities.
           </Paragraph>
         </BoxItem>
         <BoxItem>
@@ -49,10 +48,9 @@ const WhoWeAre: React.FC = (): JSX.Element => {
           </svg>
           <SecondaryHeading>Goal</SecondaryHeading>
           <Paragraph alignment="left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            Goal To invest in “service quality” to fulfill the exact
+            expectations of each client and place us on top of the best being
+            the finest service provider in the visible market.
           </Paragraph>
         </BoxItem>
       </BoxGroup>

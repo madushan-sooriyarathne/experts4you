@@ -1,24 +1,35 @@
+import { Asset, Entry, EntryCollection } from "contentful";
 import { Route } from "next/dist/next-server/server/router";
 import { FormEvent } from "react";
 
 declare global {
   type AlignmentType = "center" | "left" | "right" | "justify";
 
-  interface Image {
-    src: string;
-    alt?: string;
-    blurUrl: string;
+  interface CardContentType {
+    icon: string;
+    heading: string;
+    description: string;
   }
 
-  interface Service {
+  interface ErrorType {
+    heading: string;
+    message: string;
+    errorCode: number;
+  }
+
+  type InputEventType =
+    | FormEvent<HTMLInputElement>
+    | FormEvent<HTMLTextAreaElement>;
+
+  interface SiteLinks {
     name: string;
-    id: string;
-    description: string;
-    about: string[];
-    image: Image;
+    route: string;
+  }
+
+  interface SocialLinks {
+    name: string;
+    link: string;
     icon: string;
-    steps: Step[];
-    faqs: Faq[];
   }
 
   interface Stats {
@@ -34,17 +45,40 @@ declare global {
     image: Image;
   }
 
-  interface SiteLinks {
-    name: string;
-    route: string;
+  // Image
+  interface Image {
+    src: string;
+    alt?: string;
+    blurUrl: string;
   }
 
-  interface SocialLinks {
+  interface ContentfulImageFields extends Image {
+    src: Asset;
+  }
+
+  type ContentfulImageResult = Entry<ContentfulImageFields>;
+
+  // Service
+  interface Service {
     name: string;
-    link: string;
+    id: string;
+    description: string;
+    about: string[];
+    image: Image;
     icon: string;
+    steps: Step[];
+    faqs: Faq[];
   }
 
+  interface ContentfulServiceFields extends Service {
+    image: ContentfulImageResult;
+    steps: EntryCollection;
+    faqs: EntryCollection;
+  }
+
+  type ContentfulServiceResult = Entry<ContentfulServiceFields>;
+
+  // Testimonial
   interface Testimonial {
     image: Image;
     description: string;
@@ -53,24 +87,26 @@ declare global {
     designation?: string;
   }
 
+  interface ContentfulTestimonialFields extends Testimonial {
+    image: ContentfulImageResult;
+  }
+
+  type ContentfulTestimonialResult = Entry<ContentfulTestimonialFields>;
+
+  // Partner
   interface Partner {
     image: Image;
     id: string;
     name: string;
   }
 
-  interface ErrorType {
-    heading: string;
-    message: string;
-    errorCode: number;
+  interface ContentfulPartnerFields extends Partner {
+    image: ContentfulImageResult;
   }
 
-  interface CardContentType {
-    iconId: string;
-    heading: string;
-    description: string;
-  }
+  type ContentfulPartnerResult = Entry<ContentfulPartnerFields>;
 
+  // Cover
   interface Cover {
     id: string;
     heading: string;
@@ -82,21 +118,33 @@ declare global {
     };
   }
 
+  interface ContentfulCoverEntries extends Cover {
+    image: ContentfulImageResult;
+  }
+
+  type ContentfulCoverResult = Entry<ContentfulCoverEntries>;
+
+  // FAQ
   interface FAQ {
     question: string;
     answer: string;
     id: string;
   }
 
+  type ContentfulFAQResult = Entry<FAQ>;
+
+  //Step
   interface Step {
     name: string;
     icon: string;
     description: string;
   }
 
-  type InputEventType =
-    | FormEvent<HTMLInputElement>
-    | FormEvent<HTMLTextAreaElement>;
+  interface ContentfulStepFields extends Step {
+    icon: Asset;
+  }
+
+  type ContentfulStepResult = Entry<ContentfulStepFields>;
 }
 
 export {};

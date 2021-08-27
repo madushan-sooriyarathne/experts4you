@@ -6,34 +6,34 @@ const services: Service[] = [
     image: {
       src: "/assets/img/business-bg.jpg",
       alt: "Tax",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     icon: "/assets/svg/incorporation.svg",
     about: [
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      `Are you searching for your company incorporation or a professional secretarial service for your organization? Well, you have successfully landed on the correct page where you are to experience the finest service ever to find around.`,
+      `We, Expert4you operate with master-skilled professionals who will dominate and deliver the exact needs of your requirements. Personalized and exclusive service for each client will finetune our services to perfection where it is beyond comparison.`,
+      `Service-Oriented Process and the precious working etiquettes you are to be experienced from our team till your process successfully completes. also, we always promise Professional consultation by our veterans for your greatest business endeavors and to achieve them wisely.`,
     ],
     steps: [
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance `,
+        name: "Get registered",
+        description: `Get your self registered with us`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance`,
+        name: "Reaching back",
+        description: `Our team with reach you for verification`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistanc`,
+        name: "Documentation",
+        description: `Documentation process by our team`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance`,
+        name: "Completion",
+        description: `Completion of your incorporation `,
       },
     ],
     faqs: [
@@ -76,34 +76,34 @@ const services: Service[] = [
     image: {
       src: "/assets/img/bookkeeping-bg.jpg",
       alt: "Tax",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     icon: "/assets/svg/bookkeeping.svg",
     about: [
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      `"Beware of little expenses; A small leak will sink a great ship - Benjamin Franklin" to elaborate every reliable business should be backed by accountable bookkeeping.`,
+      `Expert4you can be the quintessential choice when planning your comprehensive bookkeeping, well experienced chartered accountants and their wise narrations will always streamline this process to rest assure error-free documentation.`,
+      `Expert4you always uses the ultra-modern accounting software or will modify your existing one to par with the best, Cloud Base and non-cloud based accounting options to good orthodox options also to be embraced for your requirements.`,
     ],
     steps: [
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance `,
+        name: "Submit",
+        description: `Submit your online request`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance`,
+        name: "Acknowledgment",
+        description: `Acknowledgment by our team`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistanc`,
+        name: "Initiation",
+        description: `Project initiation`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance`,
+        name: "Proceeding",
+        description: `Proceeding with the project`,
       },
     ],
     faqs: [
@@ -146,34 +146,34 @@ const services: Service[] = [
     image: {
       src: "/assets/img/tax-bg.jpg",
       alt: "Tax",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     icon: "/assets/svg/tax.svg",
     about: [
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
-      "Complexity to simplicity transformation is the Service you are about the experience. Click here for the easiest way ever to find your company incorporation, all we need is three clicks to confirm your details and the rest will be on us.",
+      `One of the main sub-sector of the whole finance operation, All you need is a reliable firm with vast knowledge to guide you through the tax hurdles, Expert4you can be the option for this as well, our skillful tax experts are always there to take the lead when matters arise related to Tax.`,
+      `Please feel free to help yourself to evaluate you or your business with our Tax calculator which has integrated with the latest tax formulas.`,
+      `If we have managed to earn your trust in this as well, please feel free to give you basic information allowing us to reach you in no time.`,
     ],
     steps: [
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance `,
+        name: "Evaluation",
+        description: `Do your online evaluation with us `,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance`,
+        name: "Submissions",
+        description: `Submissions of your request via our website`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistanc`,
+        name: "Consultation",
+        description: `Consultation`,
       },
       {
         icon: "/assets/svg/incorporation.svg",
-        name: "Lorum Ipsum",
-        description: `Professional and precious assistance`,
+        name: "Advisory",
+        description: `Advisory Initiation`,
       },
     ],
     faqs: [
@@ -212,18 +212,18 @@ const services: Service[] = [
 ];
 
 const heroData: HeroData = {
-  title: "Perfection in Services to be offered at your requirements. ",
+  title: "Excellence in Services.",
   image: {
     src: "/assets/img/fg-img.png",
     alt: "Experts 4 You",
-    blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
   },
-  route: "/contact",
+  route: "/about",
   stats: [
     { number: "4+", label: "Years of Excellence" },
     { number: "450+", label: "Faultless Projects" },
 
-    { number: "100%", label: "Client Satisfaction" },
+    { number: "100%", label: "Client Ratings" },
   ],
   subText:
     "Explore the facilities we cater related to Financial and Secretarial Services for any corporation in operation.",
@@ -287,7 +287,7 @@ const testimonials: Testimonial[] = [
   {
     image: {
       src: "/assets/svg/eleven.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -298,7 +298,7 @@ const testimonials: Testimonial[] = [
   {
     image: {
       src: "/assets/svg/advertaro.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     },
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -311,39 +311,34 @@ const testimonials: Testimonial[] = [
 const ourValues: CardContentType[] = [
   {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    heading: "We’re Innovators",
-    iconId: "innovators",
+      "Understanding the exact requirement to shape up the outcome is our key plan when consulting each client, dynamic mode of workings will rest assure the services while utmost professionalism to cater all in out.",
+    heading: "We’re service Perfectionists  ",
+    icon: "/assets/svg/perfect.svg",
   },
   {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: `“Innovative Ideas are the best in town” once said, we are always ready to embrace and assist any professional business voyages, professionals in our team will always assist and suggest the best.`,
     heading: "We’re Entrepreneurial",
-    iconId: "entrepreneurial",
+    icon: "/assets/svg/entrepreneur.svg",
   },
   {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    heading: "A 360 Partnership",
-    iconId: "360-partnership",
+    description: `“Professional Reliability” is a vital ingredient when we are to expect excellent service, starting from professional etiquettes to Professional reliability is a promise we can honor. “Expert4you” had been fulfilling the same so far.`,
+    heading: "We’re reliable",
+    icon: "/assets/svg/reliable.svg",
   },
   {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    heading: "We’re Innovators",
-    iconId: "innovators",
+    description: `We consider “time” as a business dimension, meeting the schedules and completing assigned tasks on time is one of our key strengths. "Time Value" is a concept our team always follows.`,
+    heading: "We’re prompt",
+    icon: "/assets/svg/prompt.svg",
   },
   {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    heading: "We’re Entrepreneurial",
-    iconId: "entrepreneurial",
+    description: `Catering and understating a wide range of business models and allowing any professional business to access us is well respected, our team always assures the accessibility of our services at the figures where the client will only find it reasonable.`,
+    heading: "We’re Accessible",
+    icon: "/assets/svg/accessible.svg",
   },
   {
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    heading: "A 360 Partnership",
-    iconId: "360-partnership",
+    description: `Getting all that we are to offer you and obtaining the same from a single place is what makes us so unique, as we strongly believe the services from “Experts4you” are somewhat incomparable.`,
+    heading: "We’re unique",
+    icon: "/assets/svg/unique.svg",
   },
 ];
 
@@ -365,12 +360,13 @@ const errors: ErrorType[] = [
   },
 ];
 
+// Moved to CMS
 const partners: Partner[] = [
   {
     name: "Advertaro",
     image: {
       src: "/assets/svg/advertaro.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
       alt: "Advertaro Logo",
     },
     id: "advertaro",
@@ -379,7 +375,7 @@ const partners: Partner[] = [
     name: "Eleven",
     image: {
       src: "/assets/svg/eleven.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
       alt: "Eleven Logo",
     },
     id: "eleven",
@@ -388,7 +384,7 @@ const partners: Partner[] = [
     name: "Asian Football",
     image: {
       src: "/assets/svg/asian-football.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
       alt: "Asian Football Logo",
     },
     id: "asian-football",
@@ -397,7 +393,7 @@ const partners: Partner[] = [
     name: "Product Hunt",
     image: {
       src: "/assets/svg/product-hunt.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
       alt: "Product Hunt Logo",
     },
     id: "product-hunt",
@@ -406,7 +402,7 @@ const partners: Partner[] = [
     name: "Reddit",
     image: {
       src: "/assets/svg/reddit.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
       alt: "Reddit Logo",
     },
     id: "reddit",
@@ -415,13 +411,14 @@ const partners: Partner[] = [
     name: "CD Projekt Red",
     image: {
       src: "/assets/svg/cd-projekt-red.svg",
-      blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+      blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
       alt: "CD Projekt Red Logo",
     },
     id: "cd-projekt-red",
   },
 ];
 
+// TODO: Move to CMS
 const servicesCover: Cover = {
   id: "services",
   heading: "Services that lead the way to better business",
@@ -429,7 +426,7 @@ const servicesCover: Cover = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   image: {
     src: "/assets/img/cover-services.jpg",
-    blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     alt: "Services that lead the way to better business - cover",
   },
   route: {
@@ -438,6 +435,7 @@ const servicesCover: Cover = {
   },
 };
 
+// TODO: Move to CMS
 const aboutCover: Cover = {
   id: "about",
   heading: "About Experts 4 You",
@@ -445,7 +443,7 @@ const aboutCover: Cover = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   image: {
     src: "/assets/img/cover-services.jpg",
-    blurUrl: "data:image/svg+xml;base64,LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
+    blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
     alt: "Services that lead the way to better business - cover",
   },
 };

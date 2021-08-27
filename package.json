@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/madushan-sooriyarathne/experts4you#readme",
   "dependencies": {
+    "contentful": "^8.5.0",
     "framer-motion": "^4.1.17",
     "mapbox-gl": "^2.4.1",
     "next": "^11.0.1",
