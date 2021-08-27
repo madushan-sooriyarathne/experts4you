@@ -18,6 +18,13 @@ const FormDataSection = styled.section`
   ${(props) => props.theme.responsive.width1000} {
     grid-template-columns: minmax(min-content, 1fr);
   }
+  ${(props) => props.theme.responsive.width800} {
+    padding: 20rem 5rem 10rem 5rem;
+  }
+
+  ${(props) => props.theme.responsive.width800} {
+    padding: 20rem 3rem 10rem 3rem;
+  }
 `;
 
 const FormSection = styled.div`
@@ -102,6 +109,11 @@ const SocialMediaIcon = styled.svg`
 
   &:hover {
     filter: grayscale(100%);
+  }
+
+  ${(props) => props.theme.responsive.width800} {
+    width: 3rem;
+    height: 3rem;
   }
 `;
 

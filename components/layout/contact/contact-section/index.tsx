@@ -79,14 +79,16 @@ const ContactSection: React.FC = (): JSX.Element => {
       </FormSection>
       <DetailsSection>
         <ItemGroup>
-          <SecondaryHeading>Experts 4 You Private Limited.</SecondaryHeading>
-          <Paragraph>
+          <SecondaryHeading alignment="center">
+            Expert4U Private Limited.
+          </SecondaryHeading>
+          <Paragraph alignment="center">
             No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka
           </Paragraph>
         </ItemGroup>
         <ItemGroup>
-          <SubHeading>077 734 2212</SubHeading>
-          <SubHeading>connect@xperts4you.com</SubHeading>
+          <SubHeading alignment="center">077 734 2212</SubHeading>
+          <SubHeading alignment="center">connect@xperts4you.com</SubHeading>
         </ItemGroup>
         <SocialMediaGroup>
           {socialMedia.map((item) => (

@@ -20,7 +20,7 @@ const AboutPage: NextPage<Props> = ({ coverData }: Props): JSX.Element => {
         description={aboutCompany.about}
       />
       <Industries industries={aboutCompany.industries} />
-      <CTASection />
+      <CTASection buttonText={"Get a free consultation"} />
     </Page>
   );
 };

@@ -9,8 +9,6 @@ const Button = styled.a<ButtonProps>`
   align-items: center;
   justify-content: flex-start;
   column-gap: 1rem;
-  padding: 3rem 0 1rem 0;
-
   cursor: pointer;
 
   &:hover {

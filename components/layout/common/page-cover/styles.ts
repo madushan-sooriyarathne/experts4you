@@ -13,6 +13,11 @@ const CoverContainer = styled.header`
     padding: 10rem 5rem 5rem 5rem;
     min-height: 50vh;
   }
+
+  ${(props) => props.theme.responsive.width600} {
+    padding: 10rem 2rem 5rem 2rem;
+    min-height: 50vh;
+  }
 `;
 
 const CoverContainerBg = styled.div`
@@ -87,6 +92,14 @@ const HeadingWrapper = styled.div`
   row-gap: 2rem;
 `;
 
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+`;
+
 export {
   CoverContainer,
   CoverContainerBg,
@@ -94,4 +107,5 @@ export {
   Cover,
   CoverCTA,
   HeadingWrapper,
+  ButtonWrapper,
 };

@@ -31,6 +31,14 @@ const ServicePage: NextPage<Props> = ({ service }: Props): JSX.Element => {
           description: service.description,
           id: service.id,
           image: service.image,
+          route: {
+            name: `Get a free consultation`,
+            url: "/get-quote",
+          },
+          secondaryRoute: {
+            name: `Contact a expert`,
+            url: "/contact",
+          },
         }}
       />
       <AboutSection
@@ -39,7 +47,10 @@ const ServicePage: NextPage<Props> = ({ service }: Props): JSX.Element => {
         description={service.about}
       />
       <StepSection steps={service.steps} />
-      <CTASection heading="Ready to get on-board with us?" />
+      <CTASection
+        heading="Ready to get on-board with us?"
+        buttonText="Let's get started"
+      />
       <FAQSection faqs={service.faqs} />
       <CallRequest />
     </Page>

@@ -1,4 +1,5 @@
 import PrimaryButton from "@components/buttons/primary-button";
+import SecondaryButton from "@components/buttons/secondary-button";
 import PrimaryHeading from "@components/headings/primary-heading";
 import SubHeading from "@components/headings/sub-heading";
 import ImageComponent from "@components/image-component";
@@ -9,6 +10,7 @@ import {
   Cover,
   CoverCTA,
   HeadingWrapper,
+  ButtonWrapper,
 } from "./styles";
 
 interface Props {
@@ -28,11 +30,18 @@ const PageCover: React.FC<Props> = ({ cover }: Props): JSX.Element => {
             <PrimaryHeading alignment="left">{cover.heading}</PrimaryHeading>
             <SubHeading alignment="left">{cover.description}</SubHeading>
           </HeadingWrapper>
-          {cover.route && (
-            <PrimaryButton type="route" route={cover.route.url}>
-              {cover.route.name}
-            </PrimaryButton>
-          )}
+          <ButtonWrapper>
+            {cover.route && (
+              <PrimaryButton type="route" route={cover.route.url}>
+                {cover.route.name}
+              </PrimaryButton>
+            )}
+            {cover.secondaryRoute && (
+              <SecondaryButton type="route" route={cover.secondaryRoute.url}>
+                {cover.secondaryRoute.name}
+              </SecondaryButton>
+            )}
+          </ButtonWrapper>
         </CoverCTA>
 
         <ImageComponent image={cover.image} />

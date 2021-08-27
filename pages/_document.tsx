@@ -57,6 +57,20 @@ class AppDocument extends Document {
             href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"
             rel="stylesheet"
           />
+
+          {/* Google analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-T7P2H14K0Q"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-T7P2H14K0Q');`,
+            }}
+          ></script>
         </Head>
         <body>
           <Main />

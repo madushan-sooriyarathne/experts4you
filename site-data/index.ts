@@ -218,18 +218,22 @@ const heroData: HeroData = {
     alt: "Experts 4 You",
     blurUrl: "LfKwzs%1Mwo}_N%MjF%2V[s;x^M{",
   },
-  route: "/about",
+  route: "/get-quote",
   stats: [
     { number: "4+", label: "Years of Excellence" },
     { number: "450+", label: "Faultless Projects" },
 
-    { number: "100%", label: "Client Ratings" },
+    { number: "100%", label: "Client Satisfaction" },
   ],
   subText:
     "Explore the facilities we cater related to Financial and Secretarial Services for any corporation in operation.",
 };
 
 const navLinks: SiteLinks[] = [
+  {
+    route: "/",
+    name: "Home",
+  },
   {
     route: "/about",
     name: "About",
@@ -238,14 +242,14 @@ const navLinks: SiteLinks[] = [
     route: "/services",
     name: "Services",
   },
-  {
-    route: "/tax-calculator",
-    name: "Tax Calculator",
-  },
-  {
-    route: "/knowledge",
-    name: "Knowledge",
-  },
+  // {
+  //   route: "/tax-calculator",
+  //   name: "Tax Calculator",
+  // },
+  // {
+  //   route: "/knowledge",
+  //   name: "Knowledge",
+  // },
   {
     route: "/contact",
     name: "Contact",
@@ -431,7 +435,11 @@ const servicesCover: Cover = {
   },
   route: {
     url: "/get-quote",
-    name: "Get a Quote",
+    name: "Get free consultation",
+  },
+  secondaryRoute: {
+    url: "/contact",
+    name: "Contact a expert",
   },
 };
 

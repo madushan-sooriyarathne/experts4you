@@ -29,13 +29,12 @@ const ServicesPage: NextPage<Props> = ({
             description={service.description}
             icon={service.icon}
             route={`/services/${service.id}`}
-            withButton
             key={service.id}
           />
         ))}
       </GridLayout>
       <FAQSection faqs={commonFaq} />
-      <CTASection />
+      <CTASection buttonText="Let's get started" />
       <CallRequest />
     </Page>
   );

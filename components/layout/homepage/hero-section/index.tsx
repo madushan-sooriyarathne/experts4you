@@ -27,7 +27,7 @@ const HeroSection: React.FC<Props> = ({ heroData }: Props): JSX.Element => {
         <PrimaryHeading alignment="left">{heroData.title}</PrimaryHeading>
         <Paragraph alignment="left">{heroData.subText}</Paragraph>
         <PrimaryButton type="route" route={heroData.route}>
-          Learn More
+          Get your free consultation
         </PrimaryButton>
         <StatGroup>
           {heroData.stats.map((stat, index) => (

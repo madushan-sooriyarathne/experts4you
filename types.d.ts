@@ -116,6 +116,10 @@ declare global {
       name: string;
       url: string;
     };
+    secondaryRoute?: {
+      name: string;
+      url: string;
+    };
   }
 
   interface ContentfulCoverEntries extends Cover {
