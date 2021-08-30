@@ -8,10 +8,6 @@ declare module "styled-components" {
       primaryMedium: string;
       primaryLight: string;
       primaryDark: string;
-      secondary: string;
-      secondaryMedium: string;
-      secondaryLight: string;
-      secondaryDark: string;
       white: string;
       black: string;
       blackMedium: string;
@@ -58,14 +54,10 @@ declare module "styled-components" {
 
 const theme: DefaultTheme = {
   colors: {
-    secondary: "#09b9f4",
-    secondaryMedium: "#53cef7",
-    secondaryLight: "#e6f8fe",
-    secondaryDark: "#055d7a",
-    primary: "#e05b14",
-    primaryMedium: "#e98c5b",
-    primaryLight: "#fcefe8",
-    primaryDark: "#86370c",
+    primary: "#0077B6",
+    primaryMedium: "#99DBFF",
+    primaryLight: "#EBF8FF",
+    primaryDark: "#03045E",
     white: "#ffffff",
     black: "#32373E",
     blackMedium: "#474b51",
@@ -73,20 +65,33 @@ const theme: DefaultTheme = {
     danger: "#de4435",
     warning: "#e8bc0d",
     success: "#29c46a",
+
+    // primary: "#e05b14",
+    // primaryMedium: "#e98c5b",
+    // primaryLight: "#fcefe8",
+    // primaryDark: "#86370c",
   },
   fonts: {
     primary: "'Inter', Tahoma, Geneva, Verdana, sans-serif",
     secondary: "'Gotham', Tahoma, Geneva, Verdana, sans-serif",
   },
   gradients: {
-    headingLight: "linear-gradient(to right, #abbaab, #ffffff)",
-    headingDark: "linear-gradient(135deg, #86370c 10%, #e05b14 100%);",
+    headingLight: "linear-gradient(to right, #90E0EF, #DBF5FA)",
+    headingDark: "linear-gradient(135deg, #010228 10%, #0096C7 100%);",
     secondaryDark: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
-    secondaryLight: "linear-gradient(to right, #ffefba, #ffffff)",
-    mainBg: "linear-gradient(135deg, #fffeff 10%, #d7fffe 100%)",
+    secondaryLight: "linear-gradient(to right, #DBF5FA, #ffffff)",
+    mainBg: "linear-gradient(135deg, #C9F0F8 10%, #d7fffe 100%)",
     blurBg:
       "linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.8) 100%)",
-    coverBg: "linear-gradient(135deg, #ffecd2 10%, #fcb69f 100%);",
+    coverBg: "linear-gradient(135deg, #DBF5FA 10%, #90E0EF 100%);",
+
+    // headingDark: "linear-gradient(135deg, #86370c 10%, #e05b14 100%);",
+    // secondaryDark: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
+    // secondaryLight: "linear-gradient(to right, #ffefba, #ffffff)",
+    // mainBg: "linear-gradient(135deg, #fffeff 10%, #d7fffe 100%)",
+    // blurBg:
+    //   "linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.8) 100%)",
+    // coverBg: "linear-gradient(135deg, #ffecd2 10%, #fcb69f 100%);",
   },
   shadows: {
     close: "0 0 5px 0 rgba(0, 0, 0, 0.25)",
