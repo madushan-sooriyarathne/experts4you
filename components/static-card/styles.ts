@@ -12,8 +12,8 @@ const Card = styled.div`
   row-gap: 3rem;
   background-image: linear-gradient(
     325deg,
-    rgba(255, 247, 243, 1) 0%,
-    rgba(252, 239, 232, 0.1) 100%
+    rgb(219, 245, 250, 1) 0%,
+    rgba(219, 245, 250, 0.1) 100%
   );
 
   &:hover {
