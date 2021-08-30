@@ -5,7 +5,7 @@ interface Props {
   onChange: (event: InputEventType) => void;
   name: string;
   placeholder: string;
-  type: "text" | "tel" | "email";
+  type: "text" | "tel" | "email" | "number";
   pattern?: string;
   textArea?: boolean;
   required?: boolean;
