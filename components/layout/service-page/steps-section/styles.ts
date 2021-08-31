@@ -80,7 +80,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 export { StepsContainer, StepsGroup, StepBox, StepNumber, Icon, TextWrapper };
