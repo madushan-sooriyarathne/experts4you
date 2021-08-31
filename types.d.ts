@@ -1,9 +1,11 @@
 import { Asset, Entry, EntryCollection } from "contentful";
 import { Route } from "next/dist/next-server/server/router";
-import { FormEvent } from "react";
+import { Dispatch, FormEvent, SetStateAction } from "react";
 
 declare global {
   type AlignmentType = "center" | "left" | "right" | "justify";
+
+  type DispatchFn<T> = Dispatch<SetStateAction<T>>;
 
   interface CardContentType {
     icon: string;
