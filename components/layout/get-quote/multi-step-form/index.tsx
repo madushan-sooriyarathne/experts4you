@@ -9,12 +9,11 @@ import {
   StatusBar,
 } from "./styles";
 
-import { services } from "@site-data";
 import { useInput } from "@hooks";
 import CompanyDetailsSelection from "../company-details-selection";
 import ContactDetailsStep from "../contact-details-step";
 import FinishedStep from "../finished-step";
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const MultiStepForm: React.FC = (): JSX.Element => {
   const serviceTypes = [
