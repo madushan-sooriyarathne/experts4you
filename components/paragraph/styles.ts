@@ -38,6 +38,20 @@ const Para = styled.div<ParaProps>`
       color: ${(props) => props.theme.colors.primary};
     }
   }
+
+  & ul {
+    padding: 0 5rem;
+    & > li {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      line-height: 145%;
+    }
+
+    ${(props) => props.theme.responsive.width500} {
+      padding: 0 2rem;
+    }
+  }
 `;
 
 export { Para };

@@ -41,18 +41,4 @@ const SubGroup = styled.div`
   margin-top: 1rem;
 `;
 
-const List = styled.ul`
-  padding: 0 5rem;
-  & > li {
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    line-height: 145%;
-  }
-
-  ${(props) => props.theme.responsive.width500} {
-    padding: 0 2rem;
-  }
-`;
-
-export { PrivacyPolicySection, SubSection, SubGroup, List };
+export { PrivacyPolicySection, SubSection, SubGroup };

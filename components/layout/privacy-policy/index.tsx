@@ -2,7 +2,7 @@ import PrimaryHeading from "@components/headings/primary-heading";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import TertiaryHeading from "@components/headings/tertiary-heading";
 import Paragraph from "@components/paragraph";
-import { PrivacyPolicySection, SubGroup, SubSection, List } from "./styles";
+import { PrivacyPolicySection, SubGroup, SubSection } from "./styles";
 
 const PrivacyPolicy: React.FC = (): JSX.Element => {
   return (
@@ -35,20 +35,11 @@ const PrivacyPolicy: React.FC = (): JSX.Element => {
           otherwise contacting us.
         </Paragraph>
         <Paragraph>
-          Generally, you control the amount and type of information you provide
-          to us when using our Website. The personal information that we collect
-          depends on the context of your interaction with us and the Website,
-          the choices you make, and the products and features you use. The
-          personal information we collect can include the following:
+          {`Generally, you control the amount and type of information you provide to us when using our Website. The personal information that we collect depends on the context of your interaction with us and the Website, the choices you make, and the products and features you use. The personal information we collect can include the following:\n\n
+
+- Name, Email Address, and Contact Data.\n
+- Business Information. If you choose to calculate your approximate tax on our Website, we may ask for specific information related to your business in order to create the tax report.`}
         </Paragraph>
-        <List>
-          {` <li>Name, Email Address, and Contact Data</li>
-          <li>
-            Business Information. If you choose to calculate your approximate
-            tax on our Website, we may ask for specific information related to
-            your business in order to create the tax report.
-          </li>`}
-        </List>
       </SubSection>
       <SubSection>
         <SecondaryHeading>Automatically Collected Information</SecondaryHeading>
@@ -115,12 +106,9 @@ const PrivacyPolicy: React.FC = (): JSX.Element => {
           Analytics about visits activity.
         </Paragraph>
         <Paragraph>
-          {` For more information on the privacy practices of Google, please visit
+          For more information on the privacy practices of Google, please visit
           the Google Privacy & Terms web page:
-          <br />
-          <a href="http://www.google.com/intl/en/policies/privacy/">
-            http://www.google.com/intl/en/policies/privacy/
-          </a>`}
+          [http://www.google.com/intl/en/policies/privacy/](http://www.google.com/intl/en/policies/privacy/)
         </Paragraph>
       </SubSection>
       <SubSection>

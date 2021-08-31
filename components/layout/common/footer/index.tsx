@@ -39,9 +39,7 @@ const Footer: React.FC = (): JSX.Element => {
           </CompanyDetailsGroup>
 
           <Paragraph alignment="left">
-            {` Phone: 077 734 2212
-            <br />
-            Email: connect@xperts4you.com`}
+            Phone: 077 734 2212\n Email: connect@xperts4you.com
           </Paragraph>
         </LinkSection>
         <LinkSection>
@@ -82,11 +80,10 @@ const Footer: React.FC = (): JSX.Element => {
         </LinkSection>
         <CopyrightNote>
           <Paragraph small alignment="center">
-            {`© ${new Date().getFullYear()} <b>Experts 4 You Private Limited.</b>{" "}
-            All Rights Reserved.`}
+            {`© ${new Date().getFullYear()} **Experts 4 You Private Limited.** All Rights Reserved.`}
           </Paragraph>
           <Paragraph small alignment="center">
-            {`Website designed & developed by <a href="https://advertaro.lk" target="_blank">Advertaro</a>`}
+            Website designed & developed by [Advertaro](https://advertaro.lk)
           </Paragraph>
         </CopyrightNote>
       </FooterWrapper>
