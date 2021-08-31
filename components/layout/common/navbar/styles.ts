@@ -177,12 +177,12 @@ const NavLink = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   outline: none;
-  color: ${(props) => props.theme.colors.blackMedium};
+  color: ${(props) => props.theme.colors.primaryDark};
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primaryMedium};
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 
