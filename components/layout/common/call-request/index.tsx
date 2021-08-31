@@ -62,11 +62,8 @@ const CallRequest: React.FC = (): JSX.Element => {
         <Paragraph small alignment="left">
           By submitting this form, I agree to having my personal and contact
           information processed and used for the purpose of marketing
-          communications.
-          <br /> For more details, Please refer to our{" "}
-          <Link href="/privacy-policy">
-            <a>Privacy Policy.</a>
-          </Link>
+          communications. For more details, Please refer to our [Privacy
+          Policy.](/privacy-policy)
         </Paragraph>
       </InputSide>
       <ImageComponent
