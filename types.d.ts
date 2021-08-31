@@ -32,17 +32,50 @@ declare global {
     icon: string;
   }
 
-  interface Stats {
+  interface Stat {
     number: string;
     label: string;
   }
 
-  interface HeroData {
+  // Industry
+  interface Industry {
+    name: string;
+    id: string;
+    icon: string;
+  }
+
+  interface ContentfulIndustryFields extends Industry {
+    icon: Asset;
+  }
+
+  // Value
+  interface Value {
+    id: string;
+    heading: string;
+    description: string;
+    icon: string;
+  }
+
+  interface ContentfulValueFields extends Value {
+    icon: Asset;
+  }
+
+  // Company
+  interface Company {
+    name: string;
     title: string;
-    subText: string;
-    route: string;
-    stats: Stats[];
+    tagline: string;
+    about: string;
+    industries: Industry[];
+    values: Value[];
+    stats: Stat[];
     image: Image;
+  }
+
+  interface ContentfulCompanyFields extends Company {
+    industries: Entry<ContentfulIndustryFields>[];
+    values: Entry<ContentfulValueFields>[];
+    image: ContentfulImageResult;
   }
 
   // Image
@@ -63,7 +96,7 @@ declare global {
     name: string;
     id: string;
     description: string;
-    about: string[];
+    about: string;
     image: Image;
     icon: string;
     steps: Step[];
@@ -71,9 +104,10 @@ declare global {
   }
 
   interface ContentfulServiceFields extends Service {
+    icon: Asset;
     image: ContentfulImageResult;
-    steps: EntryCollection;
-    faqs: EntryCollection;
+    steps: ContentfulStepResult[];
+    faqs: ContentfulFAQResult[];
   }
 
   type ContentfulServiceResult = Entry<ContentfulServiceFields>;
@@ -122,11 +156,11 @@ declare global {
     };
   }
 
-  interface ContentfulCoverEntries extends Cover {
+  interface ContentfulCoverFields extends Cover {
     image: ContentfulImageResult;
   }
 
-  type ContentfulCoverResult = Entry<ContentfulCoverEntries>;
+  type ContentfulCoverResult = Entry<ContentfulCoverFields>;
 
   // FAQ
   interface FAQ {
