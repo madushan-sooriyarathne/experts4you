@@ -45,13 +45,4 @@ const HeadingGroup = styled.div`
   }
 `;
 
-const ParagraphGroup = styled.div`
-  grid-area: de;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-`;
-
-export { AboutContainer, HeadingGroup, ParagraphGroup };
+export { AboutContainer, HeadingGroup };

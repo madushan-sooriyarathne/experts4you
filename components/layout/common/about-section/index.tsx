@@ -1,12 +1,12 @@
 import PrimaryHeading from "@components/headings/primary-heading";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import Paragraph from "@components/paragraph";
-import { AboutContainer, HeadingGroup, ParagraphGroup } from "./styles";
+import { AboutContainer, HeadingGroup } from "./styles";
 
 interface Props {
   primaryHeading: string;
   subHeading: string;
-  description: string[];
+  description: string;
 }
 
 const AboutSection: React.FC<Props> = ({
@@ -20,11 +20,7 @@ const AboutSection: React.FC<Props> = ({
         <SecondaryHeading alignment="right">{subHeading}</SecondaryHeading>
         <PrimaryHeading alignment="right">{primaryHeading}</PrimaryHeading>
       </HeadingGroup>
-      <ParagraphGroup>
-        {description.map((para: string, index: number) => (
-          <Paragraph key={`service-about-para-${index}`}>{para}</Paragraph>
-        ))}
-      </ParagraphGroup>
+      <Paragraph alignment="left">{description}</Paragraph>
     </AboutContainer>
   );
 };
