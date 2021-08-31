@@ -8,6 +8,7 @@ import "@styles/fonts.css";
 import { useEffect, useState } from "react";
 import LoadingScreen from "@components/loading-screen";
 import { AnimatePresence } from "framer-motion";
+import NotificationContextProvider from "context/notification-context";
 
 const App: React.FC<AppProps> = ({
   Component,
@@ -40,10 +41,12 @@ const App: React.FC<AppProps> = ({
       {/* View port meta tags here */}
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <AnimatePresence initial={false}>
-          {loading && <LoadingScreen />}
-        </AnimatePresence>
-        <Component {...pageProps} />
+        <NotificationContextProvider>
+          <AnimatePresence initial={false}>
+            {loading && <LoadingScreen />}
+          </AnimatePresence>
+          <Component {...pageProps} />
+        </NotificationContextProvider>
       </ThemeProvider>
     </>
   );
