@@ -197,12 +197,12 @@ const PartnersGroup = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
 `;
 
 const PartnerLogo = styled.div`
-  width: 30rem;
-  height: 20rem;
+  width: 20rem;
+  height: 15rem;
   filter: grayscale(100%);
   transition: filter 0.2s ease-in;
 
