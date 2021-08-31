@@ -20,7 +20,6 @@ import {
   getMultipleEntries,
   serializeAssetUrls,
 } from "utils/contentful";
-import { parseMarkdown } from "utils/parse-markdown";
 
 interface Props {
   service: Service;
