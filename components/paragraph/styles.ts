@@ -6,16 +6,25 @@ interface ParaProps {
   light: boolean;
 }
 
-const Para = styled.p<ParaProps>`
-  font-size: ${(props) => (props.small ? "1.3rem" : "1.5rem")};
-  font-family: ${(props) => props.theme.fonts.primary};
-  font-weight: 400;
-  letter-spacing: 0.1px;
-  line-height: 150%;
-  text-align: ${(props) => props.alignment};
-  color: ${(props) =>
-    props.light ? props.theme.colors.white : props.theme.colors.black};
+const Para = styled.div<ParaProps>`
   /* margin-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  row-gap: 1rem;
+
+  & p {
+    font-size: ${(props) => (props.small ? "1.3rem" : "1.5rem")};
+    font-family: ${(props) => props.theme.fonts.primary};
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 150%;
+    text-align: ${(props) => props.alignment};
+    color: ${(props) =>
+      props.light ? props.theme.colors.white : props.theme.colors.black};
+  }
+
   & b {
     font-weight: 700;
   }

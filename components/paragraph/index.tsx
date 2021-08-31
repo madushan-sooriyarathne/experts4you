@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
+import ReactMarkdown from "react-markdown";
 import { Para } from "./styles";
 
 interface Props {
-  children: ReactNode;
+  children: string;
   alignment?: AlignmentType;
   small?: boolean;
   light?: boolean;
@@ -16,7 +17,7 @@ const Paragraph: React.FC<Props> = ({
 }: Props): JSX.Element => {
   return (
     <Para alignment={alignment} small={small} light={light}>
-      {children}
+      <ReactMarkdown>{children.toString()}</ReactMarkdown>
     </Para>
   );
 };
