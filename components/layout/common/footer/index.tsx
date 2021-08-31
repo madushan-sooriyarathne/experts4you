@@ -39,7 +39,7 @@ const Footer: React.FC = (): JSX.Element => {
           </CompanyDetailsGroup>
 
           <Paragraph alignment="left">
-            Phone: 077 734 2212\n Email: connect@xperts4you.com
+            {`Phone: 077 734 2212\n\nEmail: connect@xperts4you.com`}
           </Paragraph>
         </LinkSection>
         <LinkSection>
