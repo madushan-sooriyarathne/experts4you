@@ -15,22 +15,30 @@ import {
 } from "./styles";
 
 interface Props {
-  heroData: HeroData;
+  title: string;
+  subText: string;
+  stats: Stat[];
+  image: Image;
 }
 
-const HeroSection: React.FC<Props> = ({ heroData }: Props): JSX.Element => {
+const HeroSection: React.FC<Props> = ({
+  title,
+  subText,
+  stats,
+  image,
+}: Props): JSX.Element => {
   return (
     <Container>
       <ContainerBG />
       <ContainerOverlay />
       <TextContainer>
-        <PrimaryHeading alignment="left">{heroData.title}</PrimaryHeading>
-        <Paragraph alignment="left">{heroData.subText}</Paragraph>
-        <PrimaryButton type="route" route={heroData.route}>
+        <PrimaryHeading alignment="left">{title}</PrimaryHeading>
+        <Paragraph alignment="left">{subText}</Paragraph>
+        <PrimaryButton type="route" route="/get-quote">
           Get your free consultation
         </PrimaryButton>
         <StatGroup>
-          {heroData.stats.map((stat, index) => (
+          {stats.map((stat, index) => (
             <StatItem key={`stat-${index}`}>
               <StatNumber>{stat.number}</StatNumber>
               <StatLabel>{stat.label}</StatLabel>
@@ -40,7 +48,7 @@ const HeroSection: React.FC<Props> = ({ heroData }: Props): JSX.Element => {
       </TextContainer>
       <ImageContainer>
         <ImageComponent
-          image={heroData.image}
+          image={image}
           objectFit="contain"
           pos={{ x: "center", y: "bottom" }}
         />
