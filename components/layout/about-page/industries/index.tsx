@@ -8,11 +8,7 @@ import {
 } from "./styles";
 
 interface Props {
-  industries: {
-    name: string;
-    id: string;
-    icon: string;
-  }[];
+  industries: Industry[];
 }
 
 const Industries: React.FC<Props> = ({ industries }: Props): JSX.Element => {
