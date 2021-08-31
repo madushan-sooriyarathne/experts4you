@@ -1,6 +1,5 @@
 import {
   GetStaticPaths,
-  GetStaticPathsContext,
   GetStaticPathsResult,
   GetStaticProps,
   GetStaticPropsContext,
@@ -9,7 +8,6 @@ import {
 } from "next";
 
 import Page from "@components/layout/common/page";
-import { services } from "@site-data";
 import { ParsedUrlQuery } from "querystring";
 import PageCover from "@components/layout/common/page-cover";
 import CTASection from "@components/layout/common/cta-section";
@@ -17,6 +15,12 @@ import FAQSection from "@components/layout/common/faq-section";
 import AboutSection from "@components/layout/common/about-section";
 import StepSection from "@components/layout/service-page/steps-section";
 import CallRequest from "@components/layout/common/call-request";
+import {
+  getAssetUrl,
+  getMultipleEntries,
+  serializeAssetUrls,
+} from "utils/contentful";
+import { parseMarkdown } from "utils/parse-markdown";
 
 interface Props {
   service: Service;
@@ -60,27 +64,45 @@ const ServicePage: NextPage<Props> = ({ service }: Props): JSX.Element => {
 const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<Props>> => {
+  const servicesResult: ContentfulServiceFields[] =
+    await getMultipleEntries<ContentfulServiceFields>("service");
+
+  const fetchedService = servicesResult.find(
+    (res) => res.id == (context.params as ParsedUrlQuery).serviceId
+  ) as ContentfulServiceFields;
+
+  const service: Service = {
+    ...fetchedService,
+    faqs: fetchedService.faqs.map((faq) => faq.fields),
+    steps: fetchedService.steps.map((step) => ({
+      ...step.fields,
+      icon: getAssetUrl(step.fields.icon),
+    })),
+    image: serializeAssetUrls(fetchedService.image.fields, "src"),
+    icon: getAssetUrl(fetchedService.icon),
+  };
+
   return {
     props: {
-      service: services.find(
-        (service) => service.id === (context.params as ParsedUrlQuery).serviceId
-      ) as Service,
+      service,
     },
   };
 };
 
-const getStaticPaths: GetStaticPaths = async (
-  context: GetStaticPathsContext
-): Promise<GetStaticPathsResult> => {
-  const paths: { params: { serviceId: string } }[] = services.map(
-    (service) => ({ params: { serviceId: service.id } })
-  );
+const getStaticPaths: GetStaticPaths =
+  async (): Promise<GetStaticPathsResult> => {
+    const servicesResult: ContentfulServiceFields[] =
+      await getMultipleEntries<ContentfulServiceFields>("service");
 
-  return {
-    paths,
-    fallback: false,
+    const paths: { params: { serviceId: string } }[] = servicesResult.map(
+      (service) => ({ params: { serviceId: service.id } })
+    );
+
+    return {
+      paths,
+      fallback: false,
+    };
   };
-};
 
 export { getStaticProps, getStaticPaths };
 
