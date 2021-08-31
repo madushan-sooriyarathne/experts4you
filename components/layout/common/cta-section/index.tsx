@@ -10,7 +10,7 @@ interface Props {
 
 const CTASection: React.FC<Props> = ({
   heading = "Got a problem that needs a solution from us?",
-  route = "/quote",
+  route = "/get-quote",
   buttonText = "Get a Quote",
 }: Props): JSX.Element => {
   return (
