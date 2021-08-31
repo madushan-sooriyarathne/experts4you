@@ -42,12 +42,12 @@ const PrivacyPolicy: React.FC = (): JSX.Element => {
           personal information we collect can include the following:
         </Paragraph>
         <List>
-          <li>Name, Email Address, and Contact Data</li>
+          {` <li>Name, Email Address, and Contact Data</li>
           <li>
             Business Information. If you choose to calculate your approximate
             tax on our Website, we may ask for specific information related to
             your business in order to create the tax report.
-          </li>
+          </li>`}
         </List>
       </SubSection>
       <SubSection>
@@ -115,12 +115,12 @@ const PrivacyPolicy: React.FC = (): JSX.Element => {
           Analytics about visits activity.
         </Paragraph>
         <Paragraph>
-          For more information on the privacy practices of Google, please visit
+          {` For more information on the privacy practices of Google, please visit
           the Google Privacy & Terms web page:
           <br />
           <a href="http://www.google.com/intl/en/policies/privacy/">
             http://www.google.com/intl/en/policies/privacy/
-          </a>
+          </a>`}
         </Paragraph>
       </SubSection>
       <SubSection>
