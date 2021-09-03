@@ -28,44 +28,41 @@ const CallRequest: React.FC = (): JSX.Element => {
 
     setLoading(true);
 
-    // fetch("/api/call-request", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     name,
-    //     email,
-    //     phone,
-    //   }),
-    // }).then((res) => {
-    //   console.log(res.status);
-    //   if (res.status === 200) {
-    //     // show notification (success)
-    //     showNotification(
-    //       `Error occurred while submitting your request. Please try again later. Thank you for your patience.`
-    //     );
-    //   } else {
-    //     showNotification(
-    //       `Hi ${
-    //         name.split(" ")[0]
-    //       }! We received your request. One of our consultants will call you within next 2 working days. Thank you!`
-    //     );
-    //   }
-    // });
+    fetch("/api/call-request", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+      }),
+    }).then((res) => {
+      // stop loading
+      setLoading(false);
 
-    sendCallRequestEmail({ name, email, phone }).then((id) => console.log(id));
+      // reset form fields
+      resetName();
+      resetEmail();
+      resetPhone();
 
-    // stop loading
-    setLoading(false);
+      if (res.status === 200) {
+        // show notification (success)
+        showNotification(
+          `Hi ${
+            name.split(" ")[0]
+          }! We received your request. One of our consultants will call you within next 2 working days. Thank you!`
+        );
+      } else {
+        showNotification(
+          `Error occurred while submitting your request. Please try again later. Thank you for your patience.`
+        );
+      }
+    });
 
     // hide notification
-    setTimeout(() => showNotification(null), 5000);
-
-    // reset form fields
-    resetName();
-    resetEmail();
-    resetPhone();
+    setTimeout(() => showNotification(null), 10000);
   };
 
   return (
