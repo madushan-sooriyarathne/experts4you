@@ -15,8 +15,8 @@ const WhoWeAre: React.FC = (): JSX.Element => {
           A professional Finance Firm that gives you all the finest services
           related to, Bookkeeping, Secretary services, Company Incorporations,
           Tax Advisory, and other Finance related Services. A bunch of skillful
-          professionals is leading “Experts for you” to meet and fulfill the
-          clients’ requirements at the best.
+          professionals is leading “Expert4U” to meet and fulfill the clients’
+          requirements at the best.
         </SubHeading>
       </Description>
       <BoxGroup>
