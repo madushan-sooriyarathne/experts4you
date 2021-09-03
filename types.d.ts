@@ -185,6 +185,62 @@ declare global {
   }
 
   type ContentfulStepResult = Entry<ContentfulStepFields>;
+
+  // EMAIL TYPES
+  interface EmailObj {
+    from: string;
+    to: string;
+    subject: string;
+    html: string;
+  }
+
+  interface CallRequestType {
+    name: string;
+    phone: string;
+    email: string;
+  }
+
+  interface IncConsultationRequestEmail {
+    service: string;
+    type: "inc";
+    companyName: string;
+    natureOfTheBusiness: string;
+    noOfDirectors: string;
+    name: string;
+    email: string;
+    phone: string;
+    timeToContact?: string;
+  }
+
+  interface OtherConsultationRequestEmail {
+    service: string;
+    type: "other";
+    companyName: string;
+    natureOfTheBusiness: string;
+    quarterlyTurnover: string;
+    name: string;
+    email: string;
+    phone: string;
+    timeToContact?: string;
+  }
+
+  type ConsultationRequestType =
+    | IncConsultationRequestEmail
+    | OtherConsultationRequestEmail;
+
+  interface ContactInquiry {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    message?: string;
+  }
+
+  // API Types
+  type ResponseBody = {
+    status: string;
+    message?: string;
+  };
 }
 
 export {};
