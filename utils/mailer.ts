@@ -1,54 +1,5 @@
 import nodemailer from "nodemailer";
 
-interface EmailObj {
-  from: string;
-  to: string;
-  subject: string;
-  html: string;
-}
-
-interface CallRequestType {
-  name: string;
-  phone: string;
-  email: string;
-}
-
-interface IncConsultationRequestEmail {
-  service: string;
-  type: "inc";
-  companyName: string;
-  natureOfTheBusiness: string;
-  noOfDirectors: string;
-  name: string;
-  email: string;
-  phone: string;
-  timeToContact?: string;
-}
-
-interface OtherConsultationRequestEmail {
-  service: string;
-  type: "other";
-  companyName: string;
-  natureOfTheBusiness: string;
-  quarterlyTurnover: string;
-  name: string;
-  email: string;
-  phone: string;
-  timeToContact?: string;
-}
-
-type ConsultationRequestType =
-  | IncConsultationRequestEmail
-  | OtherConsultationRequestEmail;
-
-interface ContactInquiry {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message?: string;
-}
-
 // create email transporter
 const transport = nodemailer.createTransport({
   host: process.env.EMAIL_HOST as string,
@@ -64,7 +15,8 @@ const transport = nodemailer.createTransport({
 const generateCallRequest = (emailData: CallRequestType): EmailObj => {
   return {
     from: `"$${emailData.name}" <${emailData.email}>`,
-    to: `connect@xperts4you.com`,
+    // to: `connect@xperts4you.com`,
+    to: "hello@madushan.dev",
     subject: `New Call Request ☎️ from ${emailData.name} ✉️`,
     html: `
         <p>${emailData.name} is requesting a call</p>
