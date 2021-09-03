@@ -25,7 +25,7 @@ const FinishedStep: React.FC<Props> = ({
       <TitleGroup>
         <SecondaryHeading alignment="center">That's it!</SecondaryHeading>
         <SubHeading alignment="center">
-          One of our representatives will contact you withing 2 working days.
+          One of our representatives will contact you withing 24 Hours.
         </SubHeading>
       </TitleGroup>
       <ActionButton large={true} onClick={onClick}>

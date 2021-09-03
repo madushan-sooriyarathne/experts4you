@@ -137,7 +137,7 @@ const StageName = styled.div<ProgressProps>`
       : props.theme.colors.blackLight};
 
   ${(props) => props.theme.responsive.width700} {
-    visibility: ${(props) => (props.active ? "visible" : "hidden")};
+    display: ${(props) => (props.active ? "block" : "none")};
   }
 `;
 

@@ -28,6 +28,10 @@ const ServiceOptionsGroup = styled.div`
   gap: 3rem;
   align-items: center;
   justify-content: center;
+
+  ${(props) => props.theme.responsive.width600} {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
 `;
 
 const SelectionBox = styled.div`

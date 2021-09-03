@@ -83,11 +83,11 @@ const ContactSection: React.FC = (): JSX.Element => {
             Expert4U Private Limited.
           </SecondaryHeading>
           <Paragraph alignment="center">
-            No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka
+            No 290, D. R. Wijewardena Mw, Colombo 0010, Sri Lanka
           </Paragraph>
         </ItemGroup>
         <ItemGroup>
-          <SubHeading alignment="center">077 734 2212</SubHeading>
+          <SubHeading alignment="center">071 866 3023</SubHeading>
           <SubHeading alignment="center">connect@xperts4you.com</SubHeading>
         </ItemGroup>
         <SocialMediaGroup>

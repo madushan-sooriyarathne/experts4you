@@ -20,17 +20,17 @@ const MultiStepForm: React.FC = (): JSX.Element => {
     {
       name: "Company Incorporation",
       id: "company-incorporation",
-      icon: "/assets/svg/incorporation.svg",
+      icon: "/assets/svg/system/incorporation.svg",
     },
     {
       name: "Bookkeeping",
       id: "bookkeeping",
-      icon: "assets/svg/bookkeeping.svg",
+      icon: "assets/svg/system/bookkeeping.svg",
     },
     {
       name: "Tax Advisory",
       id: "tax-advisory",
-      icon: "assets/svg/tax.svg",
+      icon: "assets/svg/system/tax.svg",
     },
   ];
 

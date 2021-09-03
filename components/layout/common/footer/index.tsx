@@ -31,15 +31,15 @@ const Footer: React.FC = (): JSX.Element => {
           ></Logo>
           <CompanyDetailsGroup>
             <TertiaryHeading alignment="left">
-              Experts 4 You Private Limited.
+              Expert4U (Private) Limited.
             </TertiaryHeading>
             <Paragraph alignment="left">
-              No 290, D. R. Wijewardena Mw, Colombo, Sri Lanka
+              No 290, D. R. Wijewardena Mw, Colombo 0010, Sri Lanka
             </Paragraph>
           </CompanyDetailsGroup>
 
           <Paragraph alignment="left">
-            {`Phone: 077 734 2212\n\nEmail: connect@xperts4you.com`}
+            {`Phone: 071 866 3023\n\nEmail: connect@xperts4you.com`}
           </Paragraph>
         </LinkSection>
         <LinkSection>
@@ -80,7 +80,7 @@ const Footer: React.FC = (): JSX.Element => {
         </LinkSection>
         <CopyrightNote>
           <Paragraph small alignment="center">
-            {`© ${new Date().getFullYear()} **Experts 4 You Private Limited.** All Rights Reserved.`}
+            {`© ${new Date().getFullYear()} **Expert4U (Private) Limited.** All Rights Reserved.`}
           </Paragraph>
           <Paragraph small alignment="center">
             Website designed & developed by [Advertaro](https://advertaro.lk)
