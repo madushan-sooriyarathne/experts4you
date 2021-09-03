@@ -3,10 +3,11 @@ import PrimaryHeading from "@components/headings/primary-heading";
 import ImageComponent from "@components/image-component";
 import InputField from "@components/input-field";
 import Paragraph from "@components/paragraph";
-import { useInput } from "@hooks";
-import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { useInput } from "hooks";
+import { notificationDispatchContext } from "context/notification-context";
+import { FormEvent, useContext, useState } from "react";
 import { CallSection, InputGroup, InputSide } from "./styles";
+import { sendCallRequestEmail } from "utils/courier";
 
 const CallRequest: React.FC = (): JSX.Element => {
   //other states
@@ -17,11 +18,49 @@ const CallRequest: React.FC = (): JSX.Element => {
   const [email, updateEmail, resetEmail] = useInput("");
   const [phone, updatePhone, resetPhone] = useInput("");
 
+  // context dispatch function
+  const showNotification = useContext(
+    notificationDispatchContext
+  ) as DispatchFn<string | null>;
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
     setLoading(true);
-    setTimeout(() => setLoading(false), 1000);
+
+    // fetch("/api/call-request", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     name,
+    //     email,
+    //     phone,
+    //   }),
+    // }).then((res) => {
+    //   console.log(res.status);
+    //   if (res.status === 200) {
+    //     // show notification (success)
+    //     showNotification(
+    //       `Error occurred while submitting your request. Please try again later. Thank you for your patience.`
+    //     );
+    //   } else {
+    //     showNotification(
+    //       `Hi ${
+    //         name.split(" ")[0]
+    //       }! We received your request. One of our consultants will call you within next 2 working days. Thank you!`
+    //     );
+    //   }
+    // });
+
+    sendCallRequestEmail({ name, email, phone }).then((id) => console.log(id));
+
+    // stop loading
+    setLoading(false);
+
+    // hide notification
+    setTimeout(() => showNotification(null), 5000);
 
     // reset form fields
     resetName();

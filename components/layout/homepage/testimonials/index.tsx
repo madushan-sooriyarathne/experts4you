@@ -77,7 +77,7 @@ const TestimonialsSection: React.FC<Props> = ({
                     {testimonials[curSlide].name}
                   </TertiaryHeading>
                   {testimonials[curSlide].company && (
-                    <Paragraph>{`${testimonials[curSlide].designation}, ${testimonials[0].company}`}</Paragraph>
+                    <Paragraph>{`${testimonials[curSlide].designation}, ${testimonials[curSlide].company}`}</Paragraph>
                   )}
                 </MetadataGroup>
               </TestimonialDetails>
