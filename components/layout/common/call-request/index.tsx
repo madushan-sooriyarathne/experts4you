@@ -38,28 +38,30 @@ const CallRequest: React.FC = (): JSX.Element => {
         email,
         phone,
       }),
-    }).then((res) => {
-      // stop loading
-      setLoading(false);
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          // show notification (success)
+          showNotification(
+            `Hi ${
+              name.split(" ")[0]
+            }! We received your request. One of our consultants will call you within next 2 working days. Thank you!`
+          );
+        } else {
+          showNotification(
+            `Error occurred while submitting your request. Please try again later. Thank you for your patience.`
+          );
+        }
+      })
+      .finally(() => {
+        // stop loading
+        setLoading(false);
 
-      // reset form fields
-      resetName();
-      resetEmail();
-      resetPhone();
-
-      if (res.status === 200) {
-        // show notification (success)
-        showNotification(
-          `Hi ${
-            name.split(" ")[0]
-          }! We received your request. One of our consultants will call you within next 2 working days. Thank you!`
-        );
-      } else {
-        showNotification(
-          `Error occurred while submitting your request. Please try again later. Thank you for your patience.`
-        );
-      }
-    });
+        // reset form fields
+        resetName();
+        resetEmail();
+        resetPhone();
+      });
 
     // hide notification
     setTimeout(() => showNotification(null), 10000);
