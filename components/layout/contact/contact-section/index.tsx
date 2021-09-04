@@ -12,14 +12,20 @@ import {
   SocialMediaIcon,
 } from "./styles";
 import { useInput } from "@hooks";
-import { useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import Paragraph from "@components/paragraph";
 import SubHeading from "@components/headings/sub-heading";
 
 import { socialMedia } from "@site-data";
+import { notificationDispatchContext } from "context/notification-context";
 
 const ContactSection: React.FC = (): JSX.Element => {
+  // Notification context dispatch
+  const showNotification = useContext(
+    notificationDispatchContext
+  ) as DispatchFn<string | null>;
+
   // other states
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -30,11 +36,47 @@ const ContactSection: React.FC = (): JSX.Element => {
   const [phone, updatePhone, resetPhone] = useInput("");
   const [message, updateMessage, resetMessage] = useInput("");
 
+  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+
+    fetch("/api/inquire", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        phone,
+        message: message || "Not Specified",
+      }),
+    }).then((res) => {
+      if (res.status === 200) {
+        showNotification(
+          `Hi ${firstName}! We received your inquiry and appreciate you reaching out. One of our representatives will respond to you soon.`
+        );
+      } else {
+        showNotification(
+          `Hi ${firstName}! We encountered an error while submitting your inquiry. Please call 071 866 3023 or email us to connect@xperts4you.com. Sorry for the inconvenience caused!`
+        );
+      }
+
+      setLoading(false);
+      // reset the form fields
+      resetFirstName();
+      resetLastName();
+      resetEmail();
+      resetPhone();
+      resetMessage();
+    });
+  };
+
   return (
     <FormDataSection>
       <FormSection>
         <PrimaryHeading alignment="left">Let's talk</PrimaryHeading>
-        <FormGroup>
+        <FormGroup onSubmit={handleSubmit}>
           <InputField
             value={firstName}
             onChange={updateFirstName}
