@@ -15,7 +15,7 @@ interface Props {
 
 const Page: React.FC<Props> = ({
   children,
-  title = "Experts 4 You",
+  title = "Best business consultants in Sri Lanka",
 }: Props): JSX.Element => {
   return (
     <Container
@@ -25,7 +25,7 @@ const Page: React.FC<Props> = ({
       key={title.replace(" ", "_").toLowerCase()}
     >
       <Head>
-        <title>{`${title} | Experts 4 You`}</title>
+        <title>{`${title} | Expert4U`}</title>
       </Head>
       <SnackBar />
       <Floater />

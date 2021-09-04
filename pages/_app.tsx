@@ -34,9 +34,7 @@ const App: React.FC<AppProps> = ({
   return (
     <>
       <Head>
-        <title>
-          Experts 4 You | Your one stop business consultation solutions.
-        </title>
+        <title>Expert4U | Your one stop business consultation solutions.</title>
       </Head>
       <meta
         name="viewport"
