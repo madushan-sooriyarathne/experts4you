@@ -6,6 +6,7 @@ import NavBar from "@components/layout/common/navbar";
 import { Content, Container } from "./styles";
 import SnackBar from "@components/snack-bar";
 import Floater from "@components/floater";
+import CookieNotice from "@components/cookie-notice";
 
 interface Props {
   children: ReactNode;
@@ -28,6 +29,7 @@ const Page: React.FC<Props> = ({
       </Head>
       <SnackBar />
       <Floater />
+      <CookieNotice />
       <NavBar />
       <Content>{children}</Content>
       <Footer />
