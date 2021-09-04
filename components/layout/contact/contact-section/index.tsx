@@ -39,6 +39,8 @@ const ContactSection: React.FC = (): JSX.Element => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
+    setLoading(true);
+
     fetch("/api/inquire", {
       method: "POST",
       headers: {
@@ -51,25 +53,29 @@ const ContactSection: React.FC = (): JSX.Element => {
         phone,
         message: message || "Not Specified",
       }),
-    }).then((res) => {
-      if (res.status === 200) {
-        showNotification(
-          `Hi ${firstName}! We received your inquiry and appreciate you reaching out. One of our representatives will respond to you soon.`
-        );
-      } else {
-        showNotification(
-          `Hi ${firstName}! We encountered an error while submitting your inquiry. Please call 071 866 3023 or email us to connect@xperts4you.com. Sorry for the inconvenience caused!`
-        );
-      }
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          showNotification(
+            `Hi ${firstName}! We received your inquiry and appreciate you reaching out. One of our representatives will respond to you soon.`
+          );
+        } else {
+          showNotification(
+            `Hi ${firstName}! We encountered an error while submitting your inquiry. Please call 071 866 3023 or email us to connect@xperts4you.com. Sorry for the inconvenience caused!`
+          );
+        }
 
-      setLoading(false);
-      // reset the form fields
-      resetFirstName();
-      resetLastName();
-      resetEmail();
-      resetPhone();
-      resetMessage();
-    });
+        setLoading(false);
+      })
+      .finally(() => {
+        setLoading(false);
+        // reset the form fields
+        resetFirstName();
+        resetLastName();
+        resetEmail();
+        resetPhone();
+        resetMessage();
+      });
   };
 
   return (
