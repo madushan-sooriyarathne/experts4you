@@ -216,7 +216,7 @@ declare global {
     service: string;
     type: "other";
     companyName: string;
-    natureOfTheBusiness: string;
+    natureOfBusiness: string;
     quarterlyTurnover: string;
     name: string;
     email: string;
