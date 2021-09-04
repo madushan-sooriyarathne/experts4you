@@ -38,7 +38,10 @@ const App: React.FC<AppProps> = ({
           Experts 4 You | Your one stop business consultation solutions.
         </title>
       </Head>
-      {/* View port meta tags here */}
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <NotificationContextProvider>
