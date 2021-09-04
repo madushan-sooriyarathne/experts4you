@@ -59,6 +59,12 @@ const MultiStepForm: React.FC = (): JSX.Element => {
   // service selection state
   const [selected, setSelected] = useState<string>();
 
+  //form submission success
+  const [success, setSuccess] = useState<boolean>(true);
+
+  // submit loading
+  const [loading, setLoading] = useState<boolean>(false);
+
   // Company Details Selection input states
   const [businessName, updateBusinessName, resetBusinessName] = useInput("");
   const [natureOfBusiness, updateNatureOfBusiness, resetNatureOfBusiness] =
@@ -86,21 +92,51 @@ const MultiStepForm: React.FC = (): JSX.Element => {
   const handleContactDetailsSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // TODO: Implement data submit logic here.
+    // start loading
+    setLoading(true);
 
-    // if data submitted correctly
-    setStep(3);
+    fetch("/api/consultation-request", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        type: selected === "company-incorporation" ? "inc" : "other",
+        service: (
+          serviceTypes.find((ser) => ser.id === selected) as { name: string }
+        ).name,
+        businessName,
+        natureOfBusiness,
+        noOfDirectors,
+        quarterlyTurnover,
+        name,
+        email,
+        phone,
+        timeToContact: timeToContact || "Not Specified",
+      }),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setSuccess(true);
+        } else {
+          setSuccess(false);
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+        setStep(3);
 
-    // reset all fields
-    resetBusinessName();
-    resetNatureOfBusiness();
-    resetNoOfDirectors();
-    resetQuarterlyTurnover();
-    resetName();
-    resetEmail();
-    resetPhone();
-    resetTimeToContact();
-    setSelected(undefined);
+        // reset all fields
+        resetBusinessName();
+        resetNatureOfBusiness();
+        resetNoOfDirectors();
+        resetQuarterlyTurnover();
+        resetName();
+        resetEmail();
+        resetPhone();
+        resetTimeToContact();
+        setSelected(undefined);
+      });
   };
 
   const handleContactDetailsBack = () => setStep(1);
@@ -171,6 +207,7 @@ const MultiStepForm: React.FC = (): JSX.Element => {
           email={email}
           phone={phone}
           timeToContact={timeToContact}
+          loading={loading}
           updateName={updateName}
           updateEmail={updateEmail}
           updatePhone={updatePhone}
@@ -179,7 +216,7 @@ const MultiStepForm: React.FC = (): JSX.Element => {
           onBack={handleContactDetailsBack}
         />
       )}
-      {step === 3 && <FinishedStep success={true} onClick={handleFinish} />}
+      {step === 3 && <FinishedStep success={success} onClick={handleFinish} />}
       <AnimatePresence />
     </MainContainer>
   );

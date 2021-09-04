@@ -10,6 +10,7 @@ interface Props {
   email: string;
   phone: string;
   timeToContact: string;
+  loading: boolean;
   updateName: (event: InputEventType) => void;
   updateEmail: (event: InputEventType) => void;
   updatePhone: (event: InputEventType) => void;
@@ -23,6 +24,7 @@ const ContactDetailsStep: React.FC<Props> = ({
   email,
   phone,
   timeToContact,
+  loading,
   updateName,
   updateEmail,
   updatePhone,
@@ -76,7 +78,7 @@ const ContactDetailsStep: React.FC<Props> = ({
       </FormGroup>
       <ButtonGroup>
         <ActionButton onClick={onBack}>Back</ActionButton>
-        <SubmitButton loading={false}>Submit</SubmitButton>
+        <SubmitButton loading={loading}>Submit</SubmitButton>
       </ButtonGroup>
     </Wrapper>
   );
