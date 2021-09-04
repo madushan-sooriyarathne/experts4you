@@ -58,6 +58,45 @@ class AppDocument extends Document {
             rel="stylesheet"
           />
 
+          <link rel="manifest" href="manifest.json" />
+
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="application-name" content="Expert4U" />
+          <meta name="apple-mobile-web-app-title" content="Expert4U" />
+          <meta name="theme-color" content="#0077b6" />
+          <meta name="msapplication-navbutton-color" content="#0077b6" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
+          <meta name="msapplication-starturl" content="/" />
+
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/assets/icons/icon-192x192.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            type="image/png"
+            sizes="192x192"
+            href="/assets/icons/icon-192x192.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/assets/icons/icon-512x512png"
+          />
+          <link
+            rel="apple-touch-icon"
+            type="image/png"
+            sizes="512x512"
+            href="/assets/icons/icon-512x512png"
+          />
+
           {/* Google analytics */}
           <script
             async
