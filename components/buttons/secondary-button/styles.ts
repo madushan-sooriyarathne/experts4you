@@ -10,6 +10,7 @@ const Button = styled.a<ButtonProps>`
   justify-content: flex-start;
   column-gap: 1rem;
   cursor: pointer;
+  padding: 0 3rem;
 
   &:hover {
     & > svg {
