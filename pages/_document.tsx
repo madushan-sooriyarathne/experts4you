@@ -60,6 +60,11 @@ class AppDocument extends Document {
 
           <link rel="manifest" href="manifest.json" />
 
+          <meta
+            name="Description"
+            content="Expert4U is a Company that focuses on providing business consultation services for other business in Sri Lanka. We have identified the need to provide personalized level of services aiming to maximize our client’s wealth through the real-life business experience gained by us over the years and open eye on the current market/industry, regulatory and other requirements and compliances those are continuously changing time to time and industry to industry."
+          ></meta>
+
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="application-name" content="Expert4U" />
