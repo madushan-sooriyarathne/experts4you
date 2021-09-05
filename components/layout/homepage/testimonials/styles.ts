@@ -169,10 +169,19 @@ const TestimonialDetails = styled.div`
 
   ${(props) => props.theme.responsive.width800} {
     padding: 3rem 0;
+
+    &::before {
+      top: -1rem;
+      left: 0;
+    }
   }
 
   ${(props) => props.theme.responsive.width700} {
     padding: 0;
+    &::before {
+      top: -2rem;
+      left: -1rem;
+    }
   }
 `;
 
