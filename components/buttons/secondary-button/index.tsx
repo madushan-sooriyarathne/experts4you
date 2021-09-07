@@ -2,18 +2,20 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import { Button } from "./styles";
 
-interface LinkButton {
+interface CommonProps {
+  padding?: boolean;
+  light?: boolean;
   children: ReactNode;
+}
+
+interface LinkButton extends CommonProps {
   link: string;
   isTargetBlank: boolean;
-  light?: boolean;
   type: "link";
 }
 
-interface RouteButton {
-  children: ReactNode;
+interface RouteButton extends CommonProps {
   route: string;
-  light?: boolean;
   type: "route";
 }
 
@@ -21,11 +23,12 @@ type Props = LinkButton | RouteButton;
 
 const SecondaryButton: React.FC<Props> = ({
   light = false,
+  padding = true,
   ...props
 }: Props): JSX.Element => {
   return props.type === "route" ? (
     <Link href={props.route}>
-      <Button light={light}>
+      <Button light={light} padding={padding}>
         <span>{props.children}</span>
         <svg>
           <use xlinkHref="/assets/svg/sprites.svg#arrow-right"></use>
@@ -35,6 +38,7 @@ const SecondaryButton: React.FC<Props> = ({
   ) : (
     <Button
       href={props.link}
+      padding={padding}
       light={light}
       target={props.isTargetBlank ? "_blank" : "_self"}
     >

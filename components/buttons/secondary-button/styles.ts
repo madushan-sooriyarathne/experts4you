@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface ButtonProps {
   light: boolean;
+  padding: boolean;
 }
 
 const Button = styled.a<ButtonProps>`
@@ -10,7 +11,7 @@ const Button = styled.a<ButtonProps>`
   justify-content: flex-start;
   column-gap: 1rem;
   cursor: pointer;
-  padding: 0 3rem;
+  padding: ${(props) => (props.padding ? "0 3rem" : "none")};
 
   &:hover {
     & > svg {
