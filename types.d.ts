@@ -171,10 +171,12 @@ declare global {
     subTitle: string;
     content: string;
     image: Image;
+    date: Date;
   }
 
   interface ContentfulBlogPostFields extends BlogPost {
     image: ContentfulImageResult;
+    date: never;
   }
 
   // FAQ
