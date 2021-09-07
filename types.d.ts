@@ -164,6 +164,19 @@ declare global {
 
   type ContentfulCoverResult = Entry<ContentfulCoverFields>;
 
+  // BlogPost
+  interface BlogPost {
+    id: string;
+    title: string;
+    subTitle: string;
+    content: string;
+    image: Image;
+  }
+
+  interface ContentfulBlogPostFields extends BlogPost {
+    image: ContentfulImageResult;
+  }
+
   // FAQ
   interface FAQ {
     question: string;
