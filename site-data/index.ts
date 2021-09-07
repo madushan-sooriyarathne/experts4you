@@ -74,6 +74,69 @@ const errors: ErrorType[] = [
   },
 ];
 
+const months = [
+  {
+    index: 1,
+    long: "January",
+    short: "Jan",
+  },
+  {
+    index: 2,
+    long: "February",
+    short: "Feb",
+  },
+  {
+    index: 3,
+    long: "March",
+    short: "Mar",
+  },
+  {
+    index: 4,
+    long: "April",
+    short: "Apr",
+  },
+  {
+    index: 5,
+    long: "May",
+    short: "May",
+  },
+  {
+    index: 6,
+    long: "June",
+    short: "Jun",
+  },
+  {
+    index: 7,
+    long: "July",
+    short: "Jul",
+  },
+  {
+    index: 8,
+    long: "January",
+    short: "Jan",
+  },
+  {
+    index: 9,
+    long: "August",
+    short: "Aug",
+  },
+  {
+    index: 10,
+    long: "September",
+    short: "Sept",
+  },
+  {
+    index: 11,
+    long: "November",
+    short: "Nov",
+  },
+  {
+    index: 12,
+    long: "December",
+    short: "Dec",
+  },
+];
+
 // REMOVE THIS
 const posts: BlogPost[] = [
   {
@@ -130,4 +193,4 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC S
   },
 ];
 
-export { navLinks, homeLinks, socialMedia, errors, posts };
+export { navLinks, homeLinks, socialMedia, errors, posts, months };
