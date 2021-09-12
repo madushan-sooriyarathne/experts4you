@@ -1,7 +1,8 @@
+import Link from "next/link";
+
 import SecondaryButton from "@components/buttons/secondary-button";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import SubHeading from "@components/headings/sub-heading";
-import TertiaryHeading from "@components/headings/tertiary-heading";
 import ImageComponent from "@components/image-component";
 import Paragraph from "@components/paragraph";
 import { months } from "@site-data";
@@ -35,7 +36,11 @@ const PostListItem: React.FC<Props> = ({ post }: Props): JSX.Element => {
       </ImageWrapper>
       <DetailsWrapper>
         <TitleGroup>
-          <SecondaryHeading alignment="left">{post.title}</SecondaryHeading>
+          <Link href={`/knowledge/${post.id}`}>
+            <a>
+              <SecondaryHeading alignment="left">{post.title}</SecondaryHeading>
+            </a>
+          </Link>
           <SubHeading alignment="left">{post.subTitle}</SubHeading>
         </TitleGroup>
         <Paragraph alignment="left">

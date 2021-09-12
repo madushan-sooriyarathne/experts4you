@@ -127,6 +127,10 @@ const TitleGroup = styled.div`
   flex-direction: column;
   align-items: flex-start;
   row-gap: 0.5rem;
+
+  & a {
+    text-decoration: none;
+  }
 `;
 
 export { BlogCard, DateGroup, Month, ImageWrapper, DetailsWrapper, TitleGroup };
