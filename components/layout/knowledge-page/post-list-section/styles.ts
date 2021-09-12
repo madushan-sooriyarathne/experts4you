@@ -10,4 +10,11 @@ const PostContainer = styled.section`
   row-gap: 5rem;
 `;
 
-export { PostContainer };
+const Pagination = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+`;
+
+export { PostContainer, Pagination };
