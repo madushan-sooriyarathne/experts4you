@@ -150,7 +150,7 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC S
       src: "/assets/img/phone.jpg",
       blurUrl: "cddsafda dafdafd",
     },
-    date: new Date(),
+    date: new Date().toISOString(),
   },
   {
     id: "post-01",
@@ -163,7 +163,7 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC S
       src: "/assets/img/phone.jpg",
       blurUrl: "cddsafda dafdafd",
     },
-    date: new Date(),
+    date: new Date().toISOString(),
   },
   {
     id: "post-01",
@@ -176,7 +176,7 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC S
       src: "/assets/img/phone.jpg",
       blurUrl: "cddsafda dafdafd",
     },
-    date: new Date(),
+    date: new Date().toISOString(),
   },
   {
     id: "post-01",
@@ -189,7 +189,7 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC S
       src: "/assets/img/phone.jpg",
       blurUrl: "cddsafda dafdafd",
     },
-    date: new Date(),
+    date: new Date().toISOString(),
   },
 ];
 
