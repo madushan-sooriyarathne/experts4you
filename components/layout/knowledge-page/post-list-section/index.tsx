@@ -1,7 +1,9 @@
 import ActionButton from "@components/buttons/action-button";
+import PrimaryButton from "@components/buttons/primary-button";
+import SecondaryHeading from "@components/headings/secondary-heading";
 import PostListItem from "@components/post-list-item";
 import { useState } from "react";
-import { PostContainer, Pagination } from "./styles";
+import { PostContainer, Pagination, EmptyImage, EmptyMessage } from "./styles";
 
 interface Props {
   posts: BlogPost[];
@@ -22,7 +24,7 @@ const PostListSection: React.FC<Props> = ({ posts }: Props): JSX.Element => {
     }
   };
 
-  return (
+  return posts.length > 1 ? (
     <PostContainer>
       {posts.slice(0, upperBound).map((post) => (
         <PostListItem post={post} key={post.id} />
@@ -35,6 +37,14 @@ const PostListSection: React.FC<Props> = ({ posts }: Props): JSX.Element => {
         )}
       </Pagination>
     </PostContainer>
+  ) : (
+    <EmptyMessage>
+      <EmptyImage src="/assets/img/empty.png" alt="No posts found!" />
+      <SecondaryHeading alignment="center">No Posts Found!</SecondaryHeading>
+      <PrimaryButton type="route" route="/">
+        Go Back to home
+      </PrimaryButton>
+    </EmptyMessage>
   );
 };
 

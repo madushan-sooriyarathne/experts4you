@@ -17,4 +17,19 @@ const Pagination = styled.div`
   gap: 1rem;
 `;
 
-export { PostContainer, Pagination };
+const EmptyMessage = styled.div`
+  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+`;
+
+const EmptyImage = styled.img`
+  height: 40rem;
+  width: auto;
+  object-fit: contain;
+`;
+
+export { PostContainer, Pagination, EmptyMessage, EmptyImage };
