@@ -24,7 +24,7 @@ const PostListSection: React.FC<Props> = ({ posts }: Props): JSX.Element => {
     }
   };
 
-  return posts.length > 1 ? (
+  return posts.length > 0 ? (
     <PostContainer>
       {posts.slice(0, upperBound).map((post) => (
         <PostListItem post={post} key={post.id} />
