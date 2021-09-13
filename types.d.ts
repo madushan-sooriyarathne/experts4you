@@ -176,7 +176,6 @@ declare global {
 
   interface ContentfulBlogPostFields extends BlogPost {
     image: ContentfulImageResult;
-    date: never;
   }
 
   // FAQ
