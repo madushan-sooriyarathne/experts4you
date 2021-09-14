@@ -1,6 +1,14 @@
 import { FormEvent, useState } from "react";
+import { useFormik, useFormikContext } from "formik";
+import { AnimatePresence } from "framer-motion";
+
+import { useInput } from "@hooks";
 
 import ServiceSelection from "../service-selection";
+import CompanyDetailsSelection from "../company-details-selection";
+import ContactDetailsStep from "../contact-details-step";
+import FinishedStep from "../finished-step";
+
 import {
   MainContainer,
   ProgressBar,
@@ -9,11 +17,20 @@ import {
   StatusBar,
 } from "./styles";
 
-import { useInput } from "@hooks";
-import CompanyDetailsSelection from "../company-details-selection";
-import ContactDetailsStep from "../contact-details-step";
-import FinishedStep from "../finished-step";
-import { AnimatePresence } from "framer-motion";
+interface BusinessInfoForm {
+  businessName: string;
+  natureOfBusiness: string;
+  noOfDirectors: string;
+  quarterlyTurnover: string;
+  entityType: string;
+}
+
+interface ContactInfoForm {
+  name: string;
+  email: string;
+  phone: string;
+  timeToContact: string;
+}
 
 const MultiStepForm: React.FC = (): JSX.Element => {
   const serviceTypes = [
@@ -65,79 +82,70 @@ const MultiStepForm: React.FC = (): JSX.Element => {
   // submit loading
   const [loading, setLoading] = useState<boolean>(false);
 
-  // Company Details Selection input states
-  const [businessName, updateBusinessName, resetBusinessName] = useInput("");
-  const [natureOfBusiness, updateNatureOfBusiness, resetNatureOfBusiness] =
-    useInput("");
-  const [noOfDirectors, updateNoOfDirectors, resetNoOfDirectors] = useInput("");
-  const [quarterlyTurnover, updateQuarterlyTurnover, resetQuarterlyTurnover] =
-    useInput("");
+  // company details form state
+  const businessDateForm = useFormik<BusinessInfoForm>({
+    initialValues: {
+      businessName: "",
+      natureOfBusiness: "",
+      noOfDirectors: "",
+      quarterlyTurnover: "",
+      entityType: "Limited Liability Company",
+    },
+    onSubmit: () => {
+      setStep(2);
+    },
+  });
 
-  // Contact Details input states
-  const [name, updateName, resetName] = useInput("");
-  const [email, updateEmail, resetEmail] = useInput("");
-  const [phone, updatePhone, resetPhone] = useInput("");
-  const [timeToContact, updateTimeToContact, resetTimeToContact] = useInput("");
+  // contact details form state
+  const contactDataFrom = useFormik<ContactInfoForm>({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      timeToContact: "",
+    },
+    onSubmit: (values) => {
+      // start loading
+      setLoading(true);
 
-  // company details submit handlers
-  const handleCompanyDetailsSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStep(2);
-  };
+      fetch("/api/consultation-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...businessDateForm.values,
+          ...values,
+          timeToContact: values.timeToContact || "Not Specified",
+          type:
+            selected === "company-incorporation"
+              ? "inc"
+              : selected === "bookkeeping"
+              ? "book"
+              : "tax",
+        }),
+      })
+        .then((res) => {
+          if (res.status === 200) {
+            setSuccess(true);
+          } else {
+            setSuccess(false);
+          }
+        })
+        .finally(() => {
+          setLoading(false);
+          setStep(3);
+
+          // reset all fields
+          businessDateForm.resetForm();
+          contactDataFrom.resetForm();
+          setSelected(undefined);
+        });
+    },
+  });
 
   // company details back Button click handler
   const handleCompanyDetailsBack = () => setStep(0);
-
-  // contact details submit handler
-  const handleContactDetailsSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    // start loading
-    setLoading(true);
-
-    fetch("/api/consultation-request", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        type: selected === "company-incorporation" ? "inc" : "other",
-        service: (
-          serviceTypes.find((ser) => ser.id === selected) as { name: string }
-        ).name,
-        businessName,
-        natureOfBusiness,
-        noOfDirectors,
-        quarterlyTurnover,
-        name,
-        email,
-        phone,
-        timeToContact: timeToContact || "Not Specified",
-      }),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          setSuccess(true);
-        } else {
-          setSuccess(false);
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-        setStep(3);
-
-        // reset all fields
-        resetBusinessName();
-        resetNatureOfBusiness();
-        resetNoOfDirectors();
-        resetQuarterlyTurnover();
-        resetName();
-        resetEmail();
-        resetPhone();
-        resetTimeToContact();
-        setSelected(undefined);
-      });
-  };
 
   const handleContactDetailsBack = () => setStep(1);
 
@@ -175,48 +183,32 @@ const MultiStepForm: React.FC = (): JSX.Element => {
         />
       )}
       <AnimatePresence />
-      {step === 1 &&
-        (selected === "company-incorporation" ? (
-          <CompanyDetailsSelection
-            businessName={businessName}
-            natureOfBusiness={natureOfBusiness}
-            noOfDirectors={noOfDirectors}
-            updateBusinessName={updateBusinessName}
-            updateNatureOfBusiness={updateNatureOfBusiness}
-            updateNoOfDirectors={updateNoOfDirectors}
-            onBack={handleCompanyDetailsBack}
-            onSubmit={handleCompanyDetailsSubmit}
-            type="inc"
-          />
-        ) : (
-          <CompanyDetailsSelection
-            businessName={businessName}
-            natureOfBusiness={natureOfBusiness}
-            quarterlyTurnOver={quarterlyTurnover}
-            updateBusinessName={updateBusinessName}
-            updateNatureOfBusiness={updateNatureOfBusiness}
-            updateQuarterlyTurnOver={updateQuarterlyTurnover}
-            onBack={handleCompanyDetailsBack}
-            onSubmit={handleCompanyDetailsSubmit}
-            type="other"
-          />
-        ))}
+      {step === 1 && (
+        <CompanyDetailsSelection
+          values={businessDateForm.values}
+          handleChange={businessDateForm.handleChange}
+          handleSubmit={businessDateForm.handleSubmit}
+          onBack={handleCompanyDetailsBack}
+          type={
+            selected === "company-incorporation"
+              ? "inc"
+              : selected === "bookkeeping"
+              ? "book"
+              : "tax"
+          }
+        />
+      )}
       {step === 2 && (
         <ContactDetailsStep
-          name={name}
-          email={email}
-          phone={phone}
-          timeToContact={timeToContact}
+          values={contactDataFrom.values}
           loading={loading}
-          updateName={updateName}
-          updateEmail={updateEmail}
-          updatePhone={updatePhone}
-          updateTimeToContact={updateTimeToContact}
-          onSubmit={handleContactDetailsSubmit}
+          handleChange={contactDataFrom.handleChange}
+          handleSubmit={contactDataFrom.handleSubmit}
           onBack={handleContactDetailsBack}
         />
       )}
       {step === 3 && <FinishedStep success={success} onClick={handleFinish} />}
+
       <AnimatePresence />
     </MainContainer>
   );

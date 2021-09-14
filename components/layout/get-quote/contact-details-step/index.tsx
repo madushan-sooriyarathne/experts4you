@@ -6,35 +6,28 @@ import { FormEvent } from "react";
 import { Wrapper, FormGroup, ButtonGroup } from "./styles";
 
 interface Props {
-  name: string;
-  email: string;
-  phone: string;
-  timeToContact: string;
+  values: {
+    name: string;
+    email: string;
+    phone: string;
+    timeToContact: string;
+  };
   loading: boolean;
-  updateName: (event: InputEventType) => void;
-  updateEmail: (event: InputEventType) => void;
-  updatePhone: (event: InputEventType) => void;
-  updateTimeToContact: (event: InputEventType) => void;
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  handleChange: (event: InputEventType) => void;
+  handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
   onBack: () => void;
 }
 
 const ContactDetailsStep: React.FC<Props> = ({
-  name,
-  email,
-  phone,
-  timeToContact,
+  values,
   loading,
-  updateName,
-  updateEmail,
-  updatePhone,
-  updateTimeToContact,
-  onSubmit,
+  handleChange,
+  handleSubmit,
   onBack,
 }: Props): JSX.Element => {
   return (
     <Wrapper
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -44,35 +37,39 @@ const ContactDetailsStep: React.FC<Props> = ({
       </SecondaryHeading>
       <FormGroup>
         <InputField
-          name="Your Name"
+          label="Your Name"
+          name="name"
           placeholder="John Doe"
           type="text"
-          value={name}
-          onChange={updateName}
+          value={values.name}
+          onChange={handleChange}
           required
         />
         <InputField
-          name="Email"
+          label="Email"
+          name="email"
           placeholder="sample@sample.com"
           type="email"
-          value={email}
-          onChange={updateEmail}
+          value={values.email}
+          onChange={handleChange}
           required
         />
         <InputField
-          name="Phone"
+          label="Phone"
+          name="phone"
           placeholder="+94 12 345 6789"
           type="tel"
-          value={phone}
-          onChange={updatePhone}
+          value={values.phone}
+          onChange={handleChange}
           required
         />
         <InputField
-          name="Preferred time to contact"
+          label="Preferred time to contact"
+          name="timeToContact"
           placeholder="10.00 AM"
           type="text"
-          value={timeToContact}
-          onChange={updateTimeToContact}
+          value={values.timeToContact}
+          onChange={handleChange}
           required={false}
         />
       </FormGroup>
