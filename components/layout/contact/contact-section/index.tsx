@@ -11,14 +11,22 @@ import {
   SocialMediaGroup,
   SocialMediaIcon,
 } from "./styles";
-import { useInput } from "@hooks";
-import { FormEvent, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import Paragraph from "@components/paragraph";
 import SubHeading from "@components/headings/sub-heading";
 
 import { socialMedia } from "@site-data";
 import { notificationDispatchContext } from "context/notification-context";
+import { useFormik } from "formik";
+
+interface FormicFormProps {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 const ContactSection: React.FC = (): JSX.Element => {
   // Notification context dispatch
@@ -29,92 +37,89 @@ const ContactSection: React.FC = (): JSX.Element => {
   // other states
   const [loading, setLoading] = useState<boolean>(false);
 
-  // form state
-  const [firstName, updateFirstName, resetFirstName] = useInput("");
-  const [lastName, updateLastName, resetLastName] = useInput("");
-  const [email, updateEmail, resetEmail] = useInput("");
-  const [phone, updatePhone, resetPhone] = useInput("");
-  const [message, updateMessage, resetMessage] = useInput("");
+  // formik form state
+  const formik = useFormik<FormicFormProps>({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+    onSubmit: (values) => {
+      setLoading(true);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
-    event.preventDefault();
-
-    setLoading(true);
-
-    fetch("/api/inquire", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        phone,
-        message: message || "Not Specified",
-      }),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          showNotification(
-            `Hi ${firstName}! We received your inquiry and appreciate you reaching out. One of our representatives will respond to you soon.`
-          );
-        } else {
-          showNotification(
-            `Hi ${firstName}! We encountered an error while submitting your inquiry. Please call 071 866 3023 or email us to connect@xperts4you.com. Sorry for the inconvenience caused!`
-          );
-        }
-
-        setLoading(false);
+      fetch("/api/inquire", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...values,
+          message: values.message || "Not Specified",
+        }),
       })
-      .finally(() => {
-        setLoading(false);
-        // reset the form fields
-        resetFirstName();
-        resetLastName();
-        resetEmail();
-        resetPhone();
-        resetMessage();
-      });
-  };
+        .then((res) => {
+          if (res.status === 200) {
+            showNotification(
+              `Hi ${values.firstName}! We received your inquiry and appreciate you reaching out. One of our representatives will respond to you soon.`
+            );
+          } else {
+            showNotification(
+              `Hi ${values.firstName}! We encountered an error while submitting your inquiry. Please call 071 866 3023 or email us to connect@xperts4you.com. Sorry for the inconvenience caused!`
+            );
+          }
+        })
+        .finally(() => {
+          setLoading(false);
+          // reset the form fields
+          formik.resetForm();
+        });
+    },
+  });
 
   return (
     <FormDataSection>
       <FormSection>
         <PrimaryHeading alignment="left">Let's talk</PrimaryHeading>
-        <FormGroup onSubmit={handleSubmit}>
+        <FormGroup onSubmit={formik.handleSubmit}>
           <InputField
-            value={firstName}
-            onChange={updateFirstName}
-            name="First Name"
+            value={formik.values.firstName}
+            onChange={formik.handleChange}
+            label="First Name"
+            name="firstName"
             placeholder="John"
             type="text"
           />
           <InputField
-            value={lastName}
-            onChange={updateLastName}
-            name="Last Name"
+            value={formik.values.lastName}
+            onChange={formik.handleChange}
+            label="Last Name"
+            name="lastName"
             placeholder="Doe"
             type="text"
           />
           <InputField
-            value={email}
-            onChange={updateEmail}
-            name="Email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            label="Email"
+            name="email"
             placeholder="example@example.com"
             type="email"
           />
           <InputField
-            value={phone}
-            onChange={updatePhone}
-            name="Phone"
+            value={formik.values.phone}
+            onChange={formik.handleChange}
+            label="Phone"
+            name="phone"
             placeholder="(+94) 77 123 4567"
             type="tel"
           />
           <InputField
-            value={message}
-            onChange={updateMessage}
-            name="Message"
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            label="Message"
+            name="message"
             placeholder="Your Message"
             type="text"
             textArea
