@@ -215,7 +215,6 @@ declare global {
   }
 
   interface IncConsultationRequestEmail {
-    service: string;
     type: "inc";
     companyName: string;
     natureOfTheBusiness: string;
@@ -226,9 +225,8 @@ declare global {
     timeToContact?: string;
   }
 
-  interface OtherConsultationRequestEmail {
-    service: string;
-    type: "other";
+  interface BookConsultationRequestEmail {
+    type: "book";
     companyName: string;
     natureOfBusiness: string;
     quarterlyTurnover: string;
@@ -238,9 +236,22 @@ declare global {
     timeToContact?: string;
   }
 
+  interface TaxConsultationRequestEmail {
+    type: "tax";
+    companyName: string;
+    natureOfBusiness: string;
+    quarterlyTurnover: string;
+    entityType: string;
+    name: string;
+    email: string;
+    phone: string;
+    timeToContact?: string;
+  }
+
   type ConsultationRequestType =
     | IncConsultationRequestEmail
-    | OtherConsultationRequestEmail;
+    | BookConsultationRequestEmail
+    | TaxConsultationRequestEmail;
 
   interface ContactInquiry {
     firstName: string;
