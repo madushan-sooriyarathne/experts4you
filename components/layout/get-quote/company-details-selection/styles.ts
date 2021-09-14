@@ -33,4 +33,15 @@ const ButtonGroup = styled.div`
   gap: 3rem;
 `;
 
-export { Wrapper, FormGroup, ButtonGroup };
+const EntitySelectorGroup = styled.div`
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+`;
+
+export { Wrapper, FormGroup, ButtonGroup, EntitySelectorGroup };

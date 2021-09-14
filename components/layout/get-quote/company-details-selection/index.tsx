@@ -1,43 +1,41 @@
 import ActionButton from "@components/buttons/action-button";
-import SecondaryButton from "@components/buttons/secondary-button";
 import SubmitButton from "@components/buttons/submit-button";
 import SecondaryHeading from "@components/headings/secondary-heading";
 import InputField from "@components/input-field";
-import { FormEvent } from "react";
-import { Wrapper, FormGroup, ButtonGroup } from "./styles";
+import { ChangeEvent, FormEvent } from "react";
+import { Wrapper, FormGroup, ButtonGroup, EntitySelectorGroup } from "./styles";
 
-interface IncProps {
-  businessName: string;
-  natureOfBusiness: string;
-  noOfDirectors: string;
-  updateBusinessName: (event: InputEventType) => void;
-  updateNatureOfBusiness: (event: InputEventType) => void;
-  updateNoOfDirectors: (event: InputEventType) => void;
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+import RadioButton from "@components/radio-button";
+
+interface Props {
+  type: "inc" | "book" | "tax";
+  values: {
+    businessName: string;
+    natureOfBusiness: string;
+    noOfDirectors: string;
+    quarterlyTurnover: string;
+    entityType: string;
+  };
+  handleChange: (e: ChangeEvent<any>) => void;
+  handleSubmit: (e?: FormEvent<HTMLFormElement> | undefined) => void;
   onBack: () => void;
-  type: "inc";
 }
 
-interface OtherProps {
-  businessName: string;
-  natureOfBusiness: string;
-  quarterlyTurnOver: string;
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
-  onBack: () => void;
-  updateBusinessName: (event: InputEventType) => void;
-  updateNatureOfBusiness: (event: InputEventType) => void;
-  updateQuarterlyTurnOver: (event: InputEventType) => void;
-  type: "other";
-}
-
-type Props = IncProps | OtherProps;
+const entityTypes = [
+  "Sole Proprietorship",
+  "Partnership",
+  "Limited Liability Company",
+  "Public Limited Company",
+  "Overseas Company",
+  "Offshore Company",
+];
 
 const CompanyDetailsSelection: React.FC<Props> = (
   props: Props
 ): JSX.Element => {
   return (
     <Wrapper
-      onSubmit={props.onSubmit}
+      onSubmit={props.handleSubmit}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -46,38 +44,57 @@ const CompanyDetailsSelection: React.FC<Props> = (
         Tell us about your company
       </SecondaryHeading>
       <FormGroup>
+        {props.type === "tax" && (
+          <EntitySelectorGroup>
+            {entityTypes.map((ent) => (
+              <RadioButton
+                key={ent.replace(" ", "-").toLowerCase()}
+                name="entityType"
+                label={ent}
+                value={ent}
+                checked={ent === props.values.entityType}
+                onChange={props.handleChange}
+              />
+            ))}
+          </EntitySelectorGroup>
+        )}
         <InputField
-          name="Company Name"
-          placeholder="My Company"
+          label={`${props.type === "tax" ? "Entity" : "Company"} Name`}
+          placeholder={`My ${props.type === "tax" ? "Entity" : "Company"}`}
+          name="businessName"
           type="text"
-          value={props.businessName}
-          onChange={props.updateBusinessName}
+          value={props.values.businessName}
+          onChange={props.handleChange}
           required
         />
         <InputField
-          name="Nature of Business"
+          label={`Nature of the ${props.type === "tax" ? "Entity" : "Company"}`}
+          name="natureOfBusiness"
           placeholder="Retail & Wholesale"
           type="text"
-          value={props.natureOfBusiness}
-          onChange={props.updateNatureOfBusiness}
+          value={props.values.natureOfBusiness}
+          onChange={props.handleChange}
           required
         />
+
         {props.type === "inc" ? (
           <InputField
-            name="Number of Directors"
+            label="Number of Directors"
+            name="noOfDirectors"
             placeholder="2"
             type="number"
-            value={props.noOfDirectors}
-            onChange={props.updateNoOfDirectors}
+            value={props.values.noOfDirectors}
+            onChange={props.handleChange}
             required
           />
         ) : (
           <InputField
-            name="Quarterly Turnover"
+            label="Quarterly Turnover"
+            name="quarterlyTurnover"
             placeholder="5000000"
             type="number"
-            value={props.quarterlyTurnOver}
-            onChange={props.updateQuarterlyTurnOver}
+            value={props.values.quarterlyTurnover}
+            onChange={props.handleChange}
             required
           />
         )}
