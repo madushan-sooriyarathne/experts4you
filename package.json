@@ -22,6 +22,7 @@
   "dependencies": {
     "@trycourier/courier": "^2.4.0",
     "contentful": "^8.5.0",
+    "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "mapbox-gl": "^2.4.1",
     "next": "^11.1.2",
