@@ -1,23 +1,27 @@
-import { InputGroup, Label, Input, TextArea } from "./styles";
+import { InputGroup, Label, Input, TextArea, ErrorText } from "./styles";
 
 interface Props {
   value: string;
   onChange: (event: InputEventType) => void;
   name: string;
+  label: string;
   placeholder: string;
   type: "text" | "tel" | "email" | "number";
   pattern?: string;
   textArea?: boolean;
   required?: boolean;
+  error?: string;
 }
 
 const InputField: React.FC<Props> = ({
   value,
   onChange,
   name,
+  label,
   placeholder,
   type,
   pattern,
+  error,
   textArea = false,
   required = true,
 }: Props): JSX.Element => {
@@ -25,7 +29,7 @@ const InputField: React.FC<Props> = ({
 
   return (
     <InputGroup>
-      <Label htmlFor={fieldId}>{name}</Label>
+      <Label htmlFor={fieldId}>{label}</Label>
       {textArea ? (
         <TextArea
           value={value}
@@ -34,6 +38,7 @@ const InputField: React.FC<Props> = ({
           name={name}
           placeholder={placeholder}
           required={required}
+          error={error && error?.length > 0 ? true : false}
         ></TextArea>
       ) : (
         <Input
@@ -45,8 +50,10 @@ const InputField: React.FC<Props> = ({
           type={type}
           required={required}
           pattern={pattern}
+          error={error && error?.length > 0 ? true : false}
         ></Input>
       )}
+      <ErrorText>{error}</ErrorText>
     </InputGroup>
   );
 };

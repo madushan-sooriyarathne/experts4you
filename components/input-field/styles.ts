@@ -17,7 +17,11 @@ const Label = styled.label`
   color: ${(props) => props.theme.colors.blackMedium};
 `;
 
-const InputFieldStyles = css`
+interface InputProps {
+  error: boolean;
+}
+
+const InputFieldStyles = css<InputProps>`
   width: 100%;
   height: auto;
 
@@ -28,7 +32,10 @@ const InputFieldStyles = css`
   padding: 1.5rem 2rem;
   border: none;
 
-  border-bottom: ${(props) => `2px solid ${props.theme.colors.blackMedium}`};
+  border-bottom: ${(props) =>
+    `2px solid ${
+      props.error ? props.theme.colors.danger : props.theme.colors.blackMedium
+    }`};
   outline: none;
 
   &::placeholder {
@@ -58,4 +65,11 @@ const TextArea = styled.textarea`
   resize: none;
 `;
 
-export { InputGroup, Label, Input, TextArea };
+const ErrorText = styled.p`
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: ${(props) => props.theme.colors.danger};
+`;
+
+export { InputGroup, Label, Input, TextArea, ErrorText };
