@@ -36,11 +36,16 @@ const sendConsultationRequestEmail = async (
     data.type === "inc"
       ? {
           eventId: "SDMTF5SRK74Q2VM0FHZ3BCJT3BM5",
-          recipientId: "5117ccf1-1b52-4aab-b810-7103fd5679c0",
+          recipientId: "6c2c17b4-0086-4fa3-bb43-ed8dbaa7c588",
+        }
+      : data.type === "tax"
+      ? {
+          eventId: "16EVC7NSSXMKJKPXDWN9R9JK7R0Y",
+          recipientId: "551c0a3c-e59e-4872-8a8f-0dbd005b242b",
         }
       : {
           eventId: "VY21VBBBMJ40F0J6T3J61ZNRVNFB",
-          recipientId: "7334483c-6df2-44a3-a980-6a79db9a5345",
+          recipientId: "4e657d96-2c6d-460c-b9d2-380cd0792dbb",
         };
 
   try {
@@ -70,7 +75,7 @@ const sendContactInquiryEmail = async (
   try {
     const { messageId } = await courier.send({
       eventId: "M3N33V2ZARMRE0K78W1Q8R697VG0",
-      recipientId: "2394b158-5b83-4fe1-9d1c-063607670bf0",
+      recipientId: "89fc007f-62cc-40cc-af29-1854b2e25460",
       profile: {
         email: process.env.ADMIN_EMAIL,
       },
