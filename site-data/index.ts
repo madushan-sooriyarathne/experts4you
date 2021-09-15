@@ -11,10 +11,10 @@ const navLinks: SiteLinks[] = [
     route: "/services",
     name: "Services",
   },
-  // {
-  //   route: "/tax-calculator",
-  //   name: "Tax Calculator",
-  // },
+  {
+    route: "/tax-calculator",
+    name: "Tax Calculator",
+  },
   {
     route: "/knowledge",
     name: "Knowledge",
