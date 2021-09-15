@@ -29,7 +29,7 @@ const InputFieldStyles = css<InputProps>`
   font-weight: 500;
   letter-spacing: 0.5px;
   color: ${(props) => props.theme.colors.blackMedium};
-  padding: 1.5rem 2rem;
+  padding: 1rem 1rem 0.5rem 1rem;
   border: none;
 
   border-bottom: ${(props) =>
