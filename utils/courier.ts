@@ -28,6 +28,30 @@ const sendCallRequestEmail = async (
   return id;
 };
 
+const sendTaxConsultationRequestEmail = async (
+  data: TaxConsultationEmailType
+): Promise<string | null> => {
+  let id: string | null = null;
+
+  try {
+    const { messageId } = await courier.send({
+      eventId: "EX30B1E94JMB9HQG3Y25H7MSR8KF",
+      recipientId: "232084f8-38ea-4918-b5dd-9cc88a4f1a04",
+      profile: {
+        email: process.env.ADMIN_EMAIL,
+      },
+      data: data,
+      override: {},
+    });
+
+    id = messageId;
+  } catch (err: any) {
+    console.error(`Error sending email - ${err.message}`);
+  }
+
+  return id;
+};
+
 const sendConsultationRequestEmail = async (
   data: ConsultationRequestType
 ): Promise<string | null> => {
@@ -94,4 +118,5 @@ export {
   sendCallRequestEmail,
   sendConsultationRequestEmail,
   sendContactInquiryEmail,
+  sendTaxConsultationRequestEmail,
 };
