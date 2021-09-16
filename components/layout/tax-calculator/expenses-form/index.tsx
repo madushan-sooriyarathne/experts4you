@@ -13,13 +13,7 @@ import {
 } from "./styles";
 
 interface Props {
-  values: {
-    health: string;
-    family: string;
-    housing: string;
-    pension: string;
-    investments: string;
-  };
+  values: ExpensesFormFields;
   monthly: boolean;
   handleChange: (event: InputEventType) => void;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void;

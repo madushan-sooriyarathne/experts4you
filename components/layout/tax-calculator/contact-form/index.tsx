@@ -20,11 +20,7 @@ interface Props {
     taxAmount: number;
     taxRelief: number;
   };
-  values: {
-    name: string;
-    phone: string;
-    email: string;
-  };
+  values: ContactFormFields;
   handleChange: (event: InputEventType) => void;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
   onCancel: () => void;

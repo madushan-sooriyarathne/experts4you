@@ -16,31 +16,6 @@ import {
   StepCounter,
 } from "./styles";
 
-interface PeriodFormFields {
-  period: "monthly" | "annually";
-}
-
-interface IncomeFormFields {
-  employment: string;
-  business: string;
-  interest: string;
-  other: string;
-}
-
-interface ExpensesFormFields {
-  health: string;
-  family: string;
-  housing: string;
-  pension: string;
-  investments: string;
-}
-
-interface ContactFormField {
-  name: string;
-  email: string;
-  phone: string;
-}
-
 const CalculatorParent: React.FC = (): JSX.Element => {
   // other states
   const [step, setStep] = useState<number>(0);
@@ -57,7 +32,7 @@ const CalculatorParent: React.FC = (): JSX.Element => {
   // Form states
   const periodFormik = useFormik<PeriodFormFields>({
     initialValues: {
-      period: "monthly",
+      period: "Monthly",
     },
     onSubmit: () => {
       setStep(1);
@@ -80,7 +55,7 @@ const CalculatorParent: React.FC = (): JSX.Element => {
       );
 
       let annualTotal: number =
-        total * (periodFormik.values.period === "monthly" ? 12 : 1);
+        total * (periodFormik.values.period === "Monthly" ? 12 : 1);
 
       if (annualTotal < 3000000) {
         setTax((prevState) => ({ ...prevState, tax: 0 }));
@@ -122,7 +97,7 @@ const CalculatorParent: React.FC = (): JSX.Element => {
         0
       );
       const annualExpenses: number =
-        periodFormik.values.period === "monthly" ? expenses * 12 : expenses;
+        periodFormik.values.period === "Monthly" ? expenses * 12 : expenses;
 
       const taxRelief: number =
         annualExpenses > 1200000 ? 1200000 * 0.18 : annualExpenses * 0.18;
@@ -132,7 +107,7 @@ const CalculatorParent: React.FC = (): JSX.Element => {
     },
   });
 
-  const contactFormik = useFormik<ContactFormField>({
+  const contactFormik = useFormik<ContactFormFields>({
     initialValues: {
       name: "",
       email: "",
@@ -236,7 +211,7 @@ const CalculatorParent: React.FC = (): JSX.Element => {
                 values={expensesFormik.values}
                 handleChange={expensesFormik.handleChange}
                 handleSubmit={expensesFormik.handleSubmit}
-                monthly={periodFormik.values.period === "monthly"}
+                monthly={periodFormik.values.period === "Monthly"}
               />
             )}
             {step === 3 && (

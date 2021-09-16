@@ -12,12 +12,7 @@ import {
 } from "./styled";
 
 interface Props {
-  values: {
-    employment: string;
-    business: string;
-    interest: string;
-    other: string;
-  };
+  values: IncomeFormFields;
   handleChange: (event: InputEventType) => void;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
@@ -65,7 +60,7 @@ const IncomeForm: React.FC<Props> = ({
           required
         />
         <InputField
-          label="interest Income"
+          label="Interest Income"
           name="interest"
           value={values.interest}
           onChange={handleChange}

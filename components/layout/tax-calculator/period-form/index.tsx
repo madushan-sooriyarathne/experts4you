@@ -13,9 +13,7 @@ import {
 } from "./styles";
 
 interface Props {
-  values: {
-    period: "monthly" | "annually";
-  };
+  values: PeriodFormFields;
   handleChange: (event: InputEventType) => void;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
@@ -46,16 +44,16 @@ const PeriodForm: React.FC<Props> = ({
         <RadioButtonWrapper>
           <RadioButton
             label="Monthly"
-            value="monthly"
+            value="Monthly"
             name="period"
-            checked={values.period === "monthly"}
+            checked={values.period === "Monthly"}
             onChange={handleChange}
           />
           <RadioButton
             label="Annually"
-            value="annually"
+            value="Annually"
             name="period"
-            checked={values.period === "annually"}
+            checked={values.period === "Annually"}
             onChange={handleChange}
           />
         </RadioButtonWrapper>
