@@ -16,6 +16,18 @@ const FormContainer = styled(motion.div)`
   align-items: start;
   justify-items: center;
   gap: 5rem;
+
+  ${(props) => props.theme.responsive.width800} {
+    padding: 5rem 2rem;
+  }
+
+  ${(props) => props.theme.responsive.width700} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-areas:
+      "su"
+      "ti"
+      "fo";
+  }
 `;
 
 const TaxSummery = styled.div`
@@ -26,6 +38,15 @@ const TaxSummery = styled.div`
   justify-content: flex-start;
   gap: 3rem;
   padding: 5rem;
+
+  ${(props) => props.theme.responsive.width600} {
+    padding: 0;
+    align-items: flex-start;
+
+    & h1 {
+      text-align: left;
+    }
+  }
 `;
 
 const TaxSummeryItem = styled.div`
@@ -52,6 +73,14 @@ const TitleWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+
+  ${(props) => props.theme.responsive.width600} {
+    align-items: flex-start;
+
+    & * {
+      text-align: left;
+    }
+  }
 `;
 
 const FormWrapper = styled.form`
@@ -70,6 +99,10 @@ const ButtonWrapper = styled.div`
   width: auto;
   height: auto;
   align-self: center;
+
+  ${(props) => props.theme.responsive.width600} {
+    align-self: flex-start;
+  }
 `;
 
 export {

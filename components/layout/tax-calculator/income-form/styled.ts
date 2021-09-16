@@ -15,6 +15,17 @@ const FormContainer = styled(motion.div)`
   align-items: start;
   justify-items: center;
   gap: 5rem;
+
+  ${(props) => props.theme.responsive.width800} {
+    padding: 5rem 2rem;
+  }
+
+  ${(props) => props.theme.responsive.width700} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-areas:
+      "ti"
+      "fo";
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -26,6 +37,14 @@ const TitleWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+
+  ${(props) => props.theme.responsive.width600} {
+    align-items: flex-start;
+
+    & * {
+      text-align: left;
+    }
+  }
 `;
 
 const FormWrapper = styled.form`
@@ -44,6 +63,10 @@ const ButtonWrapper = styled.div`
   width: auto;
   height: auto;
   align-self: center;
+
+  ${(props) => props.theme.responsive.width600} {
+    align-self: flex-start;
+  }
 `;
 
 export { FormContainer, TitleWrapper, FormWrapper, ButtonWrapper };
