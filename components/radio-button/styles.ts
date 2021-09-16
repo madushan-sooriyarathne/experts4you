@@ -16,6 +16,7 @@ const Label = styled.label<LabelProps>`
   border: ${(props) => `2px solid ${props.theme.colors.primaryDark}`};
   background-color: ${(props) =>
     props.checked ? props.theme.colors.primaryDark : "transparent"};
+  cursor: pointer;
 `;
 
 const Input = styled.input`

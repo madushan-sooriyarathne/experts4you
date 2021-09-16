@@ -15,7 +15,6 @@ const RadioButton: React.FC<Props> = ({
   checked,
   onChange,
 }: Props): JSX.Element => {
-  console.log(`Checked ${name} - ${checked}`);
   return (
     <Label htmlFor={`${name}-${value}`} checked={checked}>
       {label}
