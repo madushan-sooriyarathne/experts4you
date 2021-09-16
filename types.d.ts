@@ -200,6 +200,38 @@ declare global {
 
   type ContentfulStepResult = Entry<ContentfulStepFields>;
 
+  // TAX Calculator Types
+  interface PeriodFormFields {
+    period: "Monthly" | "Annually";
+  }
+
+  interface IncomeFormFields {
+    employment: string;
+    business: string;
+    interest: string;
+    other: string;
+  }
+
+  interface ExpensesFormFields {
+    health: string;
+    family: string;
+    housing: string;
+    pension: string;
+    investments: string;
+  }
+
+  interface ContactFormFields {
+    name: string;
+    email: string;
+    phone: string;
+  }
+
+  // Tax Calculator Email Type
+  type TaxConsultationEmailType = PeriodFormFields &
+    IncomeFormFields &
+    ExpensesFormFields &
+    ContactFormFields;
+
   // EMAIL TYPES
   interface EmailObj {
     from: string;
