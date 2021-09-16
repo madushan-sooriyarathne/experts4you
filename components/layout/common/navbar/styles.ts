@@ -170,9 +170,13 @@ const HamburgerMenuIcon = styled.button<HamburgerProps>`
   }
 `;
 
-const NavLink = styled.a`
+interface NavLinkProps {
+  selected: boolean;
+}
+
+const NavLink = styled.a<NavLinkProps>`
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
@@ -180,9 +184,22 @@ const NavLink = styled.a`
   color: ${(props) => props.theme.colors.primaryDark};
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  position: relative;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    opacity: ${(props) => (props.selected ? 1 : 0)};
+    background-color: ${(props) => props.theme.colors.primaryDark};
   }
 `;
 

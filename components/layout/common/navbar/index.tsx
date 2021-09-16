@@ -1,4 +1,4 @@
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { navLinks } from "@site-data";
 
@@ -118,7 +118,9 @@ const NavBar: React.FC = (): JSX.Element => {
         <NavLinkWrapper>
           {navLinks.map((link) => (
             <Link href={link.route} key={`nav-${link.name}`}>
-              <NavLink>{link.name}</NavLink>
+              <NavLink selected={router.pathname === link.route}>
+                {link.name}
+              </NavLink>
             </Link>
           ))}
         </NavLinkWrapper>
