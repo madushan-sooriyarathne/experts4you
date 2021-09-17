@@ -176,18 +176,19 @@ interface NavLinkProps {
 
 const NavLink = styled.a<NavLinkProps>`
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: ${(props) => props.theme.fonts.primary};
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
   outline: none;
-  color: ${(props) => props.theme.colors.primaryDark};
+  color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
   transition: color 0.2s ease-in-out;
   position: relative;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primaryDark};
   }
 
   &::after {
@@ -199,7 +200,7 @@ const NavLink = styled.a<NavLinkProps>`
     width: 100%;
     height: 2px;
     opacity: ${(props) => (props.selected ? 1 : 0)};
-    background-color: ${(props) => props.theme.colors.primaryDark};
+    background-color: ${(props) => props.theme.colors.primary};
   }
 `;
 
