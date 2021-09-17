@@ -29,7 +29,7 @@ const ImageComponent: React.FC<Props> = ({
         objectFit={objectFit}
         objectPosition={`${pos.x} ${pos.y}`}
         placeholder="blur"
-        blurDataURL={image.blurUrl}
+        blurDataURL={`data:image/png;base83,${image.blurUrl}`}
       />
     </ImageContainer>
   );
