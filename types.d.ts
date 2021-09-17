@@ -214,7 +214,7 @@ declare global {
 
   interface ExpensesFormFields {
     health: string;
-    family: string;
+    education: string;
     housing: string;
     pension: string;
     investments: string;
@@ -226,11 +226,23 @@ declare global {
     phone: string;
   }
 
+  interface TaxCalculation {
+    totalTax: number;
+    taxRelief: number;
+    payableTax: number;
+  }
+
+  type TaxCalculationResultsType = TaxCalculation & {
+    name: string;
+    email: string;
+  };
+
   // Tax Calculator Email Type
   type TaxConsultationEmailType = PeriodFormFields &
     IncomeFormFields &
     ExpensesFormFields &
-    ContactFormFields;
+    ContactFormFields &
+    TaxCalculation;
 
   // EMAIL TYPES
   interface EmailObj {
