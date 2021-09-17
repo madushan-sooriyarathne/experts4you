@@ -52,6 +52,30 @@ const sendTaxConsultationRequestEmail = async (
   return id;
 };
 
+const sendTaxCalculationResults = async (
+  data: TaxCalculationResultsType
+): Promise<string | null> => {
+  let id: string | null = null;
+
+  try {
+    const { messageId } = await courier.send({
+      eventId: "GPN0T3AQXCMNVWN268WQVSAQDR1D",
+      recipientId: "4bbc1281-16ec-4f4c-b26b-9062a2d81956",
+      profile: {
+        email: data.email,
+      },
+      data: data,
+      override: {},
+    });
+
+    id = messageId;
+  } catch (err: any) {
+    console.error(`Error sending email - ${err.message}`);
+  }
+
+  return id;
+};
+
 const sendConsultationRequestEmail = async (
   data: ConsultationRequestType
 ): Promise<string | null> => {
@@ -119,4 +143,5 @@ export {
   sendConsultationRequestEmail,
   sendContactInquiryEmail,
   sendTaxConsultationRequestEmail,
+  sendTaxCalculationResults,
 };
