@@ -54,7 +54,7 @@ const ExpensesForm: React.FC<Props> = ({
         />
         <InputField
           label={`${monthly ? "Monthly" : "Annual"} Educational expenses`}
-          name="family"
+          name="education"
           value={values.education}
           onChange={handleChange}
           type="number"
