@@ -14,9 +14,12 @@ import {
   getSingleEntry,
   serializeAssetUrls,
 } from "utils/contentful";
+import TitledGrid from "@components/layout/common/titled-grid";
+import StaticCard from "@components/static-card";
 
 interface Props {
   services: Service[];
+  otherServices: CardContentType[];
   servicesCover: Cover;
   commonFaq: FAQ[];
 }
@@ -25,6 +28,7 @@ const ServicesPage: NextPage<Props> = ({
   services,
   servicesCover,
   commonFaq,
+  otherServices,
 }: Props): JSX.Element => {
   return (
     <Page title="Services">
@@ -40,6 +44,17 @@ const ServicesPage: NextPage<Props> = ({
           />
         ))}
       </GridLayout>
+      {otherServices?.length > 0 && (
+        <TitledGrid
+          heading="Other Services"
+          subHeading="In coloration with our sister company, HNS Partners"
+        >
+          {otherServices.map((service) => (
+            <StaticCard content={service} key={service.id} />
+          ))}
+        </TitledGrid>
+      )}
+
       <FAQSection faqs={commonFaq} />
       <CTASection buttonText="Let's get started" />
       <CallRequest />
@@ -78,11 +93,19 @@ const getStaticProps: GetStaticProps = async (): Promise<
   // fetch faqs data from CMS
   const commonFaq: FAQ[] = await getMultipleEntries<FAQ>("faq");
 
+  // fetch other services
+  const otherServicesResult: ContentfulOtherServiceFields[] =
+    await getMultipleEntries<ContentfulOtherServiceFields>("otherServices");
+  const otherServices: CardContentType[] = otherServicesResult.map((ser) =>
+    serializeAssetUrls(ser, "icon")
+  );
+
   return {
     props: {
       servicesCover,
       services,
       commonFaq,
+      otherServices,
     },
   };
 };

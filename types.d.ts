@@ -8,6 +8,7 @@ declare global {
   type DispatchFn<T> = Dispatch<SetStateAction<T>>;
 
   interface CardContentType {
+    id: string;
     icon: string;
     heading: string;
     description: string;
@@ -199,6 +200,11 @@ declare global {
   }
 
   type ContentfulStepResult = Entry<ContentfulStepFields>;
+
+  // Other services
+  interface ContentfulOtherServiceFields extends CardContentType {
+    icon: Asset;
+  }
 
   // TAX Calculator Types
   interface PeriodFormFields {
