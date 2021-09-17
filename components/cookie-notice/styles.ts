@@ -54,7 +54,7 @@ const ButtonWrapper = styled.div`
 const cookieBarVariants: Variants = {
   initial: {
     opacity: 0,
-    y: "calc(100% + 3rem)",
+    y: "110%",
   },
   enter: {
     opacity: 1,
@@ -62,7 +62,7 @@ const cookieBarVariants: Variants = {
   },
   exit: {
     opacity: 0,
-    y: "calc(100% + 3rem)",
+    y: "110%",
   },
 };
 
