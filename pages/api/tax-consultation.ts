@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import {
-  sendConsultationRequestEmail,
+  sendTaxCalculationResults,
   sendTaxConsultationRequestEmail,
 } from "utils/courier";
 
@@ -28,9 +28,10 @@ export default async (
     return;
   }
 
-  const messageId = await sendTaxConsultationRequestEmail(inquiryData);
+  const systemMessageId = await sendTaxConsultationRequestEmail(inquiryData);
+  const clientMessageId = await sendTaxCalculationResults(inquiryData);
 
-  if (messageId) {
+  if (systemMessageId && clientMessageId) {
     res.status(200).json({
       status: "success",
     });
