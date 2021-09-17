@@ -26,7 +26,7 @@ export default async (
   }
 
   const messageId = await sendCallRequestEmail(inquiryData);
-  console.log("messageID: " + messageId);
+
   if (messageId) {
     res.status(200).json({
       status: "success",
