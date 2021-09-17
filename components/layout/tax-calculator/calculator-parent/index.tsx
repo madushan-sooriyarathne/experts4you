@@ -83,7 +83,7 @@ const CalculatorParent: React.FC = (): JSX.Element => {
   const expensesFormik = useFormik<ExpensesFormFields>({
     initialValues: {
       health: "0",
-      family: "0",
+      education: "0",
       housing: "0",
       pension: "0",
       investments: "0",
@@ -103,7 +103,6 @@ const CalculatorParent: React.FC = (): JSX.Element => {
         annualExpenses > 1200000 ? 1200000 * 0.18 : annualExpenses * 0.18;
 
       setTax((prev) => ({ ...prev, taxRelief: taxRelief }));
-      console.log(taxRelief);
     },
   });
 
@@ -127,7 +126,10 @@ const CalculatorParent: React.FC = (): JSX.Element => {
           ...incomeFormik.values,
           ...expensesFormik.values,
           ...values,
-        }),
+          totalTax: tax.taxAmount,
+          taxRelief: tax.taxRelief,
+          payableTax: tax.taxAmount - tax.taxRelief,
+        } as TaxConsultationEmailType),
       })
         .then((res) => {
           if (res.status === 200) {

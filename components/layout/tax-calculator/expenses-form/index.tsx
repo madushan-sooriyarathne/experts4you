@@ -53,11 +53,9 @@ const ExpensesForm: React.FC<Props> = ({
           required
         />
         <InputField
-          label={`${
-            monthly ? "Monthly" : "Annual"
-          } Expenditure incurred locally`}
+          label={`${monthly ? "Monthly" : "Annual"} Educational expenses`}
           name="family"
-          value={values.family}
+          value={values.education}
           onChange={handleChange}
           type="number"
           placeholder="50000"
